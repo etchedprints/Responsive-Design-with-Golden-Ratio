@@ -1,0 +1,15 @@
+@media screen and (max-width: 768px) {
+ 	.full, .large, .xlarge, .med, .small, .xsmall, .columns3, .columns4, header, footer {
+ 		float: none;
+ 		width: @base;
+ 		div, p, h1, h2, h3, h4, h5, h6, ol, ul, dl { padding: @2gld }
+ 	}
+ 	.columns3, .columns4 {
+ 		p, h1, h2, h3, h4, h5, h6, li, dt, dd, table, form { width: @10gld + @8gld;}
+ 	}		
+ 	#wrapper { padding: @5gld }
+ 	
+ 	.pcolumns { -moz-column-count: 1; -webkit-column-count: 1; column-count: 1 }
+ 	
+ 	h1, h2 { font-size: @base * @3gld }
+}

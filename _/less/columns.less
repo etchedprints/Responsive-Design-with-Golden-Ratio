@@ -1,0 +1,51 @@
+.full, .large, .xlarge, .med, .small, .xsmall,
+.columns3, .columns4,
+img, embed, object, video, iframe {
+	float: left;
+	overflow: hidden;
+	max-width: @base;
+}
+img, embed, object, video, iframe { padding: @2gld @3gld @2gld @1gld }
+
+.full, .large, .xlarge, .med, .small, .xsmall, .columns3, .columns4 { margin-bottom: @5gld }
+.full		{ width: @base }
+.large		{ width: @10gld }
+.xlarge		{ width: @base - (@7gld + @7gld) }
+.med		{ width: @9gld }
+.small		{ width: @8gld }	
+.xsmall		{ width: @7gld }
+.columns3	{ width: 28%; padding: @3gld @1gld @3gld @4gld }
+.columns4	{ width: 20%; padding: @3gld @1gld @3gld @4gld  }
+
+#wrapper {
+	margin: @2gld auto @6gld;
+	width: @10gld + @8gld;
+}
+
+.full, header, footer {
+	p, h1, h2, h3, h4, h5, h6, ol, ul, dl { padding: @1gld @4gld }
+}
+
+.large, .xlarge {
+	p, h1, h2, h3, h4, h5, h6, ol, ul, dl { padding: @1gld @5gld }
+}
+
+.med {
+	p, h1, h2, h3, h4, h5, h6, ol, ul, dl { padding: @2gld @5gld }
+}
+
+.small {
+	p, h1, h2, h3, h4, h5, h6, ol, ul, dl { padding: @3gld @7gld }
+	img, embed, object, video, iframe { 
+		padding: @3gld @7gld;
+		width: @10gld + @5gld;
+	}
+}
+
+.xsmall {
+	p, h1, h2, h3, h4, h5, h6, ol, ul, dl {
+		padding: @3gld @8gld;
+		width: @10gld - @6gld;
+	}
+	img, embed, object, video, iframe { padding: @6gld @4gld }
+}
