@@ -4,16 +4,21 @@ h1 { font-size: @base * @5gld }
 h2 { font-size: @base * @4gld }
 h3 { font-size: @base * @3gld }
 h4, dt, dd, li, p { font-size: @base }
-h5 { font-size: @base  / @2gld }
-h6 { font-size: @base  / @3gld }
-
-p { font-family: @serif; text-align: Justify }
+h5 { font-size: @base / @2gld }
+h6 { font-size: @base / @3gld }
 
 // typography metrics & leading
 p, h1, h2, h3, h4, h5, h6, li, dt, dd, table, form { 
 	line-height: @base / @golden;
 	font-weight: normal;
+	padding: @1gld 0;
 	}
+	
+p { 
+	font-family: @serif; 
+	text-align: Justify; 
+	padding: @2gld 0;
+}
 	
 h5, h6, em, strong { letter-spacing: 0.1em }
 
@@ -25,28 +30,18 @@ body {
 	font-family: @sans;
 	color: @baseColorDarker;
 	background: @baseColorDarker;
-	word-wrap: break-word;
-	-webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto;
 }
 
-#wrapper { background-color: white }
-
-/* Section divide */
-section {
-	clear: both;
-	background-color: @baseColor;
-	padding: @1gld 0;
-}
+#wrapper { background-color: #fff; }
 
 // no list style for ul or ol
 .unstyle { list-style: none }
-.row {
-	li {
-		display: inline;
-		padding: @2gld;
+.row li {
+		display: inline-block;
+		padding: @1gld @2gld;
 		&:first-child { padding-left: 0 }
-	}	
 }
+
 
 .fullimg {
 	padding: @2gld 0;

@@ -1,13 +1,9 @@
-.full, .large, .xlarge, .med, .small, .xsmall,
-.columns3, .columns4,
-img, embed, object, video, iframe {
+.full, .large, .xlarge, .med, .small, .xsmall, .columns3, .columns4, img, embed, object, video, iframe {
 	float: left;
 	overflow: hidden;
 	max-width: @base;
 }
-img, embed, object, video, iframe { padding: @2gld @3gld @2gld @1gld }
 
-.full, .large, .xlarge, .med, .small, .xsmall, .columns3, .columns4 { margin-bottom: @5gld }
 .full		{ width: @base }
 .large		{ width: @10gld }
 .xlarge		{ width: @base - (@7gld + @7gld) }
@@ -18,34 +14,26 @@ img, embed, object, video, iframe { padding: @2gld @3gld @2gld @1gld }
 .columns4	{ width: 20%; padding: @3gld @1gld @3gld @4gld  }
 
 #wrapper {
-	margin: @2gld auto @6gld;
+	margin: @3gld auto;
 	width: @10gld + @8gld;
 }
 
-.full, header, footer {
-	p, h1, h2, h3, h4, h5, h6, ol, ul, dl { padding: @1gld @4gld }
-}
-
-.large, .xlarge {
-	p, h1, h2, h3, h4, h5, h6, ol, ul, dl { padding: @1gld @5gld }
-}
-
-.med {
-	p, h1, h2, h3, h4, h5, h6, ol, ul, dl { padding: @2gld @5gld }
-}
-
-.small {
-	p, h1, h2, h3, h4, h5, h6, ol, ul, dl { padding: @3gld @7gld }
-	img, embed, object, video, iframe { 
-		padding: @3gld @7gld;
-		width: @10gld + @5gld;
+header, section, footer, .full, hr { 
+	clear: both; 
+	display: block;
 	}
+
+/* PADDING / HYPHANS / METERING SETTINGS */
+
+* {
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	
+	word-wrap: break-word;
+	-webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto;
 }
 
-.xsmall {
-	p, h1, h2, h3, h4, h5, h6, ol, ul, dl {
-		padding: @3gld @8gld;
-		width: @10gld - @6gld;
-	}
-	img, embed, object, video, iframe { padding: @6gld @4gld }
-}
+.full, header, footer, .large, .xlarge, .med, .small, .xsmall { padding:  @3gld @4gld; } 
+
+img, embed, object, video, iframe { padding: @3gld @5gld @5gld @1gld; }
