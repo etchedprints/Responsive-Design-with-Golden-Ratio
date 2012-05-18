@@ -24,7 +24,7 @@ body{font-family:"Myriad Web Pro","Helvetica Neue",Helvetica,Lucida,Verdana,sans
 .unstyle{list-style:none;}
 .row li{display:inline-block;padding:0.8130618755783343% 1.3155617496424832%;}.row li:first-child{padding-left:0;}
 .pcolumns{-moz-column-count:2;-moz-column-gap:3em;-webkit-column-count:2;-webkit-column-gap:3em;column-count:2;column-gap:3em;}
-nav{display:block;clear:both;}nav ul{float:left;position:relative;margin:0;padding:0;border:0;list-style-type:none;clear:both;display:block;font-family:"Myriad Web Pro","Helvetica Neue",Helvetica,Lucida,Verdana,sans-serif;width:100%;}nav ul li:last-child{border-right:none;}
+nav{display:block;clear:both;}nav ul{float:left;position:relative;margin:0;padding:0;border:0;list-style-type:none;list-style-position:outside;clear:both;display:block;font-family:"Myriad Web Pro","Helvetica Neue",Helvetica,Lucida,Verdana,sans-serif;width:100%;}nav ul li:last-child{border-right:none;}
 nav ul li{float:left;position:relative;border-right:solid 2px #e1e1e1;margin:0;padding:0;}nav ul li a{text-decoration:none;display:inline-block;padding:0.5em 1.25em;color:#5b5b5b;letter-spacing:1px;word-wrap:break-word;text-transform:capitalize;}
 nav ul li a:hover,nav ul li a:active{background-color:#5b5b5b;color:#e1e1e1;text-decoration:none;}
 nav ul li:hover ul{top:99%;left:0;display:block;position:absolute;}
