@@ -1,4 +1,12 @@
 /* @group General Typography*/
+
+a {
+	color: @baseColorDarker;
+	text-decoration: none;
+}
+a:hover { color: @baseColorLight }
+a:active { color: @baseColorDark }
+
 // typography size
 h1 { font-size: @base * @5gld }
 h2 { font-size: @base * @4gld }
@@ -11,20 +19,19 @@ h6 { font-size: @base / @3gld }
 p, h1, h2, h3, h4, h5, h6, li, dt, dd, table, form { 
 	line-height: @base / @golden;
 	font-weight: normal;
-	padding: @1gld 0;
 	}
 	
 p { 
 	font-family: @serif; 
 	text-align: Justify; 
 	padding: @2gld 0;
-}
-	
-h5, h6, em, strong { letter-spacing: 0.1em }
+	a {
+		color: @baseColor;
+		text-decoration: underline;
+	}
+} /* p element */
 
-a { color: @baseColor }
-a:hover { color: @baseColorLight }
-a:active { color: @baseColorDark }
+h5, h6, em, strong { letter-spacing: 0.1em }
 
 body { 
 	font-family: @sans;
@@ -42,12 +49,6 @@ body {
 		&:first-child { padding-left: 0 }
 }
 
-
-.fullimg {
-	padding: @2gld 0;
-	width: @base;
-}
-
 .pcolumns { 
 	-moz-column-count: 2;
 	-moz-column-gap: 3em;
@@ -56,14 +57,4 @@ body {
 	column-count: 2;
 	column-gap: 3em;	
 }
-
-// float code
-.flright { float: right }
-.floatleft { float: left }
-
-// clear line code
-.clright, clleft, clboth, clear { display: block; float: none }
-.clright { clear: right }
-.clleft { clear:left }
-.clboth, .clear { clear:both }
 /* @end */
