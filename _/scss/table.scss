@@ -1,0 +1,20 @@
+/* $group Table */
+table { 
+	text-align: left;
+	border: 1px solid gray;
+	width: $base;
+}
+
+table caption, table th, table td { 
+	empty-cells: show;
+	padding: $gld3;
+	border-bottom: 1px solid $baseColorDark;
+	}
+
+table th {
+	background-color: $baseColorDarker;
+	color: white;
+}
+
+table tr:nth-child(even) { background-color: $baseColorLighter; }
+/* $end */

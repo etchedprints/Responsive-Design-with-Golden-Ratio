@@ -1,16 +1,20 @@
 @media screen and (max-width: 768px) {
-	#wrapper { padding: @3gld }
+	#wrapper { 
+		margin: 0;
+		width: $base;
+		padding: $gld3; 
+		}
 
  	.full, .large, .xlarge, .med, .small, .xsmall, .columns3, .columns4, header, footer {
  		float: none;
- 		width: @base;
+ 		width: $base;
  	}
  	
  	.xsmall li { float: left; }
  	
- 	.columns3, .columns4 { width: @base; }		
+ 	.columns3, .columns4 { width: $base; }		
  
  	.pcolumns { -moz-column-count: 1; -webkit-column-count: 1; column-count: 1 }
  	
- 	h1, h2 { font-size: @base * @3gld }
+ 	h1, h2 { font-size: $gld3 * 100 }
 }

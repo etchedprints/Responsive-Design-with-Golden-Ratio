@@ -1,0 +1,22 @@
+#gld_units {
+		margin: $gld1 0;
+		font-family: monospace;
+		letter-spacing: 1px;
+	dd.boxtest {
+		background-color: #444;
+		margin-bottom: $gld1;
+	}
+	
+	#test1 { width: $gld1 }
+	#test2 { width: $gld2 }
+	#test3 { width: $gld3 }
+	#test4 { width: $gld4 }
+	#test5 { width: $gld5 }
+	#test6 { width: $gld6 }
+	#test7 { width: $gld7 }
+	#test8 { width: $gld8 }
+	#test9 { width: $gld9 }
+	#test10 { width: $gld10 }
+} /* #gld_units */
+
+.tdright { border-right: 2px dashed gray }

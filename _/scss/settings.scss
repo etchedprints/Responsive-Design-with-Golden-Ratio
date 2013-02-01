@@ -1,0 +1,26 @@
+/* $group Styles */
+	$sans:	"Myriad Web Pro", "Helvetica Neue", Helvetica, Lucida, Verdana, sans-serif;
+	$serif: "Georgia", Times New Roman, Times, serif;				
+/* Golden Ratio 0.61803398874989 */
+	$golden:	0.6180339887498948482045868343656;
+	
+	$base: 		100%;						
+	$gld10:		$base * $golden;			
+	$gld9:		$base - $gld10;
+	$gld8:		$gld9 * $golden;
+	$gld7:		$gld9 - $gld8;
+	$gld6:		$gld7 * $golden;
+	$gld5:		$gld7 - $gld6;
+	$gld4:		$gld5 * $golden;
+	$gld3:		$gld5 - $gld4;
+	$gld2:		$gld3 * $golden;			
+	$gld1:		$gld3 - $gld2;				
+/* -----------------------------  */
+/* Color Scheme */
+	$baseColor: 			gray; 	/* Base Color for Design */
+
+	$baseColorLighter:		lighten($baseColor, $gld9);
+	$baseColorLight:		lighten($baseColor, $gld7);
+
+	$baseColorDark:			darken($baseColor, $gld7);
+	$baseColorDarker:		darken($baseColor, $gld9);

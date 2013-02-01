@@ -1,0 +1,101 @@
+/* $group title */
+/*
+//==============================================================================
+//	Based on GRC multi-level script-free pure-CSS menuing system stylesheet.
+//	This code was placed into the public domain by its original author
+//	Steve Gibson. It may be freely used for any purpose whatsoever.
+//	
+//	** using {less} app **
+//	** ver: 2.8
+//	** Revised by Chad Lindemann for IE7+,Safari,Firefox,& Chrome.
+//===============================================================================
+// Navigation Bar Design Style {less}
+*/
+/* $end */
+
+/* $group TOP Nav */
+/*.nav,*/
+nav {
+	display: block;
+	clear: both;
+	
+	ul {
+		float: left;
+		position: relative;											/* sets menu under link */
+		margin:0;													/* reset */
+		padding:0;
+		border:0;
+		list-style-type:none;
+		list-style-position: outside;								/*firefox fix for nav bar*/
+		clear: both;
+		display: block;												/*make a full button*/
+		font-family: $sans;	
+		width: $base;												/*we always want our menu to fill the available space*/ 
+			
+		li:last-child { border-right: none; }						/*no line after last button*/
+				
+		li {
+			float: left;
+			position: relative;										/*sets menu under link*/
+			border-right: solid 2px $baseColorLighter;				/*creates line & ridge between each button*/
+			margin:0;												/*reset*/
+			padding:0;												/*reset*/
+	
+			a {														/*unselected top-level menu items */
+				text-decoration:none;								/*NO underline*/	
+				display: inline-block;								/*Style Stuff*/
+				padding: 0.5em 1.25em;								/*spacing of buttons*/
+				color: $baseColorDark;								/*link color*/
+				letter-spacing:	1px;								/*kerning*/
+				word-wrap:break-word;								/*words spacing and new line for words*/
+				text-transform: capitalize;							/*makes home => Home*/
+			} /*/ a*/
+			
+			a:hover, a:active { 
+				background-color: $baseColorDark;					/*IE7-8 - style*/
+				color: $baseColorLighter;							/*color for hover state*/
+				text-decoration:none;
+			} /*/ a:hover	*/	
+		}/* / li*/
+
+		
+		li:hover ul {
+			top:99%;												/*IE7-8 - places dropdown just up underneath the top-level menu*/
+			left:0;													/*IE7-8 - dropdown placement*/
+			display:block;											/*makes the dropdown work*/
+			position:absolute;										/*makes the dropdown work*/
+		} /*/ li:hover*/
+	} /*/ ul*/
+} /*/ nav*/
+
+/* $end */
+
+
+/* $group 2nd Level Nav */
+/*.nav ul li ul,*/
+nav ul li ul {
+	display:none;													/*initially hide the entire list hierarchy*/
+	width: 12.5em;													/*2nd lvl link on one line*/
+	z-index: 98;													/*at small sizes the menu stays on top*/	
+	
+	li {
+		width: 100%;												/*2nd lvl link is full width*/
+		border: none;												/*no line & ride for 2nd lvl*/
+		background-color: $baseColorLighter;						/*nav dropdown color*/
+		
+		a { color: $baseColorDark; }
+		a:hover, a:active { 
+			background: none;
+			color: $baseColorLighter;								/*color for hover state*/
+		 }														
+	} /*/li */
+	
+	li:first-child { padding: 0; }									/*No indent for dropdown items*/
+	 
+	li:hover {
+		background: $baseColorDarker;		 						/*darker hover color*/
+		
+		z-index: 99;												/*at small sizes the menu stays on top*/
+	}
+} /*/ nav ul li ul*/
+/* $end */

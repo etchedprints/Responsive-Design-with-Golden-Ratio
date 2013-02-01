@@ -1,24 +1,24 @@
 .full, .large, .xlarge, .med, .small, .xsmall, .columns3, .columns4, img, embed, object, video, iframe {
 	float: left;
 	overflow: hidden;
-	max-width: @base;
+	max-width: $base;
 }
 
-.full		{ width: @base }
-.large		{ width: @10gld }
-.xlarge		{ width: @base - (@7gld + @7gld) }
-.med		{ width: @9gld }
-.small		{ width: @8gld }	
-.xsmall		{ width: @7gld }
+.full		{ width: $base }
+.large		{ width: $gld10 }
+.xlarge		{ width: $base - ($gld7 + $gld7) }
+.med		{ width: $gld9 }
+.small		{ width: $gld8 }	
+.xsmall		{ width: $gld7 }
 .columns3	{ width: 33% }
 .columns4	{ width: 25%; }
 
 #wrapper {
-	margin: @3gld auto;
-	width: @10gld + @8gld;
+	margin: $gld3 auto;
+	width: $gld10 + $gld8;
 }
 
-aside { margin-top: @4gld; }
+aside { margin-top: $gld4; }
 
 header, section, footer, .full, hr { 
 	clear: both; 
@@ -26,10 +26,10 @@ header, section, footer, .full, hr {
 	}
 
 /* PADDING / HYPHANS / METERING SETTINGS */
-.full, header, footer, .large, .xlarge, .med, .small, .xsmall, .columns3, .columns4 { padding:  @3gld @4gld; } 
+.full, header, footer, .large, .xlarge, .med, .small, .xsmall, .columns3, .columns4 { padding:  $gld3 $gld4; } 
 
 img, embed, object, video, iframe { 
-	padding: @4gld @2gld; 
+	padding: $gld4 $gld2; 
 	display: inline-block;
 	clear: both;
 	float: none;
