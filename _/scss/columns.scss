@@ -1,4 +1,4 @@
-.full, .large, .xlarge, .med, .small, .xsmall, .columns3, .columns4, img, embed, object, video, iframe {
+.full, .large, .xlarge, .med, .small, .xsmall, .columns3, .columns4 {
 	float: left;
 	overflow: hidden;
 	max-width: $base;
@@ -28,9 +28,12 @@ header, section, footer, .full, hr {
 /* PADDING / HYPHANS / METERING SETTINGS */
 .full, header, footer, .large, .xlarge, .med, .small, .xsmall, .columns3, .columns4 { padding:  $gld3 $gld4; } 
 
-img, embed, object, video, iframe { 
-	padding: $gld4 $gld2; 
+img, embed, object, video, iframe {
+	width: auto;
+	max-width: $base; 
+	padding: $gld4 0; 
 	display: inline-block;
+	position: static;
 	clear: both;
 	float: none;
 	}
