@@ -1,0 +1,96 @@
+*, body {
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+/* @group NINJA MOVE */
+section, .clearfix, .group, header, footer, .full, hr { 
+	&:after {
+		content: "."; 
+		visibility: hidden; 
+		display: block; 
+		height: 0;
+		clear: both;
+	}
+}
+/* @end */
+
+body { 
+	background: $baseColorDarker; 
+}
+
+#wrapper { 
+	background-color: #fff;
+	margin: $gld3 auto;
+	width: $gld10 + $gld8;
+}
+
+
+.full, .large, .xlarge, .med, .small, .xsmall, .columns3, .columns4 {
+	float: left;
+	overflow: hidden;
+	max-width: $base;
+}
+
+.full		{ width: $base }
+.large		{ width: $gld10 }
+.xlarge		{ width: $base - ($gld7 + $gld7) }
+.med		{ width: $gld9 }
+.small		{ width: $gld8 }	
+.xsmall		{ width: $gld7 }
+
+.old_columns2 { width: 50%; }
+.old_columns3	{ width: 33% }
+.old_columns4	{ width: 25%; }
+
+.span_2columns { 
+	-moz-column-count: 2;
+	-moz-column-gap: 3em;
+	-webkit-column-count: 2;
+	-webkit-column-gap: 3em;
+	column-count: 2;
+	column-gap: 3em;	
+}
+
+.span_3columns 	{ 
+	-moz-column-count: 3;
+	-moz-column-gap: 3em;
+	-webkit-column-count: 3;
+	-webkit-column-gap: 3em;
+	column-count: 3;
+	column-gap: 3em;	
+}
+
+
+.span_4columns 	{ 
+	-moz-column-count: 4;
+	-moz-column-gap: 3em;
+	-webkit-column-count: 4;
+	-webkit-column-gap: 3em;
+	column-count: 4;
+	column-gap: 3em;	
+}
+
+
+article {
+
+}
+
+aside { 
+	margin-top: $gld4; 
+}
+
+
+/* PADDING / HYPHANS / METERING SETTINGS */
+.full, header, footer, .large, .xlarge, .med, .small, .xsmall, .columns3, .columns4 { padding:  $gld3 $gld4; } 
+
+
+/* no list style for ul or ol */
+.unstyle { list-style: none }
+.row li {
+		display: inline-block;
+		padding: $gld1 $gld2;
+		&:first-child { padding-left: 0 }
+}
+

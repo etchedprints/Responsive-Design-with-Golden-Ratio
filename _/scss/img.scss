@@ -1,0 +1,19 @@
+img, embed, object, video, iframe {
+	border-style: none;
+	width: auto;
+	max-width: $base; 
+	padding: $gld4 0; 
+	display: inline-block;
+	position: static;
+	clear: both;
+	float: none;
+}
+
+img.left {
+	margin: $gld1 $gld4 $gld1 $gld1;
+	float: left;
+}
+img.right {
+	margin: $gld1 $gld2 $gld1 $gld5; 
+	float: right;
+}

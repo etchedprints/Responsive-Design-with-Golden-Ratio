@@ -21,8 +21,16 @@
 
 .tdright { border-right: 2px dashed gray }
 
-#lighterc {color: $baseColorLighter; }
-#lightc { color: $baseColorLight; }
-#basec { color: $baseColor; }
-#darkc { color: $baseColorDark; }
-#darkerc { color: $baseColorDarker; }
+#colorText {
+	border-top: 1px solid $baseColor;
+	border-bottom: 1px solid $baseColor;
+	font-size: $gld3 * 100;
+	margin: $gld5;
+
+	#lighterc {color: $baseColorLighter; }
+	#lightc { color: $baseColorLight; }
+	#basec { color: $baseColor; }
+	#darkc { color: $baseColorDark; }
+	#darkerc { color: $baseColorDarker; }
+}
+

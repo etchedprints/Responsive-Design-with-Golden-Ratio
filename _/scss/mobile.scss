@@ -14,7 +14,12 @@
  	
  	.columns3, .columns4 { width: $base; }		
  
- 	.pcolumns { -moz-column-count: 1; -webkit-column-count: 1; column-count: 1 }
+ 	.span_2columns, .span_3columns, .span_4columns  { 
+ 		-moz-column-count: 1; 
+ 		-webkit-column-count: 1; 
+ 		column-count: 1 
+ 	}
  	
  	h1, h2 { font-size: $gld3 * 100 }
+ 	
 }

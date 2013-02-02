@@ -14,7 +14,6 @@
 /* $end */
 
 /* $group TOP Nav */
-/*.nav,*/
 nav {
 	display: block;
 	clear: both;
@@ -67,12 +66,10 @@ nav {
 		} /*/ li:hover*/
 	} /*/ ul*/
 } /*/ nav*/
-
 /* $end */
 
 
 /* $group 2nd Level Nav */
-/*.nav ul li ul,*/
 nav ul li ul {
 	display:none;													/*initially hide the entire list hierarchy*/
 	width: 12.5em;													/*2nd lvl link on one line*/

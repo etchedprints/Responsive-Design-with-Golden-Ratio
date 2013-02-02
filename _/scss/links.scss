@@ -1,0 +1,11 @@
+a {
+	color: $baseColorDarker;
+	text-decoration: none;
+}
+a:hover { color: $baseColorLight }
+a:active { color: $baseColorDark }
+
+p a {
+	color: $baseColor;
+	text-decoration: underline;
+}
