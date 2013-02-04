@@ -63,7 +63,7 @@ strong {
   hyphens: auto;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  font-family: "Myriad Web Pro", "Helvetica Neue", Helvetica, Lucida, Verdana, sans-serif;
+  font-family: Verdana, sans-serif;
   color: #1f1f1f; }
 
 /* typography size */
@@ -91,12 +91,28 @@ p, h1, h2, h3, h4, h5, h6, li, dt, dd, table, form {
   font-weight: normal; }
 
 p {
-  font-family: "Georgia", Times New Roman, Times, serif;
-  padding: 1.31556% 0; }
+  font-family: "Georgia", serif;
+  /*padding: $gld2 0;*/ }
 
 /* p element */
 h5, h6, em, strong {
   letter-spacing: 0.1em; }
+
+aside h2:first-child {
+  padding-top: 9.01699%;
+  padding-bottom: 3.44419%; }
+
+aside h3:first-child {
+  padding-top: 14.5898%;
+  padding-bottom: 5.57281%; }
+
+aside h4:first-child {
+  padding-top: 23.6068%;
+  padding-bottom: 9.01699%; }
+
+aside p:first-child {
+  padding-top: 23.6068%;
+  padding-bottom: 9.01699%; }
 
 img, embed, object, video, iframe {
   border-style: none;
@@ -151,9 +167,10 @@ body {
   background: #1f1f1f; }
 
 #wrapper {
-  background-color: #fff;
   margin: 2.12862% auto;
-  width: 85.4102%; }
+  width: 85.4102%;
+  /*	background: url(../img/bgline.png) repeat #fff;*/
+  background-color: #fff; }
 
 .full, .large, .xlarge, .med, .small, .xsmall, .columns3, .columns4 {
   float: left;
@@ -211,9 +228,6 @@ body {
   column-count: 4;
   column-gap: 3em; }
 
-aside {
-  margin-top: 3.44419%; }
-
 /* PADDING / HYPHANS / METERING SETTINGS */
 .full, header, footer, .large, .xlarge, .med, .small, .xsmall, .columns3, .columns4 {
   padding: 2.12862% 3.44419%; }
@@ -249,7 +263,7 @@ nav {
     clear: both;
     display: block;
     /*make a full button*/
-    font-family: "Myriad Web Pro", "Helvetica Neue", Helvetica, Lucida, Verdana, sans-serif;
+    font-family: Verdana, sans-serif;
     width: 100%;
     /*we always want our menu to fill the available space*/
     /*no line after last button*/
@@ -355,6 +369,9 @@ table tr:nth-child(even) {
   background-color: #e1e1e1; }
 
 /* $end */
+canvas {
+  -ms-touch-action: double-tap-zoom; }
+
 @media screen and (max-width: 768px) {
   #wrapper {
     margin: 0;

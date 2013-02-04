@@ -20,10 +20,11 @@ body {
 	background: $baseColorDarker; 
 }
 
-#wrapper { 
-	background-color: #fff;
+#wrapper {
 	margin: $gld3 auto;
 	width: $gld10 + $gld8;
+/*	background: url(../img/bgline.png) repeat #fff;*/
+	background-color: #fff;
 }
 
 
@@ -70,15 +71,6 @@ body {
 	-webkit-column-gap: 3em;
 	column-count: 4;
 	column-gap: 3em;	
-}
-
-
-article {
-
-}
-
-aside { 
-	margin-top: $gld4; 
 }
 
 

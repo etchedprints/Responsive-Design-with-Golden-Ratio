@@ -28,7 +28,28 @@ p, h1, h2, h3, h4, h5, h6, li, dt, dd, table, form {
 	
 p { 
 	font-family: $serif; 
-	padding: $gld2 0;
+	/*padding: $gld2 0;*/
 } /* p element */
 
 h5, h6, em, strong { letter-spacing: 0.1em }
+
+
+aside h2:first-child {
+	padding-top: $gld6;
+	padding-bottom: $gld4;
+}
+
+aside h3:first-child {
+	padding-top: $gld7;
+	padding-bottom: $gld5;
+}
+
+aside h4:first-child {
+	padding-top: $gld8;
+	padding-bottom: $gld6;
+}
+aside p:first-child {
+	padding-top: $gld8;
+	padding-bottom: $gld6;
+
+}
