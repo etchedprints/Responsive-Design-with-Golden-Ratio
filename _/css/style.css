@@ -127,7 +127,7 @@ img, embed, object, video, iframe {
   border-style: none;
   width: auto;
   max-width: 100%;
-  padding: 1.31541% 0.81292%; }
+  padding: 3.44391% 0.81292%; }
 
 img.left {
   margin: 0.81292% 3.44391% 0.81292% 0.81292%;
@@ -201,6 +201,7 @@ body {
 /* @group Columns Group */
 .columns2 h1, .columns2 h2, .columns2 h3, .columns3 h1, .columns3 h2, .columns3 h3, .columns4 h1, .columns4 h2, .columns4 h3 {
   -webkit-column-break-before: always;
+  break-before: always;
   column-break-before: always; }
 
 .columns2 {

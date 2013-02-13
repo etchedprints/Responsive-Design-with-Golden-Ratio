@@ -37,7 +37,7 @@ body { background: $baseColorDarker; }
 
 /* @group Columns Group */
 .columns2, .columns3, .columns4  {
-	h1, h2, h3 { -webkit-column-break-before: always; column-break-before: always; }
+	h1, h2, h3 { -webkit-column-break-before: always; break-before: always; column-break-before: always; }
 }
 
 .columns2 { 
