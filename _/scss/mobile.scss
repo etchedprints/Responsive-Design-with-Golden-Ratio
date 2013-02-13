@@ -1,6 +1,5 @@
 canvas { -ms-touch-action: double-tap-zoom; }
 
-
 @media screen and (max-width: 768px) {
 	#wrapper { 
 		margin: 0;
@@ -13,16 +12,14 @@ canvas { -ms-touch-action: double-tap-zoom; }
  		width: $base;
  	}
  	
- 	.xsmall li { float: left; }
- 	
- 	.columns3, .columns4 { width: $base; }		
+ 	.xsmall li { float: left; }	
  
- 	.span_2columns, .span_3columns, .span_4columns  { 
+ 	.columns2, .columns3, .columns4  { 
  		-moz-column-count: 1; 
  		-webkit-column-count: 1; 
  		column-count: 1 
  	}
  	
- 	h1, h2 { font-size: $gld3 * 100 }
+ 	h1, h2 { font-size: $h3; }
  	
 }

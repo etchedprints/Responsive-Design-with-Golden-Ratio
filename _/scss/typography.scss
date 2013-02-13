@@ -12,44 +12,26 @@
 	color: $baseColorDarker;
 }
 
-/* typography size */
-h1 { font-size: $gld5 * 100; }
-h2 { font-size: $gld4 * 100}
-h3 { font-size: $gld3 * 100}
-h4, dt, dd, li, p { font-size: $base }
-h5 { font-size: $gld2 * (100 / 2)}
-h6 { font-size: $gld3 * (100 / 2) }
+h1 { @include goldenH1; }
+h2 { @include goldenH2; }
+h3 { @include goldenH3; }
+h4 { @include goldenH4; }
+h5 { @include goldenH5; }
+h6 { @include goldenH6; }
 
-/* typography metrics & leading */
-p, h1, h2, h3, h4, h5, h6, li, dt, dd, table, form { 
-	line-height: $base / $golden;
+p, li, dt, dd, table, form { 
+	line-height: $lineHeight;
 	font-weight: normal;
-	}
-	
+	font-size: $h4;
+}
+
 p { 
 	font-family: $serif; 
-	/*padding: $gld2 0;*/
-} /* p element */
-
-h5, h6, em, strong { letter-spacing: 0.1em }
-
-
-aside h2:first-child {
-	padding-top: $gld6;
-	padding-bottom: $gld4;
+	padding-bottom: ($lineHeight / 50);
 }
 
-aside h3:first-child {
-	padding-top: $gld7;
-	padding-bottom: $gld5;
+.full, .large, .xlarge {
+ 	p{ text-align: justify; }
 }
 
-aside h4:first-child {
-	padding-top: $gld8;
-	padding-bottom: $gld6;
-}
-aside p:first-child {
-	padding-top: $gld8;
-	padding-bottom: $gld6;
-
-}
+h5, h6, em, strong { letter-spacing: 1px }

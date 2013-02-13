@@ -16,23 +16,17 @@ section, .clearfix, .group, header, footer, .full, hr {
 }
 /* @end */
 
-body { 
-	background: $baseColorDarker; 
-}
+body { background: $baseColorDarker; }
 
 #wrapper {
-	margin: $gld3 auto;
+	margin: $gld2 auto;
 	width: $gld10 + $gld8;
 /*	background: url(../img/bgline.png) repeat #fff;*/
 	background-color: #fff;
 }
 
 
-.full, .large, .xlarge, .med, .small, .xsmall, .columns3, .columns4 {
-	float: left;
-	overflow: hidden;
-	max-width: $base;
-}
+.full, .large, .xlarge, .med, .small, .xsmall, .columns3, .columns4 { float: left; }
 
 .full		{ width: $base }
 .large		{ width: $gld10 }
@@ -41,48 +35,45 @@ body {
 .small		{ width: $gld8 }	
 .xsmall		{ width: $gld7 }
 
-.old_columns2 { width: 50%; }
-.old_columns3	{ width: 33% }
-.old_columns4	{ width: 25%; }
+/* @group Columns Group */
+.columns2, .columns3, .columns4  {
+	h1, h2, h3 { -webkit-column-break-before: always; column-break-before: always; }
+}
 
-.span_2columns { 
+.columns2 { 
 	-moz-column-count: 2;
 	-moz-column-gap: 3em;
 	-webkit-column-count: 2;
 	-webkit-column-gap: 3em;
 	column-count: 2;
-	column-gap: 3em;	
+	column-gap: 3em;
 }
 
-.span_3columns 	{ 
+.columns3 	{ 
 	-moz-column-count: 3;
 	-moz-column-gap: 3em;
 	-webkit-column-count: 3;
 	-webkit-column-gap: 3em;
 	column-count: 3;
-	column-gap: 3em;	
+	column-gap: 3em;
+	p { text-align: left; }
 }
 
 
-.span_4columns 	{ 
+.columns4 	{ 
 	-moz-column-count: 4;
 	-moz-column-gap: 3em;
 	-webkit-column-count: 4;
 	-webkit-column-gap: 3em;
 	column-count: 4;
-	column-gap: 3em;	
+	column-gap: 3em;
+	p { text-align: left; }
 }
+/* @end */
 
 
-/* PADDING / HYPHANS / METERING SETTINGS */
-.full, header, footer, .large, .xlarge, .med, .small, .xsmall, .columns3, .columns4 { padding:  $gld3 $gld4; } 
-
+/* PADDING / METERING SETTINGS */
+.full, header, footer, .large, .xlarge, .med, .small, .xsmall, .columns3, .columns4 { padding:  $gld2 $gld4; } 
 
 /* no list style for ul or ol */
 .unstyle { list-style: none }
-.row li {
-		display: inline-block;
-		padding: $gld1 $gld2;
-		&:first-child { padding-left: 0 }
-}
-

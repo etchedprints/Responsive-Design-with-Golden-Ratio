@@ -2,11 +2,7 @@ img, embed, object, video, iframe {
 	border-style: none;
 	width: auto;
 	max-width: $base; 
-	padding: $gld4 0; 
-	display: inline-block;
-	position: static;
-	clear: both;
-	float: none;
+	padding: $gld2 $gld1;
 }
 
 img.left {

@@ -1,26 +1,76 @@
 /* $group Styles */
 	$sans:	Verdana, sans-serif;
-	$serif: "Georgia", serif;				
-/* Golden Ratio 0.61803398874989 */
-	$golden:	0.6180339887498948482045868343656;
+	$serif: "Georgia", serif;			
+/* Golden Ratio 1.618 */
+	$golden:	1.618;
 	
 	$base: 		100%;						
-	$gld10:		$base * $golden;			
+	$gld10:		$base / $golden;			
 	$gld9:		$base - $gld10;
-	$gld8:		$gld9 * $golden;
+	$gld8:		$gld9 / $golden;
 	$gld7:		$gld9 - $gld8;
-	$gld6:		$gld7 * $golden;
+	$gld6:		$gld7 / $golden;
 	$gld5:		$gld7 - $gld6;
-	$gld4:		$gld5 * $golden;
+	$gld4:		$gld5 / $golden;
 	$gld3:		$gld5 - $gld4;
-	$gld2:		$gld3 * $golden;			
+	$gld2:		$gld3 / $golden;			
 	$gld1:		$gld3 - $gld2;				
 /* -----------------------------  */
 /* Color Scheme */
 	$baseColor: 			gray; 	/* Base Color for Design */
-
 	$baseColorLighter:		lighten($baseColor, $gld9);
 	$baseColorLight:		lighten($baseColor, $gld7);
-
 	$baseColorDark:			darken($baseColor, $gld7);
 	$baseColorDarker:		darken($baseColor, $gld9);
+	
+/* -----------------------------  */	
+/* Typography size */
+	$h1: $gld5 * 100;
+	$h2: $gld4 * 100;
+	$h3: $gld3 * 100;
+	$h4: $base;
+	$h5: $gld2 * (100 / 2);
+	$h6: $gld1 * (100 / 2);
+	
+/* Typography metrics & leading */
+	$lineHeight: $base * $golden;
+	
+/*-----------------------------*/
+/* Typography Mixins */
+@mixin goldenH1 {
+	font-size: $h1;
+	line-height: ( $lineHeight / ($gld10) )/2;
+	position: relative;
+	top: 0;
+}
+@mixin goldenH2 {
+	font-size: $h2;
+	line-height: ( $lineHeight / ($gld9) )/2;
+	position: relative;
+	top: 1rem;
+}
+@mixin goldenH3 {
+	font-size: $h3;
+	line-height: ( $lineHeight / ($gld8) )/2;
+	position: relative;
+	top: 1.5rem;
+}
+@mixin goldenH4 {
+	font-size: $h4;
+	line-height: ( $lineHeight / ($gld7) )/1.5;
+	position: relative;
+	top: 2rem;
+}
+@mixin goldenH5 {
+	font-size: $h5;
+	line-height: ( $lineHeight / ($gld6) )/1.70;
+	position: relative;
+	top: 2rem;
+}
+@mixin goldenH6 {
+	font-size: $h6;
+	line-height: ( $lineHeight / ($gld5) )/2.2;
+	position: relative;
+	top: 2rem;
+}
+/*-----------------------------*/

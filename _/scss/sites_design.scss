@@ -1,10 +1,9 @@
 #gld_units {
-		margin: $gld1 0;
 		font-family: monospace;
 		letter-spacing: 1px;
 	dd.boxtest {
 		background-color: #444;
-		margin-bottom: $gld1;
+		margin-bottom: $gld2;
 	}
 	
 	#test1 { width: $gld1 }
@@ -25,7 +24,7 @@
 	border-top: 1px solid $baseColor;
 	border-bottom: 1px solid $baseColor;
 	font-size: $gld3 * 100;
-	margin: $gld5;
+	padding: $gld5;
 
 	#lighterc {color: $baseColorLighter; }
 	#lightc { color: $baseColorLight; }
@@ -33,4 +32,3 @@
 	#darkc { color: $baseColorDark; }
 	#darkerc { color: $baseColorDarker; }
 }
-
