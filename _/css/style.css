@@ -201,7 +201,8 @@ body {
 /* @group Columns Group */
 .columns2 h1, .columns2 h2, .columns2 h3, .columns3 h1, .columns3 h2, .columns3 h3, .columns4 h1, .columns4 h2, .columns4 h3 {
   -webkit-column-break-before: always;
-  break-before: always;
+  break-inside: avoid-column;
+  /*IE10 bug fix*/
   column-break-before: always; }
 
 .columns2 {
@@ -379,15 +380,17 @@ canvas {
     width: 100%; }
 
   .xsmall li {
-    float: left; }
+    display: inline-block; }
 
   .columns2, .columns3, .columns4 {
     -moz-column-count: 1;
     -webkit-column-count: 1;
     column-count: 1; }
 
-  h1, h2 {
-    font-size: 212.83342%; } }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 212.83342%;
+    line-height: 161.8%;
+    position: static; } }
 #gld_units {
   font-family: monospace;
   letter-spacing: 1px; }

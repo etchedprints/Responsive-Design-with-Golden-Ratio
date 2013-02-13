@@ -12,7 +12,7 @@ canvas { -ms-touch-action: double-tap-zoom; }
  		width: $base;
  	}
  	
- 	.xsmall li { float: left; }	
+ 	.xsmall li { display: inline-block; }	
  
  	.columns2, .columns3, .columns4  { 
  		-moz-column-count: 1; 
@@ -20,6 +20,10 @@ canvas { -ms-touch-action: double-tap-zoom; }
  		column-count: 1 
  	}
  	
- 	h1, h2 { font-size: $h3; }
+ 	h1, h2, h3, h4, h5, h6 { 
+ 		font-size: $h3; 
+ 		line-height: $lineHeight;
+ 		position: static;
+ 	}
  	
 }
