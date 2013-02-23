@@ -177,7 +177,7 @@ body {
   /*	background: url(../img/bgline.png) repeat #fff;*/
   background-color: #fff; }
 
-.full, .large, .xlarge, .med, .small, .xsmall, .columns3, .columns4 {
+.full, .large, .xlarge, .med, .small, .xsmall, .columns2, .columns3, .columns4 {
   float: left; }
 
 .full {
@@ -375,7 +375,7 @@ canvas {
     width: 100%;
     padding: 2.12833%; }
 
-  .full, .large, .xlarge, .med, .small, .xsmall, .columns3, .columns4, header, footer {
+  .full, .large, .xlarge, .med, .small, .xsmall, columns2, .columns3, .columns4, header, footer {
     float: none;
     width: 100%; }
 

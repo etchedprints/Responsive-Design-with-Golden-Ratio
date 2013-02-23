@@ -7,7 +7,7 @@ canvas { -ms-touch-action: double-tap-zoom; }
 		padding: $gld3; 
 		}
 
- 	.full, .large, .xlarge, .med, .small, .xsmall, .columns3, .columns4, header, footer {
+ 	.full, .large, .xlarge, .med, .small, .xsmall, columns2, .columns3, .columns4, header, footer {
  		float: none;
  		width: $base;
  	}
