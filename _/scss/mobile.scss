@@ -26,4 +26,7 @@ canvas { -ms-touch-action: double-tap-zoom; }
  		position: static;
  	}
  	
+ 	img.left, img.right {
+ 		float: none;
+ 	}
 }

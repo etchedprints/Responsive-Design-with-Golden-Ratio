@@ -8,11 +8,11 @@ table {
 table caption, table th, table td { 
 	empty-cells: show;
 	padding: $gld3;
-	border-bottom: 1px solid $baseColorDark;
+	border-bottom: 1px solid $baseColorLight;
 	}
 
 table th {
-	background-color: $baseColorDarker;
+	background-color: $baseColorDark;
 	color: white;
 }
 
