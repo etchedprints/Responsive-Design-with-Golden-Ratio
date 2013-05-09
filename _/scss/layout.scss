@@ -40,7 +40,7 @@ body { background: $baseColorDarker; }
 	h1, h2, h3 { 
 		-webkit-column-break-before: always;
 		break-inside: avoid-column; 				/*IE10 bug fix*/
-		column-break-before: always; 
+		column-break-before: always;
 	}
 }
 

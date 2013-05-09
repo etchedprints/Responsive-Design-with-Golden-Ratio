@@ -59,9 +59,6 @@ strong {
 /* -----------------------------  */
 /* Typography size */
 /* Typography metrics & leading */
-/*-----------------------------*/
-/* Typography Mixins */
-/*-----------------------------*/
 *, body {
   word-wrap: break-word;
   -webkit-hyphens: auto;
@@ -72,41 +69,26 @@ strong {
   font-family: Verdana, sans-serif;
   color: #1f1f1f; }
 
+h1, h2, h3, h4, h5, h6 {
+  line-height: 161.8%; }
+
 h1 {
-  font-size: 557.22408%;
-  line-height: 1.30896;
-  position: relative;
-  top: 0; }
+  font-size: 557.22408%; }
 
 h2 {
-  font-size: 344.39065%;
-  line-height: 2.11806;
-  position: relative;
-  top: 1rem; }
+  font-size: 344.39065%; }
 
 h3 {
-  font-size: 212.83342%;
-  line-height: 3.42702;
-  position: relative;
-  top: 1.5rem; }
+  font-size: 212.83342%; }
 
 h4 {
-  font-size: 100%;
-  line-height: 7.39379;
-  position: relative;
-  top: 2rem; }
+  font-size: 100%; }
 
 h5 {
-  font-size: 65.77053%;
-  line-height: 10.55573;
-  position: relative;
-  top: 2rem; }
+  font-size: 65.77053%; }
 
 h6 {
-  font-size: 40.64619%;
-  line-height: 13.19854;
-  position: relative;
-  top: 2rem; }
+  font-size: 40.64619%; }
 
 p, li, dt, dd, table, form {
   line-height: 161.8%;
@@ -123,6 +105,42 @@ p {
 h5, h6, em, strong {
   letter-spacing: 1px; }
 
+/*-----------------------------*/
+/* Typography Mixins */
+/*-----------------------------*/
+/*First Header item, lines up for grid*/
+.full h1:nth-child(1), .large h1:nth-child(1), .xlarge h1:nth-child(1), .med h1:nth-child(1), .small h1:nth-child(1), .xsmall h1:nth-child(1) {
+  line-height: 1.30896;
+  position: relative;
+  top: 0; }
+.full h2:nth-child(1), .large h2:nth-child(1), .xlarge h2:nth-child(1), .med h2:nth-child(1), .small h2:nth-child(1), .xsmall h2:nth-child(1) {
+  line-height: 2.11806;
+  position: relative;
+  top: 1rem; }
+.full h3:nth-child(1), .large h3:nth-child(1), .xlarge h3:nth-child(1), .med h3:nth-child(1), .small h3:nth-child(1), .xsmall h3:nth-child(1) {
+  line-height: 3.42702;
+  position: relative;
+  top: 1.5rem; }
+.full h4:nth-child(1), .large h4:nth-child(1), .xlarge h4:nth-child(1), .med h4:nth-child(1), .small h4:nth-child(1), .xsmall h4:nth-child(1) {
+  line-height: 7.39379;
+  position: relative;
+  top: 2rem; }
+.full h5:nth-child(1), .large h5:nth-child(1), .xlarge h5:nth-child(1), .med h5:nth-child(1), .small h5:nth-child(1), .xsmall h5:nth-child(1) {
+  line-height: 10.55573;
+  position: relative;
+  top: 2rem; }
+.full h6:nth-child(1), .large h6:nth-child(1), .xlarge h6:nth-child(1), .med h6:nth-child(1), .small h6:nth-child(1), .xsmall h6:nth-child(1) {
+  line-height: 13.19854;
+  position: relative;
+  top: 2rem; }
+
+/*-----------------------------*/
+.columns2 h1, .columns2 h2, .columns2 h3, .columns3 h1, .columns3 h2, .columns3 h3, .columns4 h1, .columns4 h2, .columns4 h3 {
+  position: static !important;
+  top: 0 !important;
+  line-height: 161.8% !important; }
+
+/*-----------------------------*/
 img, embed, object, video, iframe {
   border-style: none;
   width: auto;
