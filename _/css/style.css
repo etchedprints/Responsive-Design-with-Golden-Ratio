@@ -1,4 +1,5 @@
 /* style.less */
+/*MODEL*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain) */
@@ -59,6 +60,7 @@ strong {
 /* -----------------------------  */
 /* Typography size */
 /* Typography metrics & leading */
+/*CONTROLLER*/
 *, body {
   word-wrap: break-word;
   -webkit-hyphens: auto;
@@ -97,7 +99,7 @@ p, li, dt, dd, table, form {
 
 p {
   font-family: "Georgia", serif;
-  padding-bottom: 3.236%; }
+  padding-bottom: 1.618%; }
 
 .full p, .large p, .xlarge p {
   text-align: justify; }
@@ -105,42 +107,32 @@ p {
 h5, h6, em, strong {
   letter-spacing: 1px; }
 
-/*-----------------------------*/
-/* Typography Mixins */
+/* @group Header top of line for grid */
 /*-----------------------------*/
 /*First Header item, lines up for grid*/
-.full h1:nth-child(1), .large h1:nth-child(1), .xlarge h1:nth-child(1), .med h1:nth-child(1), .small h1:nth-child(1), .xsmall h1:nth-child(1) {
-  line-height: 1.30896;
-  position: relative;
-  top: 0; }
-.full h2:nth-child(1), .large h2:nth-child(1), .xlarge h2:nth-child(1), .med h2:nth-child(1), .small h2:nth-child(1), .xsmall h2:nth-child(1) {
-  line-height: 2.11806;
-  position: relative;
-  top: 1rem; }
-.full h3:nth-child(1), .large h3:nth-child(1), .xlarge h3:nth-child(1), .med h3:nth-child(1), .small h3:nth-child(1), .xsmall h3:nth-child(1) {
-  line-height: 3.42702;
-  position: relative;
-  top: 1.5rem; }
-.full h4:nth-child(1), .large h4:nth-child(1), .xlarge h4:nth-child(1), .med h4:nth-child(1), .small h4:nth-child(1), .xsmall h4:nth-child(1) {
-  line-height: 7.39379;
-  position: relative;
-  top: 2rem; }
-.full h5:nth-child(1), .large h5:nth-child(1), .xlarge h5:nth-child(1), .med h5:nth-child(1), .small h5:nth-child(1), .xsmall h5:nth-child(1) {
-  line-height: 10.55573;
-  position: relative;
-  top: 2rem; }
-.full h6:nth-child(1), .large h6:nth-child(1), .xlarge h6:nth-child(1), .med h6:nth-child(1), .small h6:nth-child(1), .xsmall h6:nth-child(1) {
-  line-height: 13.19854;
-  position: relative;
-  top: 2rem; }
+.large, .xlarge, .med, .small, .xsmall {
+  /*-----------------------------*/ }
+  .large h1:first-child, .large h2:first-child, .large h3:first-child, .large h4:first-child, .large h5:first-child, .large h6:first-child, .xlarge h1:first-child, .xlarge h2:first-child, .xlarge h3:first-child, .xlarge h4:first-child, .xlarge h5:first-child, .xlarge h6:first-child, .med h1:first-child, .med h2:first-child, .med h3:first-child, .med h4:first-child, .med h5:first-child, .med h6:first-child, .small h1:first-child, .small h2:first-child, .small h3:first-child, .small h4:first-child, .small h5:first-child, .small h6:first-child, .xsmall h1:first-child, .xsmall h2:first-child, .xsmall h3:first-child, .xsmall h4:first-child, .xsmall h5:first-child, .xsmall h6:first-child {
+    position: relative; }
+  .large h4:first-child, .large h5:first-child, .large h6:first-child, .xlarge h4:first-child, .xlarge h5:first-child, .xlarge h6:first-child, .med h4:first-child, .med h5:first-child, .med h6:first-child, .small h4:first-child, .small h5:first-child, .small h6:first-child, .xsmall h4:first-child, .xsmall h5:first-child, .xsmall h6:first-child {
+    top: 2rem; }
+  .large h1:first-child, .xlarge h1:first-child, .med h1:first-child, .small h1:first-child, .xsmall h1:first-child {
+    line-height: 1.30896;
+    top: 0; }
+  .large h2:first-child, .xlarge h2:first-child, .med h2:first-child, .small h2:first-child, .xsmall h2:first-child {
+    line-height: 2.11806;
+    top: 1rem; }
+  .large h3:first-child, .xlarge h3:first-child, .med h3:first-child, .small h3:first-child, .xsmall h3:first-child {
+    line-height: 3.42702;
+    top: 1.5rem; }
+  .large h4:first-child, .xlarge h4:first-child, .med h4:first-child, .small h4:first-child, .xsmall h4:first-child {
+    line-height: 7.15528; }
+  .large h5:first-child, .xlarge h5:first-child, .med h5:first-child, .small h5:first-child, .xsmall h5:first-child {
+    line-height: 10.55573; }
+  .large h6:first-child, .xlarge h6:first-child, .med h6:first-child, .small h6:first-child, .xsmall h6:first-child {
+    line-height: 13.19854; }
 
-/*-----------------------------*/
-.columns2 h1, .columns2 h2, .columns2 h3, .columns3 h1, .columns3 h2, .columns3 h3, .columns4 h1, .columns4 h2, .columns4 h3 {
-  position: static !important;
-  top: 0 !important;
-  line-height: 161.8% !important; }
-
-/*-----------------------------*/
+/* @end */
 img, embed, object, video, iframe {
   border-style: none;
   width: auto;
@@ -157,7 +149,9 @@ img.right {
 
 a {
   color: #1f1f1f;
-  text-decoration: none; }
+  text-decoration: none;
+  position: relative;
+  z-index: 99; }
 
 a:hover {
   color: #a5a5a5; }
@@ -254,7 +248,7 @@ body {
 /* @end */
 /* PADDING / METERING SETTINGS */
 .full, header, footer, .large, .xlarge, .med, .small, .xsmall, .columns3, .columns4 {
-  padding: 1.31541% 3.44391%; }
+  padding: 2.12833% 3.44391%; }
 
 /* no list style for ul or ol */
 .unstyle {
@@ -384,6 +378,7 @@ table tr:nth-child(even) {
   background-color: #e1e1e1; }
 
 /* $end */
+/*VIEW*/
 canvas {
   -ms-touch-action: double-tap-zoom; }
 
@@ -407,7 +402,7 @@ canvas {
 
   h1, h2, h3, h4, h5, h6 {
     font-size: 212.83342%;
-    line-height: 161.8%;
+    line-height: 212.83342%;
     position: static; }
 
   img.left, img.right {
@@ -417,10 +412,6 @@ section {
   -webkit-box-shadow: 0 8px 6px -6px #888888;
   -moz-box-shadow: 0 8px 6px -6px #888888;
   box-shadow: 0 8px 6px -6px #888888; }
-
-#page_title {
-  line-height: 123.60939%;
-  margin-bottom: 5.57224%; }
 
 #gld_units {
   font-family: monospace;

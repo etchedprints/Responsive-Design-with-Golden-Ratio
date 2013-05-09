@@ -22,7 +22,7 @@ canvas { -ms-touch-action: double-tap-zoom; }
  	
  	h1, h2, h3, h4, h5, h6 { 
  		font-size: $h3; 
- 		line-height: $lineHeight;
+ 		line-height: $h3;
  		position: static;
  	}
  	

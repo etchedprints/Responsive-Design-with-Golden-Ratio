@@ -1,0 +1,73 @@
+*, body {
+	word-wrap: break-word;
+	
+	-webkit-hyphens: auto; 
+	-moz-hyphens: auto; 
+	hyphens: auto;
+	
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	
+	font-family: $sans;
+	color: $baseColorDarker;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: $lineHeight;
+}
+
+h1 { font-size: $h1; }
+h2 { font-size: $h2; }
+h3 { font-size: $h3; }
+h4 { font-size: $h4; }
+h5 { font-size: $h5; }
+h6 { font-size: $h6; }
+
+p, li, dt, dd, table, form { 
+	line-height: $lineHeight;
+	font-weight: normal;
+	font-size: $h4;
+}
+
+p { 
+	font-family: $serif; 
+	padding-bottom: ($lineHeight / 100);
+}
+
+.full, .large, .xlarge {
+ 	p{ text-align: justify; }
+}
+
+h5, h6, em, strong { letter-spacing: 1px }
+
+/* @group Header top of line for grid */
+/*-----------------------------*/
+/*First Header item, lines up for grid*/
+.large, .xlarge, .med, .small, .xsmall {
+	h1, h2, h3, h4, h5, h6 {
+		&:first-child { position: relative; }
+	}
+
+	h4, h5, h6 {
+		&:first-child { top: 2rem; }
+	} 
+	
+	/*-----------------------------*/
+	h1:first-child  { 
+		line-height: ( $lineHeight / ($gld10) )/2;
+		top: 0;
+	}
+	h2:first-child { 
+		line-height: ( $lineHeight / ($gld9) )/2;
+		top: 1rem;
+	}
+	h3:first-child  { 
+		line-height: ( $lineHeight / ($gld8) )/2;
+		top: 1.5rem;
+	}
+	h4:first-child { line-height: ( $lineHeight / ($gld7) )/1.55; }
+	h5:first-child { line-height: ( $lineHeight / ($gld6) )/1.7; }
+	h6:first-child { line-height: ( $lineHeight / ($gld5) )/2.2; }
+}
+/* @end */	

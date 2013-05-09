@@ -1,6 +1,8 @@
 a {
 	color: $baseColorDarker;
 	text-decoration: none;
+	position: relative;
+	z-index: 99;
 }
 a:hover { color: $baseColorLight }
 a:active { color: $baseColorDark }

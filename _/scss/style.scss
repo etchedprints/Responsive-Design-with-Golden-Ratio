@@ -1,16 +1,17 @@
 /* style.less */
-@import "reset.scss";
-@import "settings.scss";
+/*MODEL*/
+@import "model/_reset.scss";
+@import "model/_algorithm.scss";
 
-@import "typography.scss";
-@import "img.scss";
-@import "links.scss";
+/*CONTROLLER*/
+@import "controller/_typography.scss";
+@import "controller/_img.scss";
+@import "controller/_links.scss";
+@import "controller/_layout.scss";
+@import "controller/_nav.scss";
+@import "controller/_table.scss";
 
-@import "layout.scss";
 
-@import "nav.scss";
-@import "table.scss";
-
-@import "mobile.scss";
-
-@import "sites_design.scss";
+/*VIEW*/
+@import "view/_mobile.scss";
+@import "view/_sites_design.scss";
