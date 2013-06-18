@@ -14,10 +14,14 @@ canvas { -ms-touch-action: double-tap-zoom; }
  	
  	.xsmall li { display: inline-block; }	
  
- 	.columns2, .columns3, .columns4  { 
+ 	.columns2 { 
  		-moz-column-count: 1; 
  		-webkit-column-count: 1; 
  		column-count: 1 
+ 	}
+ 	
+ 	.columns3 div, .columns4 div  {
+ 		width: $full;
  	}
  	
  	h1, h2, h3, h4, h5, h6 { 
