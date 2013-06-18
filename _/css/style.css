@@ -210,42 +210,6 @@ body {
 .xsmall {
   width: 14.58881%; }
 
-/* @group Columns Group */
-.columns2 h1, .columns2 h2, .columns2 h3, .columns3 h1, .columns3 h2, .columns3 h3, .columns4 h1, .columns4 h2, .columns4 h3 {
-  -webkit-column-break-before: always;
-  break-inside: avoid-column;
-  /*IE10 bug fix*/
-  column-break-before: always; }
-
-.columns2 {
-  -moz-column-count: 2;
-  -moz-column-gap: 3em;
-  -webkit-column-count: 2;
-  -webkit-column-gap: 3em;
-  column-count: 2;
-  column-gap: 3em; }
-
-.columns3 {
-  -moz-column-count: 3;
-  -moz-column-gap: 3em;
-  -webkit-column-count: 3;
-  -webkit-column-gap: 3em;
-  column-count: 3;
-  column-gap: 3em; }
-  .columns3 p {
-    text-align: left; }
-
-.columns4 {
-  -moz-column-count: 4;
-  -moz-column-gap: 3em;
-  -webkit-column-count: 4;
-  -webkit-column-gap: 3em;
-  column-count: 4;
-  column-gap: 3em; }
-  .columns4 p {
-    text-align: left; }
-
-/* @end */
 /* PADDING / METERING SETTINGS */
 .full, header, footer, .large, .xlarge, .med, .small, .xsmall, .columns3, .columns4 {
   padding: 2.12833% 3.44391%; }
@@ -254,6 +218,30 @@ body {
 .unstyle {
   list-style: none; }
 
+/* @group Columns Group */
+.columns2 {
+  -moz-column-count: 2;
+  -moz-column-gap: 3em;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 3em;
+  column-count: 2;
+  column-gap: 3em; }
+
+.columns3, .columns4 {
+  width: 100%; }
+  .columns3 div, .columns4 div {
+    float: left;
+    margin-right: 5.57224%; }
+  .columns3 p, .columns4 p {
+    text-align: left; }
+
+.columns3 div {
+  width: 26.96667%; }
+
+.columns4 div {
+  width: 17.97778%; }
+
+/* @end */
 nav {
   display: block;
   clear: both;

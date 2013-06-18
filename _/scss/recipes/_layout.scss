@@ -28,52 +28,12 @@ body { background: $baseColorDarker; }
 
 .full, .large, .xlarge, .med, .small, .xsmall, .columns2, .columns3, .columns4 { float: left; }
 
-.full		{ width: $base }
+.full		{ width: $full	 }
 .large		{ width: $gld10 }
-.xlarge		{ width: $base - ($gld7 + $gld7) }
+.xlarge		{ width: $full - ($gld7 + $gld7) }
 .med		{ width: $gld9 }
 .small		{ width: $gld8 }	
 .xsmall		{ width: $gld7 }
-
-/* @group Columns Group */
-.columns2, .columns3, .columns4  {
-	h1, h2, h3 { 
-		-webkit-column-break-before: always;
-		break-inside: avoid-column; 				/*IE10 bug fix*/
-		column-break-before: always;
-	}
-}
-
-.columns2 { 
-	-moz-column-count: 2;
-	-moz-column-gap: 3em;
-	-webkit-column-count: 2;
-	-webkit-column-gap: 3em;
-	column-count: 2;
-	column-gap: 3em;
-}
-
-.columns3 	{ 
-	-moz-column-count: 3;
-	-moz-column-gap: 3em;
-	-webkit-column-count: 3;
-	-webkit-column-gap: 3em;
-	column-count: 3;
-	column-gap: 3em;
-	p { text-align: left; }
-}
-
-
-.columns4 	{ 
-	-moz-column-count: 4;
-	-moz-column-gap: 3em;
-	-webkit-column-count: 4;
-	-webkit-column-gap: 3em;
-	column-count: 4;
-	column-gap: 3em;
-	p { text-align: left; }
-}
-/* @end */
 
 
 /* PADDING / METERING SETTINGS */

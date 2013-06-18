@@ -14,7 +14,10 @@
 	$gld4:		$gld5 / $golden;
 	$gld3:		$gld5 - $gld4;
 	$gld2:		$gld3 / $golden;			
-	$gld1:		$gld3 - $gld2;				
+	$gld1:		$gld3 - $gld2;
+	
+	$full:		$base;
+					
 /* -----------------------------  */
 /* Color Scheme */
 	$baseColor: 			gray; 	/* Base Color for Design */

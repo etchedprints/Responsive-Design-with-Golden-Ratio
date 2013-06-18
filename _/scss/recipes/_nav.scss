@@ -26,7 +26,7 @@ nav {
 		clear: both;
 		display: block;												/*make a full button*/
 		font-family: $sans;	
-		width: $base;												/*we always want our menu to fill the available space*/ 
+		width: $full;												/*we always want our menu to fill the available space*/ 
 			
 		li:last-child { border-right: none; }						/*no line after last button*/
 				
