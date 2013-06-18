@@ -1,17 +1,18 @@
 /* style.less */
-/*MODEL*/
-@import "model/_reset.scss";
-@import "model/_algorithm.scss";
 
-/*CONTROLLER*/
-@import "controller/_typography.scss";
-@import "controller/_img.scss";
-@import "controller/_links.scss";
-@import "controller/_layout.scss";
-@import "controller/_nav.scss";
-@import "controller/_table.scss";
+/*Ingredients*/
+@import "ingredients/_reset.scss";
+@import "ingredients/_algorithm.scss";
+
+/*Recipes*/
+@import "recipes/_typography.scss";
+@import "recipes/_img.scss";
+@import "recipes/_links.scss";
+@import "recipes/_layout.scss";
+@import "recipes/_nav.scss";
+@import "recipes/_table.scss";
 
 
 /*VIEW*/
-@import "view/_mobile.scss";
-@import "view/_sites_design.scss";
+@import "views/_mobile.scss";
+@import "views/_specific_sites_design.scss";

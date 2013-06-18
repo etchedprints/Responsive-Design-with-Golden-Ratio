@@ -1,5 +1,5 @@
 /* style.less */
-/*MODEL*/
+/*Ingredients*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain) */
@@ -60,7 +60,7 @@ strong {
 /* -----------------------------  */
 /* Typography size */
 /* Typography metrics & leading */
-/*CONTROLLER*/
+/*Recipes*/
 *, body {
   word-wrap: break-word;
   -webkit-hyphens: auto;
@@ -408,10 +408,10 @@ canvas {
   img.left, img.right {
     float: none; } }
 section {
-  border-bottom: 1px solid #999999;
-  -webkit-box-shadow: 0 8px 6px -6px #888888;
-  -moz-box-shadow: 0 8px 6px -6px #888888;
-  box-shadow: 0 8px 6px -6px #888888; }
+  border-bottom: 1px solid #999;
+  -webkit-box-shadow: 0 8px 6px -6px #888;
+  -moz-box-shadow: 0 8px 6px -6px #888;
+  box-shadow: 0 8px 6px -6px #888; }
 
 #gld_units {
   font-family: monospace;
