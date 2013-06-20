@@ -24,9 +24,15 @@ canvas { -ms-touch-action: double-tap-zoom; }
 		width: $full;
  	}
  	
- 	h1, h2, h3, h4, h5, h6 { 
+ 	h1 {
+ 		font-size: $h2;
+ 		line-height: $h4;
+ 		position: static;
+ 	}
+ 	
+ 	h2, h3, h4, h5, h6 { 
  		font-size: $h3; 
- 		line-height: $h3;
+ 		line-height: $h4 + $gld8;
  		position: static;
  	}
  	

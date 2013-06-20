@@ -87,7 +87,7 @@ nav ul li ul {
 	li:first-child { padding: 0; }									/*No indent for dropdown items*/
 	 
 	li:hover {
-		background: $baseColorDarker;		 						/*darker hover color*/
+		background: $baseColorDark;		 							/*darker hover color*/
 		z-index: 99;												/*at small sizes the menu stays on top*/
 	}
 } /*/ nav ul li ul*/
