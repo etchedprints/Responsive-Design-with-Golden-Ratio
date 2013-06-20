@@ -1,8 +1,6 @@
 section {
-	border-bottom: 1px solid #999;
--webkit-box-shadow: 0 8px 6px -6px #888;
-   -moz-box-shadow: 0 8px 6px -6px #888;
-        box-shadow: 0 8px 6px -6px #888;	
+	border-bottom: 1px solid $baseColor;
+    box-shadow: 0 8px 6px -6px $baseColorLight;	
 }
 
 #gld_units {
