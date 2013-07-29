@@ -1,7 +1,12 @@
 img, embed, object, video, iframe {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	
 	border-style: none;
 	width: auto;
-	max-width: $full; 
+	max-width: $full;
+	height: auto;
+	vertical-align: middle;
 	padding: $gld4 $gld1;
 }
 

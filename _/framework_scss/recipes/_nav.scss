@@ -45,6 +45,7 @@ nav {
 				letter-spacing:	1px;								/*kerning*/
 				word-wrap:break-word;								/*words spacing and new line for words*/
 				text-transform: capitalize;							/*makes home => Home*/
+				z-index: 97;										/*make dropdown stay on top*/
 			} /*/ a*/
 			
 			a:hover, a:active { 
