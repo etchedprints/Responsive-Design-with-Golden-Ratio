@@ -16,16 +16,6 @@ section, .clearfix, .group, header, footer, .full, hr {
 }
 /* @end */
 
-body { background: $baseColorDarker; }
-
-#wrapper {
-	margin: $gld2 auto;
-	width: $gld10 + $gld8;
-/*	background: url(../img/bgline.png) repeat #fff;*/
-	background-color: #fff;
-}
-
-
 .full, .large, .xlarge, .med, .small, .xsmall { float: left; }
 
 .full		{ width: $full	 }

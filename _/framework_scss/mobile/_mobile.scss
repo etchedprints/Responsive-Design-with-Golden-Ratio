@@ -1,11 +1,6 @@
 canvas { -ms-touch-action: double-tap-zoom; }
 
 @media screen and (max-width: 768px) {
-	#wrapper { 
-		margin: 0;
-		width: $base;
-		padding: $gld3; 
-		}
 
  	.full, .large, .xlarge, .med, .small, .xsmall, columns2, .columns3, .columns4, header, footer {
  		float: none;
