@@ -1,96 +1,128 @@
-/*
-//==============================================================================
-//	Based on GRC multi-level script-free pure-CSS menuing system stylesheet.
-//	This code was placed into the public domain by its original author
-//	Steve Gibson. It may be freely used for any purpose whatsoever.
-//	
-//	** using {scss} app **
-//	** ver: 2.9
-//	** Revised by Chad Lindemann for IE7+,Safari,Firefox,& Chrome.
-//===============================================================================
-// Navigation Bar Design Style {scss}
-*/
-
 nav {
-	display: block;
-	clear: both;
 	
 	ul {
-		float: left;
-		position: relative;											/* sets menu under link */
-		margin:0;													/* reset */
-		padding:0;
-		border:0;
-		list-style-type:none;
-		list-style-position: outside;								/*firefox fix for nav bar*/
-		clear: both;
-		display: block;												/*make a full button*/
-		font-family: $sans;	
-		width: $full;												/*we always want our menu to fill the available space*/ 
-			
-		li:last-child { border-right: none; }						/*no line after last button*/
-				
+		list-style: none;
+		
 		li {
 			float: left;
-			position: relative;										/*sets menu under link*/
-			border-right: solid 2px $baseColorLighter;				/*creates line & ridge between each button*/
-			margin:0;												/*reset*/
-			padding:0;												/*reset*/
-	
-			a {														/*unselected top-level menu items */
-				text-decoration:none;								/*NO underline*/	
-				display: inline-block;								/*Style Stuff*/
-				padding: 0.5em 1.25em;								/*spacing of buttons*/
-				color: $baseColorDark;								/*link color*/
-				letter-spacing:	1px;								/*kerning*/
-				word-wrap:break-word;								/*words spacing and new line for words*/
-				text-transform: capitalize;							/*makes home => Home*/
-				z-index: 97;										/*make dropdown stay on top*/
-			} /*/ a*/
-			
-			a:hover, a:active { 
-				background-color: $baseColorDark;					/*IE7-8 - style*/
-				color: $baseColorLighter;							/*color for hover state*/
-				text-decoration:none;
-			} /*/ a:hover	*/	
-		}/* / li*/
-
 		
-		li:hover ul {
-			top:99%;												/*IE7-8 - places dropdown just up underneath the top-level menu*/
-			left:0;													/*IE7-8 - dropdown placement*/
-			display:block;											/*makes the dropdown work*/
-			position:absolute;										/*makes the dropdown work*/
-		} /*/ li:hover*/
-	} /*/ ul*/
-} /*/ nav*/
-/* $end */
+			a {
+				padding: 0.5em 1.25em;
+				display: block;
+				z-index: 98;
+				
+				&:hover, &:active, &:target { 
+					color: $baseColorLighter;
+					background-color: $baseColorDark;
+				}
+			}
+		}
+	}	
+}
 
+
+/* =========================================================== */
+/*2nd lvl*/
+nav ul li:hover ul {
+	display: block;
+	position: absolute;
+}
 
 /* $group 2nd Level Nav */
 nav ul li ul {
-	display:none;													/*initially hide the entire list hierarchy*/
-	width: 12.5em;													/*2nd lvl link on one line*/
-	z-index: 98;													/*at small sizes the menu stays on top*/	
-	
+	z-index: 99;
+	display: none;
+	width: 0;
 	li {
-		width: 100%;												/*2nd lvl link is full width*/
-		border: none;												/*no line & ride for 2nd lvl*/
-		background-color: $baseColorLighter;						/*nav dropdown color*/
-		
-		a { color: $baseColorDark; }
-		a:hover, a:active { 
-			background: none;
-			color: $baseColorLighter;								/*color for hover state*/
-		 }														
-	} /*/li */
-	
-	li:first-child { padding: 0; }									/*No indent for dropdown items*/
-	 
-	li:hover {
-		background: $baseColorDark;		 							/*darker hover color*/
-		z-index: 99;												/*at small sizes the menu stays on top*/
+		background-color: $baseColorLighter;
+		a {
+			width: 15em;
+		}
 	}
-} /*/ nav ul li ul*/
-/* $end */
+}
 
+/* =========================================================== */
+
+
+header nav {
+	position: fixed;											/* place nav at top of window */
+	top: 0;
+	left: 0;
+	z-index: 99;
+	background-color: $baseColorLighter;						/* default color / style of nav */
+	opacity: 0.95;
+	
+	ul {	
+		li {
+			float: none;										/* Vertical Nav */
+			height: 0;											/* hide the drop down content */
+			text-indent: -9999px;							
+			margin-top: -$gld8;	
+
+			ul:before, ul li { display:none } 					/* Hide 2nd lvl nav */
+			
+		} /* /li*/
+		
+		&:before {
+			content: "\2630";									/* Unicode Character TRIGRAM FOR HEAVEN (U+2630) */	
+			font-size: $h3;										/* button size */
+			padding: 0.5em 1em;								/* move button from corner */
+			background-color: $baseColorLighter;
+			
+			vertical-align: middle;
+			display: inline-table;
+			
+		} /* /ul:before */
+		/* =========================================================== */
+		&:hover, &:active, &:link, &:target { 
+			li{
+				height: $full;											/* SHOW the drop down content */
+				text-indent: 0;
+				margin-top: 0;
+				
+				-webkit-transition-property: margin-top, text-indent;	/* CSS3 transition */
+				-moz-transition-property: margin-top, text-indent;
+				transition-property: margin-top, text-indent;
+				
+				-webkit-transition-duration: 0.3s, 0.5s;
+				-moz-transition-duration: 0.3s, 0.5s;
+				transition-duration: 0.3s, 0.5s;
+				
+				-webkit-transition-delay: 0s, -0.2s;
+				-moz-transition-duration: 0s, -0.2s;
+				transition-duration: 0s, -0.2s;
+			
+				a {
+					width: 15em;	
+				}
+			}
+		} /* /hover */
+		
+		&:hover + #mobile_nav{
+			@media (max-device-width : 768px) {					/* magic code for iOS hide buttons */
+				width: $full;
+				z-index: 99;
+			}
+		}
+		
+		
+	/* =========================================================== */
+	} /* /ul */		
+} /* /header nav */
+
+#mobile_nav {												/* magic hide button for iOS to hide drop down content */
+	content: "";
+
+	font-size: $h3;
+	display: block;
+	
+	position: fixed;										/* place the magic hide button */
+	top: 0;
+	right: 0;
+
+	border: none;											/* reset this as a invisible button */
+	background: none;
+	padding: 0;
+	margin: 0;
+	width: 0;				/* no width on device at start */
+}	

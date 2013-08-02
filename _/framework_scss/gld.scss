@@ -9,11 +9,10 @@
 @import "recipes/_img.scss";
 @import "recipes/_links.scss";
 @import "recipes/_layout.scss";
-@import "recipes/_columns.scss";
 @import "recipes/_nav.scss";
 @import "recipes/_table.scss";
 
 
-/*MOBILE*/
-@import "mobile/_mobile.scss";
-@import "mobile/_mobile_nav.scss";
+/* Desktop Recipes*/
+@import "desktop_recipes/_desktop_layout.scss";
+@import "desktop_recipes/_desktop_header_nav.scss";

@@ -1,3 +1,5 @@
+canvas { -ms-touch-action: double-tap-zoom; }
+
 *, body, img, embed, object, video, iframe {
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
@@ -5,7 +7,7 @@
 }
 
 /* @group NINJA MOVE */
-section, .clearfix, .group, header, footer, .full, hr { 
+section, .clearfix, .group, header, footer, .full { 
 	&:after {
 		content: "."; 
 		visibility: hidden; 
@@ -16,18 +18,10 @@ section, .clearfix, .group, header, footer, .full, hr {
 }
 /* @end */
 
-.full, .large, .xlarge, .med, .small, .xsmall { float: left; }
-
-.full		{ width: $full	 }
-.large		{ width: $gld10 }
-.xlarge		{ width: $full - ($gld7 + $gld7) }
-.med		{ width: $gld9 }
-.small		{ width: $gld8 }	
-.xsmall		{ width: $gld7 }
-
+/* =========================================================== */
 
 /* PADDING / METERING SETTINGS */
-.full, header, footer, .large, .xlarge, .med, .small, .xsmall, .columns3, .columns4 { padding:  $gld3 $gld4; } 
+.full, header, footer, .large, .xlarge, .med, .small, .xsmall, .columns3, .columns4 { padding:  $gld4 $gld6; } 
 
 /* no list style for ul or ol */
 .unstyle { list-style: none }

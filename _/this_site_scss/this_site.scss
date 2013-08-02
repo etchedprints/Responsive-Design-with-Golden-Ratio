@@ -1,7 +1,7 @@
 /*Ingredients*/
 @import "../framework_scss/ingredients/_algorithm.scss";
 
-section {
+section, hr {
 	border-bottom: 1px solid $baseColor;
     box-shadow: 0 8px 6px -6px $baseColorLight;	
 }

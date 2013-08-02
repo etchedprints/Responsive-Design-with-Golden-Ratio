@@ -1,0 +1,40 @@
+@media screen and (min-width: 60em ) {
+	header nav {
+		position: static;											/* place nav at top of window */
+		opacity: 1;
+		
+		ul {	
+			li {
+				float: left;										/* Vertical Nav */
+				height: $full;										/* hide the drop down content */
+				text-indent: 0;							
+				margin-top: 0;	
+				
+				ul:before, ul li { 
+					width: 15em;
+					display: block;	
+				} 													/* Show 2nd lvl nav */
+			} /* /li*/
+			
+			&:before {
+				display: none;
+			} /* /ul:before */
+
+			&:hover, &:active, &:link, &:target { 
+				li a {
+					width: auto;
+				}
+			} /* /hover */
+	
+		} /* /ul */		
+	} /* /header nav */
+	
+	#mobile_nav {											
+		display: none;
+	}	
+	header nav ul li ul:before {
+		display: none; /* hide the 3 line button*/
+	}
+	
+	
+}
