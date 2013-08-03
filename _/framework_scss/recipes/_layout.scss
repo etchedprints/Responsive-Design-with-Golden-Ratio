@@ -1,5 +1,9 @@
 canvas { -ms-touch-action: double-tap-zoom; }
 
+body {
+	margin-top: $gld7;
+}
+
 *, body, img, embed, object, video, iframe {
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
