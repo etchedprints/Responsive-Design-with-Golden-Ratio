@@ -25,7 +25,10 @@ section, .clearfix, .group, header, footer, .full {
 /* =========================================================== */
 
 /* PADDING / METERING SETTINGS */
-.full, header, footer, .large, .xlarge, .med, .small, .xsmall, .columns3, .columns4 { padding:  $gld4 $gld6; } 
+/*.full, header, footer, .large, .xlarge, .med, .small, .xsmall, .columns3, .columns4 { padding:  $gld4 $gld6; } */
+
+header, footer, article, aside, .columns3, .columns4 { padding:  $gld4; } 
+
 
 /* no list style for ul or ol */
 .unstyle { list-style: none }
