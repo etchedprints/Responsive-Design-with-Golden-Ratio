@@ -11,7 +11,7 @@ nav {
 				display: block;
 				z-index: 98;
 				
-				&:hover, &:active, &:target { 
+				&:hover { 
 					color: $baseColorLighter;
 					background-color: $baseColorDark;
 				}
@@ -42,8 +42,6 @@ nav ul li ul {
 }
 
 /* =========================================================== */
-
-
 header nav {
 	position: fixed;											/* place nav at top of window */
 	top: 0;
@@ -55,28 +53,30 @@ header nav {
 	ul {	
 		li {
 			float: none;										/* Vertical Nav */
-			height: 0;											/* hide the drop down content */
 			text-indent: -9999px;							
-			margin-top: -$gld8;	
-
+			margin-top: -4em;	
+			
 			ul:before, ul li { display:none } 					/* Hide 2nd lvl nav */
 			
 		} /* /li*/
 		
 		&:before {
-			content: "\2630";									/* Unicode Character TRIGRAM FOR HEAVEN (U+2630) */	
-			font-size: $h3;										/* button size */
-			padding: 0.5em 1em;								/* move button from corner */
-			background-color: $baseColorLighter;
+			font-family: menuicon;
+			content: "=";										/* Unicode Character TRIGRAM FOR HEAVEN (U+2630) */	
+			font-size: $h2;										/* button size */
 			
-			vertical-align: middle;
+			padding: 0.25em 0.5em 0;								/* move button from corner */
+			
 			display: inline-table;
+			vertical-align: middle;
 			
+			background-color: $baseColorLighter;
 		} /* /ul:before */
 		/* =========================================================== */
-		&:hover, &:active, &:link, &:target { 
+			
+		&:hover { 
 			li{
-				height: $full;											/* SHOW the drop down content */
+				
 				text-indent: 0;
 				margin-top: 0;
 				
@@ -84,20 +84,21 @@ header nav {
 				-moz-transition-property: margin-top, text-indent;
 				transition-property: margin-top, text-indent;
 				
-				-webkit-transition-duration: 0.3s, 0.5s;
-				-moz-transition-duration: 0.3s, 0.5s;
-				transition-duration: 0.3s, 0.5s;
+				-webkit-transition-duration: 0.3s, 0.3s;
+				-moz-transition-duration: 0.3s, 0.3s;
+				transition-duration: 0.3s, 0.3s;
 				
-				-webkit-transition-delay: 0s, -0.2s;
-				-moz-transition-duration: 0s, -0.2s;
-				transition-duration: 0s, -0.2s;
+				-webkit-transition-delay: 0s, 0.06s;
+				-moz-transition-duration: 0s, 0.06s;
+				transition-duration: 0s, 0.06s;			
 			
 				a {
 					width: 15em;	
 				}
 			}
 		} /* /hover */
-		
+			
+
 		&:hover + #mobile_nav{
 			@media (max-device-width : 768px) {					/* magic code for iOS hide buttons */
 				width: $full;
@@ -108,21 +109,16 @@ header nav {
 		
 	/* =========================================================== */
 	} /* /ul */		
+	
+	
 } /* /header nav */
 
-#mobile_nav {												/* magic hide button for iOS to hide drop down content */
-	content: "";
 
-	font-size: $h3;
-	display: block;
-	
+#mobile_nav {												/* magic hide button for iOS to hide drop down content */
+	font-size: $h2;
 	position: fixed;										/* place the magic hide button */
 	top: 0;
 	right: 0;
-
-	border: none;											/* reset this as a invisible button */
+	border: none;											/* reset this as a invisible button  */
 	background: none;
-	padding: 0;
-	margin: 0;
-	width: 0;				/* no width on device at start */
 }	
