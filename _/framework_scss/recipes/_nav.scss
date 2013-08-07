@@ -37,6 +37,7 @@ nav ul li ul {
 		background-color: $baseColorLighter;
 		a {
 			width: 15em;
+			z-index: 200;
 		}
 	}
 }
@@ -50,7 +51,8 @@ header nav {
 	background-color: $baseColorLighter;						/* default color / style of nav */
 	opacity: 0.95;
 	
-	ul {	
+	ul {
+		display: block;	
 		li {
 			float: none;										/* Vertical Nav */
 			text-indent: -9999px;							
@@ -70,7 +72,7 @@ header nav {
 			/*image based icon*/
 				content: "";
 				background-image: url(fonts/menu_icon.gif);
-				background-size: 60%;
+				background-size: 34px;
 				background-repeat: no-repeat;
 				background-position: center center;
 				height: 64px;
@@ -81,6 +83,10 @@ header nav {
 			display: inline-table;
 			padding: 0.25em 0.5em;								/* move button from corner */
 			background-color: $baseColorLighter;
+			overflow: hidden;
+			white-space: nowrap;
+			text-indent: 100%;
+			
 		} /* /ul:before */
 		/* =========================================================== */
 			
@@ -104,7 +110,9 @@ header nav {
 			
 				a {
 					width: 15em;
-					height: 2.75em;	
+					@media (max-width : 767px) {	
+						height: 2.75em;
+					}	
 				}
 			}
 		} /* /hover */
@@ -132,4 +140,5 @@ header nav {
 	right: 0;
 	border: none;											/* reset this as a invisible button  */
 	background: none;
+	box-shadow: none;
 }	
