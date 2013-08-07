@@ -61,26 +61,25 @@ header nav {
 		} /* /li*/
 		
 		&:before {
-			/*font-family: menuicon;
-			content: "=";										/* Unicode Character TRIGRAM FOR HEAVEN (U+2630) *!/	*/
+		/*	font-size: $h2;										/* button size *!/
+			font-family: menuicon;
+			content: "=";										/* Unicode Character TRIGRAM FOR HEAVEN (U+2630) *!/	
+			display: inline-table;
+			vertical-align: middle;*/
 			
 			/*image based icon*/
 				content: "";
 				background-image: url(fonts/menu_icon.gif);
-				background-size: 40%;
+				background-size: 60%;
 				background-repeat: no-repeat;
 				background-position: center center;
-				height: 35px;
-				width: 35px;
+				height: 64px;
+				width: 64px;
 			/* ============= */
 			
-			font-size: $h2;										/* button size */
-			
-			padding: 0.25em 0.5em 0;								/* move button from corner */
 			
 			display: inline-table;
-			vertical-align: middle;
-			
+			padding: 0.25em 0.5em;								/* move button from corner */
 			background-color: $baseColorLighter;
 		} /* /ul:before */
 		/* =========================================================== */
@@ -104,7 +103,8 @@ header nav {
 				transition-duration: 0s, 0.06s;			
 			
 				a {
-					width: 15em;	
+					width: 15em;
+					height: 2.75em;	
 				}
 			}
 		} /* /hover */
