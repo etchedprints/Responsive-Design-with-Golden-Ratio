@@ -61,8 +61,19 @@ header nav {
 		} /* /li*/
 		
 		&:before {
-			font-family: menuicon;
-			content: "=";										/* Unicode Character TRIGRAM FOR HEAVEN (U+2630) */	
+			/*font-family: menuicon;
+			content: "=";										/* Unicode Character TRIGRAM FOR HEAVEN (U+2630) *!/	*/
+			
+			/*image based icon*/
+				content: "";
+				background-image: url(fonts/menu_icon.gif);
+				background-size: 40%;
+				background-repeat: no-repeat;
+				background-position: center center;
+				height: 35px;
+				width: 35px;
+			/* ============= */
+			
 			font-size: $h2;										/* button size */
 			
 			padding: 0.25em 0.5em 0;								/* move button from corner */

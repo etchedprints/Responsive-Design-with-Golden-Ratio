@@ -33,15 +33,15 @@
 /* =========================================================== */
 	
 	/*Images*/
-	img.left {
+	img.left, .alignleft {
 		margin: $gld1 $gld4 $gld1 $gld1;
 		float: left;
 	}
-	img.right {
+	img.right, .alignright {
 		margin: $gld1 $gld2 $gld1 $gld5; 
 		float: right;
 	}
-	
+
 /* =========================================================== */
 	
 	
