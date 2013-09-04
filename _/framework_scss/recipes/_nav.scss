@@ -1,3 +1,19 @@
+$headerNavIcon:	url(menu_icon.gif);
+/* =========================================================== */
+@mixin navTransition {
+	-webkit-transition-property: margin-top, text-indent;	/* CSS3 transition */
+	-moz-transition-property: margin-top, text-indent;
+	transition-property: margin-top, text-indent;
+	
+	-webkit-transition-duration: 0.3s, 0.3s;
+	-moz-transition-duration: 0.3s, 0.3s;
+	transition-duration: 0.3s, 0.3s;
+	
+	-webkit-transition-delay: 0s, 0.06s;
+	-moz-transition-duration: 0s, 0.06s;
+	transition-duration: 0s, 0.06s;	
+}
+/* =========================================================== */
 nav {
 	
 	ul {
@@ -42,7 +58,10 @@ nav ul li ul {
 	}
 }
 
-/* =========================================================== */
+
+/* ================================================================= */
+/*				Header Nav Bar				 						*/
+/* =============================================================== */
 header nav {
 	position: fixed;											/* place nav at top of window */
 	top: 0;
@@ -63,15 +82,9 @@ header nav {
 		} /* /li*/
 		
 		&:before {
-		/*	font-size: $h2;										/* button size *!/
-			font-family: menuicon;
-			content: "=";										/* Unicode Character TRIGRAM FOR HEAVEN (U+2630) *!/	
-			display: inline-table;
-			vertical-align: middle;*/
-			
 			/*image based icon*/
 				content: "";
-				background-image: url(fonts/menu_icon.gif);
+				background-image: $headerNavIcon;
 				background-size: 34px;
 				background-repeat: no-repeat;
 				background-position: center center;
@@ -88,22 +101,11 @@ header nav {
 			
 		&:hover { 
 			li{
+				@include navTransition;		
 				
 				text-indent: 0;
 				margin-top: 0;
 				
-				-webkit-transition-property: margin-top, text-indent;	/* CSS3 transition */
-				-moz-transition-property: margin-top, text-indent;
-				transition-property: margin-top, text-indent;
-				
-				-webkit-transition-duration: 0.3s, 0.3s;
-				-moz-transition-duration: 0.3s, 0.3s;
-				transition-duration: 0.3s, 0.3s;
-				
-				-webkit-transition-delay: 0s, 0.06s;
-				-moz-transition-duration: 0s, 0.06s;
-				transition-duration: 0s, 0.06s;			
-			
 				a {
 					width: 15em;
 					@media (max-width : 767px) {	
@@ -115,7 +117,7 @@ header nav {
 			
 
 		&:hover + #mobile_nav{
-			@media (max-device-width : 768px) {					/* magic code for iOS hide buttons */
+			@media (max-device-width : $at_desktop) {					/* magic code for iOS hide buttons */
 				width: $full;
 				z-index: 99;
 			}

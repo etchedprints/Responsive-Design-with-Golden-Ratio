@@ -1,8 +1,6 @@
 canvas { -ms-touch-action: double-tap-zoom; }
 
-body {
-	margin-top: $gld6;
-}
+body { margin-top: $gld7; }
 
 *, body, img, embed, object, video, iframe {
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -23,12 +21,10 @@ section, .clearfix, .group, header, footer, .full {
 /* @end */
 
 /* =========================================================== */
-
-/* PADDING / METERING SETTINGS */
-/*.full, header, footer, .large, .xlarge, .med, .small, .xsmall, .columns3, .columns4 { padding:  $gld4 $gld6; } */
-
 header, footer, article, aside, .columns3, .columns4 { padding:  $gld4; } 
 
 
-/* no list style for ul or ol */
-.unstyle { list-style: none }
+/* ================================================================= */
+/*				@breakpoint				 							*/
+/* =============================================================== */
+$at_desktop: 60em;

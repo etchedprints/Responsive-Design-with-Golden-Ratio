@@ -13,7 +13,6 @@
 @import "recipes/_nav.scss";
 @import "recipes/_table.scss";
 
-
-/* Desktop Recipes*/
-@import "desktop_recipes/_desktop_layout.scss";
-@import "desktop_recipes/_desktop_header_nav.scss";
+/* Desktop Breakpoint Recipes*/
+@import "recipes/desktop_breakpoint/_desktop_layout.scss";
+@import "recipes/desktop_breakpoint/_desktop_header_nav.scss";

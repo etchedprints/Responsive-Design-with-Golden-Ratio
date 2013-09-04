@@ -1,4 +1,4 @@
-@media screen and (min-width: 60em ) {
+@media screen and (min-width: $at_desktop ) {
 	header nav {
 		position: static;											/* place nav at top of window */
 		opacity: 1;

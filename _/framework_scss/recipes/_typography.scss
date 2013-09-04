@@ -1,6 +1,5 @@
 *, body {
 	word-wrap: break-word;
-	
 	-webkit-hyphens: auto; 
 	-moz-hyphens: auto; 
 	hyphens: auto;
@@ -10,7 +9,6 @@
 	
 	font-family: $sans;
 	color: $baseColorDarker;
-	
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -39,6 +37,9 @@ p {
 }
 
 h5, h6, em, strong { letter-spacing: 1px }
+
+/* no list style for ul or ol */
+.unstyle { list-style: none }
 
 /*-----------------------------*/
 
