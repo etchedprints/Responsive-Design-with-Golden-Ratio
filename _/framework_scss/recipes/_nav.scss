@@ -33,7 +33,6 @@ nav {
 			a {
 				padding: 0.5em 1.25em;
 				display: block;
-				z-index: 97;
 				
 				&:hover { 
 					color: white;
@@ -48,7 +47,7 @@ nav {
 /* =============================================================== */
 nav ul li {
 	&:hover ul {
-		z-index: 98;
+		z-index: 99;
 		display: block;
 		position: absolute;
 	}
@@ -68,7 +67,6 @@ nav ul li:hover ul li {
 	ul { display: none; }
 		
 	&:hover ul {
-		z-index: 99;
 		display: block;
 		position: absolute;
 		margin-top: -2.5em;
