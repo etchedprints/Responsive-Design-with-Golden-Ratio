@@ -1,6 +1,15 @@
+/* ================================================================= */
+/*				headerNav Icon Image				 				*/
+/* =============================================================== */
 $headerNavIcon:	url(menu_icon.gif);
-/* =========================================================== */
+
+/* ================================================================= */
+/*				Mixin Transition								 	*/
+/* =============================================================== */
 @mixin navTransition {
+	text-indent: 0;
+	margin-top: 0;
+
 	-webkit-transition-property: margin-top, text-indent;	/* CSS3 transition */
 	-moz-transition-property: margin-top, text-indent;
 	transition-property: margin-top, text-indent;
@@ -13,130 +22,108 @@ $headerNavIcon:	url(menu_icon.gif);
 	-moz-transition-duration: 0s, 0.06s;
 	transition-duration: 0s, 0.06s;	
 }
-/* =========================================================== */
+/* ================================================================= */
+/*				1st lvl menu				 						*/
+/* =============================================================== */
 nav {
-	
 	ul {
-		list-style: none;
-		
+		list-style: none;	
 		li {
 			float: left;
-		
 			a {
 				padding: 0.5em 1.25em;
 				display: block;
-				z-index: 98;
+				z-index: 97;
 				
 				&:hover { 
-					color: $baseColorLighter;
+					color: white;
 					background-color: $baseColorDark;
 				}
 			}
 		}
 	}	
 }
-
-
-/* =========================================================== */
-/*2nd lvl*/
-nav ul li:hover ul {
-	display: block;
-	position: absolute;
-}
-
-/* $group 2nd Level Nav */
-nav ul li ul {
-	z-index: 99;
-	display: none;
-	width: 0;
-	li {
-		background-color: $baseColorLighter;
-		a {
-			width: 15em;
-			z-index: 200;
+/* ================================================================= */
+/*				2rd lvl menu				 						*/
+/* =============================================================== */
+nav ul li {
+	&:hover ul {
+		z-index: 98;
+		display: block;
+		position: absolute;
+	}
+	ul {
+		display: none;
+		width: 0;
+		li a { 
+			min-width: 12em;
+			background-color: $baseColorLighter;
 		}
 	}
 }
-
-
+/* ================================================================= */
+/*				3rd lvl menu				 						*/
+/* =============================================================== */
+nav ul li:hover ul li {
+	ul { display: none; }
+		
+	&:hover ul {
+		z-index: 99;
+		display: block;
+		position: absolute;
+		margin-top: -2.5em;
+		left: 5em;
+	} 
+}	
 /* ================================================================= */
 /*				Header Nav Bar				 						*/
 /* =============================================================== */
 header nav {
-	position: fixed;											/* place nav at top of window */
+	position: fixed;							/* place nav at top of window */
 	top: 0;
 	left: 0;
 	z-index: 99;
-	background-color: $baseColorLighter;						/* default color / style of nav */
-	opacity: 0.95;
+	background-color: $baseColorLighter;		/* default color / style of nav */
 	
 	ul {
-		display: block;	
 		li {
-			float: none;										/* Vertical Nav */
+			float: none;						/* Vertical Nav */
 			text-indent: -9999px;							
 			margin-top: -4em;	
 			
-			ul:before, ul li { display:none } 					/* Hide 2nd lvl nav */
+			ul:before {
+				display:none;
+			}
+			
+			/* 2nd lvl nav */
+			ul li a{
+				position: relative;
+				left: 5em;
+				top: -2.5em; 
+				background-color: $baseColorLight;
+			} 					
 			
 		} /* /li*/
 		
 		&:before {
-			/*image based icon*/
-				content: "";
-				background-image: $headerNavIcon;
-				background-size: 34px;
-				background-repeat: no-repeat;
-				background-position: center center;
-				height: 64px;
-				width: 64px;
-			/* ============= */
-			
-			
+			content: "";
+			background-image: $headerNavIcon;
+			background-size: 34px;
+			background-repeat: no-repeat;
+			background-position: center center;
+			height: 64px;
+			width: 64px;		
 			display: inline-table;
-			padding: 0.25em 0.5em;								/* move button from corner */
+			padding: 0.25em 0.5em;				/* move button from corner */
 			background-color: $baseColorLighter;		
 		} /* /ul:before */
+		/* ================================================================= */
+		/*				Header Transition				 					*/
+		/* =============================================================== */
+		&:hover li{
+			@include navTransition;	
+		} 
 		/* =========================================================== */
-			
-		&:hover { 
-			li{
-				@include navTransition;		
-				
-				text-indent: 0;
-				margin-top: 0;
-				
-				a {
-					width: 15em;
-					@media (max-width : 767px) {	
-						height: 2.75em;
-					}	
-				}
-			}
-		} /* /hover */
-			
-
-		&:hover + #mobile_nav{
-			@media (max-device-width : $at_desktop) {					/* magic code for iOS hide buttons */
-				width: $full;
-				z-index: 99;
-			}
-		}
-		
-		
-	/* =========================================================== */
 	} /* /ul */		
 	
-	
 } /* /header nav */
-
-
-#mobile_nav {												/* magic hide button for iOS to hide drop down content */
-	font-size: $h2;
-	position: fixed;										/* place the magic hide button */
-	top: 0;
-	right: 0;
-	border: none;											/* reset this as a invisible button  */
-	background: none;
-	box-shadow: none;
-}	

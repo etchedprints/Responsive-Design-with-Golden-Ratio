@@ -1,12 +1,15 @@
-*, body {
-	word-wrap: break-word;
+@mixin hyphens {
 	-webkit-hyphens: auto; 
 	-moz-hyphens: auto; 
 	hyphens: auto;
-	
+}
+/* =========================================================== */
+/* =========================================================== */
+*, body {
+	@include hyphens;
+	word-wrap: break-word;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
-	
 	font-family: $sans;
 	color: $baseColorDarker;
 }
