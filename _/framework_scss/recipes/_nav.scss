@@ -4,38 +4,13 @@
 $headerNavIcon:	url(menu_icon.gif);
 
 /* ================================================================= */
-/*				Mixin Transition								 	*/
-/* =============================================================== */
-@mixin navTransition {
-	text-indent: 0;
-	margin-top: 0;
-	white-space: normal;
-	
-
-/*	-webkit-transition-property: margin-top, text-indent;	/* CSS3 transition *!/
-	-moz-transition-property: margin-top, text-indent;
-	transition-property: margin-top, text-indent;
-	
-	-webkit-transition-duration: 0.3s, 0.3s;
-	-moz-transition-duration: 0.3s, 0.3s;
-	transition-duration: 0.3s, 0.3s;
-	
-	-webkit-transition-delay: 0s, 0.06s;
-	-moz-transition-duration: 0s, 0.06s;
-	transition-duration: 0s, 0.06s;	*/
-}
-/* ================================================================= */
 /*				1st lvl menu				 						*/
 /* =============================================================== */
 nav {
-	position: relative;
 	z-index: 99;
-	
 	ul {
 		list-style: none;	
 		li {
-			float: left;
-			position: relative;
 			a {
 				padding: 0.5em 1.25em;
 				text-decoration: none;
@@ -95,6 +70,8 @@ header nav {
 	ul {
 		li {
 			float: none;						/* Vertical Nav */
+			
+			/*hide the nav bar*/
 			text-indent: -9999px;							
 			margin-top: -50px;
 			white-space: nowrap;
@@ -113,8 +90,14 @@ header nav {
 			
 		} /* /li*/
 		
+		/*show the nav bar*/
+		&:hover li{
+			text-indent: 0;
+			margin-top: 0;
+			white-space: normal;	
+		} 
+		
 		&:before {
-			z-index: 99;
 			content: "\0020";
 			background-image: $headerNavIcon;
 			background-size: 34px;
@@ -126,13 +109,7 @@ header nav {
 			padding: 0.25em 0.5em;				/* move button from corner */
 			background-color: $baseColorLighter;		
 		} /* /ul:before */
-		/* ================================================================= */
-		/*				Header Transition				 					*/
-		/* =============================================================== */
-		&:hover li{
-			@include navTransition;	
-		} 
-		/* =========================================================== */
+
 	} /* /ul */		
 	
 } /* /header nav */
