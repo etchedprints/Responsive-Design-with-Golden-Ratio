@@ -9,8 +9,10 @@ $headerNavIcon:	url(menu_icon.gif);
 @mixin navTransition {
 	text-indent: 0;
 	margin-top: 0;
+	white-space: normal;
+	
 
-	-webkit-transition-property: margin-top, text-indent;	/* CSS3 transition */
+/*	-webkit-transition-property: margin-top, text-indent;	/* CSS3 transition *!/
 	-moz-transition-property: margin-top, text-indent;
 	transition-property: margin-top, text-indent;
 	
@@ -20,19 +22,25 @@ $headerNavIcon:	url(menu_icon.gif);
 	
 	-webkit-transition-delay: 0s, 0.06s;
 	-moz-transition-duration: 0s, 0.06s;
-	transition-duration: 0s, 0.06s;	
+	transition-duration: 0s, 0.06s;	*/
 }
 /* ================================================================= */
 /*				1st lvl menu				 						*/
 /* =============================================================== */
 nav {
+	position: relative;
+	z-index: 99;
+	
 	ul {
 		list-style: none;	
 		li {
 			float: left;
+			position: relative;
 			a {
 				padding: 0.5em 1.25em;
+				text-decoration: none;
 				display: block;
+				min-height: 2.75em;
 				
 				&:hover { 
 					color: white;
@@ -50,6 +58,7 @@ nav ul li {
 		z-index: 99;
 		display: block;
 		position: absolute;
+		float: none;
 	}
 	ul {
 		display: none;
@@ -80,14 +89,15 @@ header nav {
 	position: fixed;							/* place nav at top of window */
 	top: 0;
 	left: 0;
-	z-index: 99;
 	background-color: $baseColorLighter;		/* default color / style of nav */
+	
 	
 	ul {
 		li {
 			float: none;						/* Vertical Nav */
 			text-indent: -9999px;							
-			margin-top: -4em;	
+			margin-top: -50px;
+			white-space: nowrap;
 			
 			ul:before {
 				display:none;
@@ -104,7 +114,8 @@ header nav {
 		} /* /li*/
 		
 		&:before {
-			content: "";
+			z-index: 99;
+			content: "\0020";
 			background-image: $headerNavIcon;
 			background-size: 34px;
 			background-repeat: no-repeat;
