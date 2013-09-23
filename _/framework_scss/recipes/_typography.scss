@@ -15,13 +15,12 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-size: $h3; 
+	font-size: $h4+$gld9;
 	line-height: $lineHeight;
 }
 
 h1 { 
-	font-size: $h2;
-	line-height: $full;
+	font-size: $h3;
 }
 
 p, li, dt, dd, table, form { 

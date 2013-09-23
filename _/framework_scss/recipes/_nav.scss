@@ -7,7 +7,7 @@ $headerNavIcon:	url(menu_icon.gif);
 /*				1st lvl menu				 						*/
 /* =============================================================== */
 nav {
-	z-index: 99;
+	z-index: 99;	
 	ul {
 		list-style: none;	
 		li {
@@ -65,15 +65,14 @@ header nav {
 	top: 0;
 	left: 0;
 	background-color: $baseColorLighter;		/* default color / style of nav */
-	
-	
+		
 	ul {
 		li {
 			float: none;						/* Vertical Nav */
 			
 			/*hide the nav bar*/
 			text-indent: -9999px;							
-			margin-top: -50px;
+			margin-top: -75%;
 			white-space: nowrap;
 			
 			ul:before {
