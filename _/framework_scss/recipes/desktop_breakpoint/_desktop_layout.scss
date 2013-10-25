@@ -1,4 +1,4 @@
-@mixin columns2 {
+/*@mixin columns2 {
 	-moz-column-count: 2;
 	-moz-column-gap: 3em;
 	
@@ -7,7 +7,7 @@
 	
 	column-count: 2;
 	column-gap: 3em;
-}
+}*/
 /* =========================================================== */
 
 @media screen and (min-width: $at_desktop ) {
@@ -53,11 +53,11 @@
 	
 	
 	/* Columns */
-	.columns2 { 
+/*	.columns2 { 
 		@include columns2;
-	}
+	}*/
 	
-	.columns3, .columns4  {
+	.columns2, .columns3, .columns4  {
 		width: $full;
 		div { 
 			float: left;
@@ -66,6 +66,8 @@
 		p { text-align: left; }
 	}
 	
+
+	.columns2 div { width: $lineHeight / 4; }
 	.columns3 div { width: $lineHeight / 6; }
 	.columns4 div { width: $lineHeight / 9; }	
 	

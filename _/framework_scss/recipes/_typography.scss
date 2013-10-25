@@ -34,10 +34,6 @@ p {
 	padding-bottom: ($lineHeight / 100);
 }
 
-.full, .large, .xlarge {
- 	p { text-align: justify; }
-}
-
 h5, h6, em, strong { letter-spacing: 1px }
 
 /* no list style for ul or ol */
