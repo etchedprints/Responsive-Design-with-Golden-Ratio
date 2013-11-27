@@ -1,20 +1,25 @@
-/* $group Table */
-table { 
-	text-align: left;
-	border: 1px solid $baseColor;
-	width: $full;
-}
+body.tables {
 
-table caption, table th, table td { 
-	empty-cells: show;
-	padding: $gld3;
-	border-bottom: 1px solid $baseColorLight;
+	/* $group Table */
+	table { 
+		text-align: left;
+		border: 1px solid $baseColor;
+		width: $full;
 	}
+	
+	table caption, table th, table td { 
+		empty-cells: show;
+		padding: $gld3;
+		border-bottom: 1px solid $baseColorLight;
+		}
+	
+	table th {
+		background-color: $baseColorDark;
+		color: white;
+	}
+	
+	table tr:nth-child(even) { background-color: $baseColorLighter; }
+	/* $end */
+	
+} /*  |---------------|END of Tables |---------------|  */
 
-table th {
-	background-color: $baseColorDark;
-	color: white;
-}
-
-table tr:nth-child(even) { background-color: $baseColorLighter; }
-/* $end */

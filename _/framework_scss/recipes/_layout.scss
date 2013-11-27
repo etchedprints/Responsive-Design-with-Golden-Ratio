@@ -5,33 +5,32 @@
 }
 /* =========================================================== */
 
-canvas { -ms-touch-action: double-tap-zoom; }
+body.layout {
+	canvas { -ms-touch-action: double-tap-zoom; }
 
-body { margin-top: $gld8; }
-
-*, body, img, embed, object, video, iframe {
-	@include borderBox;	
-}
-
-/* @group NINJA MOVE */
-section, .clearfix, .group, header, footer, .full { 
-	&:before, &:after {
-		content: "\0020";
-		display: block;
-		height: 0;
-		overflow: hidden;
-		visibility: hidden; 
+	*, body, img, embed, object, video, iframe {
+		@include borderBox;	
 	}
 	
-	&:after {
-		clear: both;
+	/* @group NINJA MOVE */
+	section, .clearfix, .group, header, footer, .full { 
+		&:before, &:after {
+			content: "\0020";
+			display: block;
+			height: 0;
+			overflow: hidden;
+			visibility: hidden; 
+		}
+		&:after {
+			clear: both;
+		}
 	}
-}
-/* @end */
+	/* @end */
+	
+	/* =========================================================== */
+	header, footer, article, aside, .columns2, .columns3, .columns4 { padding:  $gld4; } 
 
-/* =========================================================== */
-header, footer, article, aside, .columns2, .columns3, .columns4 { padding:  $gld4; } 
-
+}/*  |---------------|END of Body layout |---------------|  */
 
 /* ================================================================= */
 /*				@breakpoint				 							*/

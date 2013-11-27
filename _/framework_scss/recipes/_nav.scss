@@ -1,114 +1,118 @@
-/* ================================================================= */
-/*				headerNav Icon Image				 				*/
-/* =============================================================== */
-$headerNavIcon:	url(menu_icon.gif);
-
-/* ================================================================= */
-/*				1st lvl menu				 						*/
-/* =============================================================== */
-nav {
-	z-index: 99;	
-	ul {
-		list-style: none;	
-		li {
-			a {
-				padding: 0.5em 1.25em;
-				text-decoration: none;
-				display: block;
-				min-height: 2.75em;
-				
-				&:hover { 
-					color: white;
-					background-color: $baseColorDark;
+body.navbar {
+	
+	/* ================================================================= */
+	/*				headerNav Icon Image				 				*/
+	/* =============================================================== */
+	$headerNavIcon:	url(menu_icon.gif);
+	
+	/* ================================================================= */
+	/*				1st lvl menu				 						*/
+	/* =============================================================== */
+	nav {
+		z-index: 99;	
+		ul {
+			list-style: none;	
+			li {
+				a {
+					padding: 0.5em 1.25em;
+					text-decoration: none;
+					display: block;
+					min-height: 2.75em;
+					
+					&:hover { 
+						color: white;
+						background-color: $baseColorDark;
+					}
 				}
 			}
-		}
-	}	
-}
-/* ================================================================= */
-/*				2rd lvl menu				 						*/
-/* =============================================================== */
-nav ul li {
-	&:hover ul {
-		z-index: 99;
-		display: block;
-		position: absolute;
-		float: none;
+		}	
 	}
-	ul {
-		display: none;
-		width: 0;
-		li a { 
-			min-width: 12em;
-			background-color: $baseColorLighter;
+	/* ================================================================= */
+	/*				2rd lvl menu				 						*/
+	/* =============================================================== */
+	nav ul li {
+		&:hover ul {
+			z-index: 99;
+			display: block;
+			position: absolute;
+			float: none;
 		}
-	}
-}
-/* ================================================================= */
-/*				3rd lvl menu				 						*/
-/* =============================================================== */
-nav ul li:hover ul li {
-	ul { display: none; }
-		
-	&:hover ul {
-		display: block;
-		position: absolute;
-		margin-top: -2.5em;
-		left: 5em;
-	} 
-}	
-/* ================================================================= */
-/*				Header Nav Bar				 						*/
-/* =============================================================== */
-header nav {
-	position: fixed;							/* place nav at top of window */
-	top: 0;
-	left: 0;
-	background-color: $baseColorLighter;		/* default color / style of nav */
-		
-	ul {
-		li {
-			float: none;						/* Vertical Nav */
-			
-			/*hide the nav bar*/
-			text-indent: -9999px;							
-			margin-top: -75%;
-			white-space: nowrap;
-			
-			ul:before {
-				display:none;
+		ul {
+			display: none;
+			width: 0;
+			li a { 
+				min-width: 12em;
+				background-color: $baseColorLighter;
 			}
+		}
+	}
+	/* ================================================================= */
+	/*				3rd lvl menu				 						*/
+	/* =============================================================== */
+	nav ul li:hover ul li {
+		ul { display: none; }
 			
-			/* 2nd lvl nav */
-			ul li a{
-				position: relative;
-				left: 5em;
-				top: -2.5em; 
-				background-color: $baseColorLight;
-			} 					
-			
-		} /* /li*/
-		
-		/*show the nav bar*/
-		&:hover li{
-			text-indent: 0;
-			margin-top: 0;
-			white-space: normal;	
+		&:hover ul {
+			display: block;
+			position: absolute;
+			margin-top: -2.5em;
+			left: 5em;
 		} 
-		
-		&:before {
-			content: "\0020";
-			background-image: $headerNavIcon;
-			background-size: 34px;
-			background-repeat: no-repeat;
-			background-position: center center;
-			height: 64px;
-			width: 64px;		
-			display: inline-table;
-			padding: 0.25em 0.5em;				/* move button from corner */
-			background-color: $baseColorLighter;		
-		} /* /ul:before */
-
-	} /* /ul */		
+	}	
+	/* ================================================================= */
+	/*				Header Nav Bar				 						*/
+	/* =============================================================== */
+	header nav {
+		position: fixed;							/* place nav at top of window */
+		top: 0;
+		left: 0;
+		background-color: $baseColorLighter;		/* default color / style of nav */
+			
+		ul {
+			li {
+				float: none;						/* Vertical Nav */
+				
+				/*hide the nav bar*/
+				text-indent: -9999px;							
+				margin-top: -75%;
+				white-space: nowrap;
+				
+				ul:before {
+					display:none;
+				}
+				
+				/* 2nd lvl nav */
+				ul li a{
+					position: relative;
+					left: 5em;
+					top: -2.5em; 
+					background-color: $baseColorLight;
+				} 					
+				
+			} /* /li*/
+			
+			/*show the nav bar*/
+			&:hover li{
+				text-indent: 0;
+				margin-top: 0;
+				white-space: normal;	
+			} 
+			
+			&:before {
+				content: "\0020";
+				background-image: $headerNavIcon;
+				background-size: 34px;
+				background-repeat: no-repeat;
+				background-position: center center;
+				height: 64px;
+				width: 64px;		
+				display: inline-table;
+				padding: 0.25em 0.5em;				/* move button from corner */
+				background-color: $baseColorLighter;		
+			} /* /ul:before */
 	
-} /* /header nav */
+		} /* /ul */		
+		
+	} /* /header nav */
+		
+} /*  |---------------|END Navbar |---------------|  */

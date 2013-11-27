@@ -1,26 +1,31 @@
 @media screen and (min-width: $at_desktop ) {
-	header nav {
-		position: static;											/* place nav at top of window */		
-		ul {	
-			li {
-				float: left;										/* Vertical Nav */
-				text-indent: 0;							
-				margin-top: 0;	
+
+	body.desktop-nav {
+
+		header nav, footer nav {
+			position: static;											/* place nav at top of window */		
+			ul {	
+				li {
+					float: left;										/* Vertical Nav */
+					text-indent: 0;							
+					margin-top: 0;	
+					
+					ul li a { 											/* Show 2nd lvl nav */
+						background-color: $baseColorLighter;
+						position: static;
+					} /*/ul*/
+																		
+				} /* /li*/
 				
-				ul li a { 											/* Show 2nd lvl nav */
-					background-color: $baseColorLighter;
-					position: static;
-				} /*/ul*/
-																	
-			} /* /li*/
+			/* =========================================================== */
+				&:before {
+					display: none;
+				} /* /ul:before */
+			/* =========================================================== */
 			
-		/* =========================================================== */
-			&:before {
-				display: none;
-			} /* /ul:before */
-		/* =========================================================== */
-		
-		} /* /ul */		
-	} /* /header nav */
+			} /* /ul */		
+		} /* /header nav */
+	
+	} /*  |---------------|END of Desktop Nav |---------------|  */
 	
 } /*/@media desktop*/

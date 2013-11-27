@@ -1,5 +1,14 @@
+/* ================================================================= */
+/*				@breakpoint				 							*/
+/* =============================================================== */
+$at_desktop: 60em;
+
+
+
 /*Ingredients*/
 @import "../framework_scss/ingredients/_algorithm.scss";
+
+body { margin-top: $gld7; }
 
 section, hr {
 	border-bottom: 1px solid $baseColor;
@@ -58,4 +67,11 @@ code {
 	display: inline-block;
 	border: 1px solid $baseColorLight;
 	margin-bottom: $gld4;
+}
+
+@media screen and (min-width: $at_desktop ) {
+	body {
+		margin-top: 0;
+	}
+
 }

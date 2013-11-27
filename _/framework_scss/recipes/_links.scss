@@ -1,13 +1,17 @@
-a {
-	color: $baseColorDarker;
-	text-decoration: none;
-	position: relative;
-	z-index: 95;
-}
-a:hover { color: $baseColorLight }
-a:active { color: $baseColorDark }
+body.links {
 
-p a {
-	color: $baseColor;
-	text-decoration: underline;
-}
+	a {
+		color: $baseColorDarker;
+		text-decoration: none;
+		position: relative;
+		z-index: 95;
+	}
+	a:hover { color: $baseColorLight }
+	a:active { color: $baseColorDark }
+	
+	p a {
+		color: $baseColor;
+		text-decoration: underline;
+	}
+	
+} /*  |---------------|END of Body Links |---------------|  */
