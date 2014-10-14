@@ -44,6 +44,7 @@
 /* =============================================================== */
 			.columns2, .columns3, .columns4  {
 				width: $full;
+				
 				div, .column { 
 					float: left;
 					margin-right: $gld5;
@@ -52,9 +53,9 @@
 			}
 			
 		
-			.columns2 div { width: $lineHeight / 4; }
-			.columns3 div { width: $lineHeight / 6; }
-			.columns4 div { width: $lineHeight / 9; }	
+			.columns2 div { width: ($lineHeight * $base) / 4; }
+			.columns3 div { width: ($lineHeight * $base) / 6; }
+			.columns4 div { width: ($lineHeight * $base) / 9; }	
 		
 	} /*  |---------------|END of Desktop Layout |---------------|  */
 

@@ -13,10 +13,10 @@ body.type {
 	text-rendering: optimizeLegibility;
 	font-family: $sans;
 	color: $baseColorDarker;
+	line-height: $lineHeight;
 	
 	h1, h2, h3, h4, h5, h6 {
 		font-size: $h4+$gld9;
-		line-height: $lineHeight;
 	}
 	
 	h1 { 
@@ -24,7 +24,6 @@ body.type {
 	}
 	
 	p, li, dt, dd, table, form { 
-		line-height: $lineHeight;
 		font-weight: normal;
 		font-size: $h4;
 	}
@@ -47,26 +46,14 @@ body.type {
 			&:first-child { position: relative; }
 		}
 	
-		h4, h5, h6 {
-			&:first-child { top: 2rem; }
-		} 
-		
-		/*-----------------------------*/
-		h1:first-child  { 
-			line-height: ( $lineHeight / ($gld10) )/2;
-			top: 0;
-		}
-		h2:first-child { 
-			line-height: ( $lineHeight / ($gld9) )/2;
-			top: 1rem;
-		}
 		h3:first-child  { 
-			line-height: ( $lineHeight / ($gld8) )/2;
-			top: 1.5rem;
+			line-height:  $lineHeight * 2;
 		}
-		h4:first-child { line-height: ( $lineHeight / ($gld7) )/1.55; }
-		h5:first-child { line-height: ( $lineHeight / ($gld6) )/1.7; }
-		h6:first-child { line-height: ( $lineHeight / ($gld5) )/2.2; }
+		
+		h4:first-child {
+			line-height: $lineHeight * 4;
+		}
+		
 	}
 	
 } /*  |---------------|END type |---------------|  */
