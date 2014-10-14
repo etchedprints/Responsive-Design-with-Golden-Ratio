@@ -78,16 +78,21 @@ body.type {
   /* no list style for ul or ol */
   /*-----------------------------*/
   /*First Header item, lines up for grid*/ }
-  body.type h1, body.type h2, body.type h3, body.type h4, body.type h5, body.type h6 {
-    font-size: 138.195302843%; }
   body.type h1 {
-    font-size: 212.8334236872%; }
+    font-size: 344.3906532156%;
+    font-weight: 700;
+    padding-bottom: 1rem; }
+  body.type h2, body.type h3, body.type h4, body.type h5, body.type h6 {
+    font-size: 212.8334236872%;
+    font-weight: 600;
+    line-height: 1;
+    padding-bottom: 2rem; }
   body.type p, body.type li, body.type dt, body.type dd, body.type table, body.type form {
     font-weight: normal;
     font-size: 100%; }
   body.type p {
     font-family: "Georgia", serif;
-    padding-bottom: 0.01618; }
+    padding-bottom: 2rem; }
   body.type h5, body.type h6, body.type em, body.type strong {
     letter-spacing: 1px; }
   body.type .unstyle {

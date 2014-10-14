@@ -14,15 +14,22 @@ body.type {
 	font-family: $sans;
 	color: $baseColorDarker;
 	line-height: $lineHeight;
-	
-	h1, h2, h3, h4, h5, h6 {
-		font-size: $h4+$gld9;
-	}
+
 	
 	h1 { 
-		font-size: $h3;
+		font-size: $h2;
+		font-weight: 700;
+		padding-bottom: 1rem;
 	}
 	
+	h2, h3, h4, h5, h6 {
+		font-size: $h3;
+		font-weight:  600;
+		line-height: $lineHeight / $lineHeight;
+		padding-bottom: 2rem;
+	}
+	
+
 	p, li, dt, dd, table, form { 
 		font-weight: normal;
 		font-size: $h4;
@@ -30,7 +37,7 @@ body.type {
 	
 	p { 
 		font-family: $serif; 
-		padding-bottom: ($lineHeight / 100);
+		padding-bottom: 2rem;
 	}
 	
 	h5, h6, em, strong { letter-spacing: 1px }
