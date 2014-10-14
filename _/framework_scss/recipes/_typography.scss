@@ -16,17 +16,18 @@ body.type {
 	line-height: $lineHeight;
 
 	
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: bold;
+		padding-bottom: 1rem;
+	}
+	
 	h1 { 
 		font-size: $h2;
-		font-weight: 700;
-		padding-bottom: 1rem;
+	
 	}
 	
 	h2, h3, h4, h5, h6 {
 		font-size: $h3;
-		font-weight:  600;
-		line-height: $lineHeight / $lineHeight;
-		padding-bottom: 2rem;
 	}
 	
 

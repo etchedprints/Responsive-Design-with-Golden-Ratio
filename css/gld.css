@@ -72,21 +72,19 @@ body.type {
   word-wrap: break-word;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  font-family: "Avenir Next", Verdana, sans-serif;
+  font-family: "Avenir Next Condensed", "Avenir Next", Verdana, sans-serif;
   color: #1f1f1f;
   line-height: 1.618;
   /* no list style for ul or ol */
   /*-----------------------------*/
   /*First Header item, lines up for grid*/ }
-  body.type h1 {
-    font-size: 344.3906532156%;
-    font-weight: 700;
+  body.type h1, body.type h2, body.type h3, body.type h4, body.type h5, body.type h6 {
+    font-weight: bold;
     padding-bottom: 1rem; }
+  body.type h1 {
+    font-size: 344.3906532156%; }
   body.type h2, body.type h3, body.type h4, body.type h5, body.type h6 {
-    font-size: 212.8334236872%;
-    font-weight: 600;
-    line-height: 1;
-    padding-bottom: 2rem; }
+    font-size: 212.8334236872%; }
   body.type p, body.type li, body.type dt, body.type dd, body.type table, body.type form {
     font-weight: normal;
     font-size: 100%; }
