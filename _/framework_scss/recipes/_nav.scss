@@ -21,6 +21,14 @@
     background-color: $baseColorLighter;
 }
 
+@mixin flexbox {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
 body.navbar {
 	/* ================================================================= */
 	/*				1st lvl menu				 						*/
@@ -28,9 +36,10 @@ body.navbar {
 	nav {
 		z-index: 98;	
 		ul {
-        
-            display: flex;
-             flex-direction: row;
+            @include flexbox;
+            
+            -webkit-flex-direction: row;
+            flex-direction: row;
             
 			list-style: none;	
 			li {
@@ -92,7 +101,9 @@ body.navbar {
     
 			
 		ul {
-                flex-direction: column;
+            
+            -webkit-flex-direction: column;
+            flex-direction: column;
             
 			li {
                 
