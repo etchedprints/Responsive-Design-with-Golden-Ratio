@@ -54,20 +54,15 @@ em {
 strong {
   font-weight: bold; }
 
-/* $group Styles */
 /* Golden Ratio 1.618 */
 /* -----------------------------  */
 /* Color Scheme */
 /* Base Color for Design */
-/* -----------------------------  */
-/* Typography size */
+/* $group Styles */
+/* Type Ratio */
 /* Typography metrics & leading */
 /*Recipes*/
-/* =========================================================== */
-/* =========================================================== */
 body.type {
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
   hyphens: auto;
   word-wrap: break-word;
   -webkit-font-smoothing: antialiased;
@@ -75,32 +70,32 @@ body.type {
   font-family: "Avenir Next Condensed", "Avenir Next", Verdana, sans-serif;
   color: #1f1f1f;
   line-height: 1.618;
-  /* no list style for ul or ol */
-  /*-----------------------------*/
-  /*First Header item, lines up for grid*/ }
+  /* no list style for ul or ol */ }
   body.type h1, body.type h2, body.type h3, body.type h4, body.type h5, body.type h6 {
     font-weight: bold;
     padding-bottom: 1rem; }
   body.type h1 {
-    font-size: 344.3906532156%; }
-  body.type h2, body.type h3, body.type h4, body.type h5, body.type h6 {
-    font-size: 212.8334236872%; }
+    font-size: 9.0158855643vh; }
+  body.type h2 {
+    font-size: 5.572240769vh; }
+  body.type h3 {
+    font-size: 3.4436447953vh; }
+  body.type h4 {
+    font-size: 2.1283342369vh; }
+  body.type h5 {
+    font-size: 1.3153105584vh; }
+  body.type h6 {
+    font-size: 1.3153105584vh; }
   body.type p, body.type li, body.type dt, body.type dd, body.type table, body.type form {
     font-weight: normal;
-    font-size: 100%; }
+    font-size: 2.1283342369vh; }
   body.type p {
     font-family: "Georgia", serif;
-    padding-bottom: 2rem; }
+    padding-bottom: 1.618vh; }
   body.type h5, body.type h6, body.type em, body.type strong {
     letter-spacing: 1px; }
   body.type .unstyle {
     list-style: none; }
-  body.type .large h1:first-child, body.type .large h2:first-child, body.type .large h3:first-child, body.type .large h4:first-child, body.type .large h5:first-child, body.type .large h6:first-child, body.type .xlarge h1:first-child, body.type .xlarge h2:first-child, body.type .xlarge h3:first-child, body.type .xlarge h4:first-child, body.type .xlarge h5:first-child, body.type .xlarge h6:first-child, body.type .med h1:first-child, body.type .med h2:first-child, body.type .med h3:first-child, body.type .med h4:first-child, body.type .med h5:first-child, body.type .med h6:first-child, body.type .small h1:first-child, body.type .small h2:first-child, body.type .small h3:first-child, body.type .small h4:first-child, body.type .small h5:first-child, body.type .small h6:first-child, body.type .xsmall h1:first-child, body.type .xsmall h2:first-child, body.type .xsmall h3:first-child, body.type .xsmall h4:first-child, body.type .xsmall h5:first-child, body.type .xsmall h6:first-child {
-    position: relative; }
-  body.type .large h3:first-child, body.type .xlarge h3:first-child, body.type .med h3:first-child, body.type .small h3:first-child, body.type .xsmall h3:first-child {
-    line-height: 3.236; }
-  body.type .large h4:first-child, body.type .xlarge h4:first-child, body.type .med h4:first-child, body.type .small h4:first-child, body.type .xsmall h4:first-child {
-    line-height: 6.472; }
 
 /*  |---------------|END type |---------------|  */
 body.images img, body.images embed, body.images object, body.images video {
@@ -124,6 +119,8 @@ body.links a:active {
 body.links p a {
   color: gray;
   text-decoration: underline; }
+  body.links p a:hover {
+    text-decoration: none; }
 
 /*  |---------------|END of Body Links |---------------|  */
 /* =========================================================== */
@@ -131,8 +128,6 @@ body.layout {
   /* @group NINJA MOVE */
   /* @end */
   /* =========================================================== */ }
-  body.layout canvas {
-    -ms-touch-action: double-tap-zoom; }
   body.layout *, body.layout body, body.layout img, body.layout embed, body.layout object, body.layout video, body.layout iframe {
     -webkit-box-sizing: border-box;
     /* Safari/Chrome, other WebKit */
@@ -148,7 +143,14 @@ body.layout {
     visibility: hidden; }
   body.layout section:after, body.layout .clearfix:after, body.layout .group:after, body.layout header:after, body.layout footer:after, body.layout .full:after {
     clear: both; }
-  body.layout header, body.layout footer, body.layout article, body.layout aside, body.layout .columns2, body.layout .columns3, body.layout .columns4 {
+  body.layout section {
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: flex-start; }
+  body.layout header, body.layout footer, body.layout article, body.layout aside, body.layout div {
     padding: 3.4439065322%; }
 
 /*  |---------------|END of Body layout |---------------|  */
@@ -269,16 +271,9 @@ body.tables {
 @media screen and (min-width: 60em) {
   body.desktop-layout {
     /*Layout*/
-    /* =========================================================== */
-    /* =========================================================== */
-    /*Typography*/
-    /* =========================================================== */
-    /*Images*/
-    /* ================================================================= */
-    /*				Columns				 								*/
-    /* =============================================================== */ }
-    body.desktop-layout .full, body.desktop-layout .large, body.desktop-layout .xlarge, body.desktop-layout .med, body.desktop-layout .small, body.desktop-layout .xsmall {
-      float: left; }
+    /*Images*/ }
+    body.desktop-layout section {
+      flex-direction: row; }
     body.desktop-layout .full {
       width: 100%; }
     body.desktop-layout .large {
@@ -291,39 +286,9 @@ body.tables {
       width: 23.6064912503%; }
     body.desktop-layout .xsmall {
       width: 14.5888115927%; }
-    body.desktop-layout body {
-      margin-top: 0; }
-    body.desktop-layout h1 {
-      font-size: 557.2240769028%; }
-    body.desktop-layout h2 {
-      font-size: 344.3906532156%; }
-    body.desktop-layout h3 {
-      font-size: 212.8334236872%; }
-    body.desktop-layout h4 {
-      font-size: 100%; }
-    body.desktop-layout h5 {
-      font-size: 65.7705264794%; }
-    body.desktop-layout h6 {
-      font-size: 40.6461853642%; }
-    body.desktop-layout img.left, body.desktop-layout .alignleft {
-      margin: 0.8129237073% 3.4439065322% 0.8129237073% 0.8129237073%;
-      float: left; }
-    body.desktop-layout img.right, body.desktop-layout .alignright {
-      margin: 0.8129237073% 1.3154105296% 0.8129237073% 5.572240769%;
-      float: right; }
-    body.desktop-layout .columns2, body.desktop-layout .columns3, body.desktop-layout .columns4 {
-      width: 100%; }
-      body.desktop-layout .columns2 div, body.desktop-layout .columns2 .column, body.desktop-layout .columns3 div, body.desktop-layout .columns3 .column, body.desktop-layout .columns4 div, body.desktop-layout .columns4 .column {
-        float: left;
-        margin-right: 5.572240769%; }
-      body.desktop-layout .columns2 p, body.desktop-layout .columns3 p, body.desktop-layout .columns4 p {
-        text-align: left; }
-    body.desktop-layout .columns2 div {
-      width: 40.45%; }
-    body.desktop-layout .columns3 div {
-      width: 26.9666666667%; }
-    body.desktop-layout .columns4 div {
-      width: 17.9777777778%; }
+    body.desktop-layout img, body.desktop-layout embed, body.desktop-layout object, body.desktop-layout video {
+      float: left;
+      margin: 0.8129237073% 3.4439065322% 0.8129237073% 0.8129237073%; }
 
   /*  |---------------|END of Desktop Layout |---------------|  */ }
 /*  |---------------|END of @media |---------------|  */

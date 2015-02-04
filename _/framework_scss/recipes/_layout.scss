@@ -6,8 +6,6 @@
 /* =========================================================== */
 
 body.layout {
-	canvas { -ms-touch-action: double-tap-zoom; }
-
 	*, body, img, embed, object, video, iframe {
 		@include borderBox;	
 	}
@@ -25,10 +23,24 @@ body.layout {
 			clear: both;
 		}
 	}
+    
+    section { 
+        display: flex;
+        align-items: baseline;
+        
+        // phone first layout
+        flex-direction: column;
+        
+        // extra flex settings - can be removed later
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+    }
+    
 	/* @end */
 	
 	/* =========================================================== */
-	header, footer, article, aside, .columns2, .columns3, .columns4 { padding:  $gld4; } 
+	header, footer, article, aside, div { padding:  $gld4; } 
 
 }/*  |---------------|END of Body layout |---------------|  */
 

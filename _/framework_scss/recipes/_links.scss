@@ -12,6 +12,10 @@ body.links {
 	p a {
 		color: $baseColor;
 		text-decoration: underline;
+        
+        &:hover {
+            text-decoration: none;
+        }
 	}
 	
 } /*  |---------------|END of Body Links |---------------|  */

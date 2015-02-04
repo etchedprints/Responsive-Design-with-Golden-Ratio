@@ -1,0 +1,25 @@
+@media screen and (min-width: $at_desktop ) {
+
+	body.desktop-layout {
+	
+        /*Layout*/
+			section { 
+                flex-direction: row;
+            }
+        
+			.full		{ width: $full }
+			.large		{ width: $gld10 }
+			.xlarge		{ width: $full - ($gld7 + $gld7) }
+			.med		{ width: $gld9 }
+			.small		{ width: $gld8 }	
+			.xsmall		{ width: $gld7 }
+			
+			/*Images*/
+            img, embed, object, video {
+                float: left;
+                margin: $gld1 $gld4 $gld1 $gld1;
+            }
+			
+	} /*  |---------------|END of Desktop Layout |---------------|  */
+
+} /*  |---------------|END of @media |---------------|  */

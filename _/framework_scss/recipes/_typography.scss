@@ -1,13 +1,5 @@
-@mixin hyphens {
-	-webkit-hyphens: auto; 
-	-moz-hyphens: auto; 
-	hyphens: auto;
-}
-/* =========================================================== */
-/* =========================================================== */
 body.type {
-	
-	@include hyphens;
+	hyphens: auto;
 	word-wrap: break-word;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
@@ -15,54 +7,33 @@ body.type {
 	color: $baseColorDarker;
 	line-height: $lineHeight;
 
-	
+
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: bold;
 		padding-bottom: 1rem;
 	}
 	
-	h1 { 
-		font-size: $h2;
-	
-	}
-	
-	h2, h3, h4, h5, h6 {
-		font-size: $h3;
-	}
-	
-
-	p, li, dt, dd, table, form { 
+	h1 { font-size: $h1 }
+    h2 { font-size: $h2 }
+    h3 { font-size: $h3 }
+    h4 { font-size: $h4 }
+    h5 { font-size: $h5 }
+    h6 { font-size: $h6 }
+    
+    p, li, dt, dd, table, form { 
 		font-weight: normal;
 		font-size: $h4;
 	}
-	
+    
 	p { 
-		font-family: $serif; 
-		padding-bottom: 2rem;
+		font-family: $serif;
+		padding-bottom: $viewPortHeight;
 	}
 	
 	h5, h6, em, strong { letter-spacing: 1px }
 	
 	/* no list style for ul or ol */
 	.unstyle { list-style: none }
-	
-	/*-----------------------------*/
-	
-	/*First Header item, lines up for grid*/
-	.large, .xlarge, .med, .small, .xsmall {
-		h1, h2, h3, h4, h5, h6 {
-			&:first-child { position: relative; }
-		}
-	
-		h3:first-child  { 
-			line-height:  $lineHeight * 2;
-		}
-		
-		h4:first-child {
-			line-height: $lineHeight * 4;
-		}
-		
-	}
-	
+
 } /*  |---------------|END type |---------------|  */
 

@@ -39,16 +39,13 @@ section, hr {
 .tdright { border-right: 2px dashed gray }
 
 #code_type {
-	h1, h2, h3, h4, h5, h6 {
-		line-height: $lineHeight;
-	}
 	margin-bottom: $gld6;
 }
 
 #color_text {
 	border-top: 1px solid $baseColor;
 	border-bottom: 1px solid $baseColor;
-	font-size: $h3;
+
 	padding: $gld5;
 
 	#lighterc {color: $baseColorLighter; }
@@ -63,7 +60,6 @@ section, hr {
 code {
 	background-color: $baseColorLighter;
 	padding: $gld4;
-	line-height: $lineHeight;
 	display: inline-block;
 	border: 1px solid $baseColorLight;
 	margin-bottom: $gld4;

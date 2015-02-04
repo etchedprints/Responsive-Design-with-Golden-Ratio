@@ -76,7 +76,7 @@ body.navbar {
 				text-indent: -9999px;							
 				margin-top: -75%;
 				white-space: nowrap;
-				
+                
 				ul:before {
 					display:none;
 				}
@@ -95,7 +95,7 @@ body.navbar {
 			&:hover li{
 				text-indent: 0;
 				margin-top: 0;
-				white-space: normal;	
+				white-space: normal;
 			} 
 			
 			&:before {

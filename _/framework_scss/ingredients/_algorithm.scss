@@ -1,6 +1,3 @@
-/* $group Styles */
-	$sans:	"Avenir Next Condensed", "Avenir Next", Verdana, sans-serif;
-	$serif: "Georgia", serif;			
 /* Golden Ratio 1.618 */
 	$golden:	1.618;
 	
@@ -26,14 +23,31 @@
 	$baseColorDark:			darken($baseColor, $gld7);
 	$baseColorDarker:		darken($baseColor, $gld9);
 	
-/* -----------------------------  */	
-/* Typography size */
-	$h1: $gld5 * 100;
-	$h2: $gld4 * 100;
-	$h3: $gld3 * 100;
-	$h4: $base;
-	$h5: $gld2 * (100 / 2);
-	$h6: $gld1 * (100 / 2);
-	
+
+/* $group Styles */
+	$sans:	"Avenir Next Condensed", "Avenir Next", Verdana, sans-serif;
+	$serif: "Georgia", serif;
+
+/* Type Ratio */
+	$type10:	100 / $golden;			
+	$type9:		100 - $type10;
+	$type8:		$type9 / $golden;
+	$type7:		$type9 - $type8;
+	$type6:		$type7 / $golden;
+	$type5:		$type7 - $type6;
+	$type4:		$type5 / $golden;
+	$type3:		$type5 - $type4;
+	$type2:		$type3 / $golden;			
+	$type1:		$type3 - $type2;
+    
+    $viewPortHeight: 1.618vh; 
+
+    $h1: $type5 * $viewPortHeight;
+	$h2: $type4 * $viewPortHeight;
+	$h3: $type3 * $viewPortHeight;
+	$h4: $type2 * $viewPortHeight;
+	$h5: $type1 * $viewPortHeight;
+	$h6: $type1 * $viewPortHeight;
+
 /* Typography metrics & leading */
 	$lineHeight: $golden;
