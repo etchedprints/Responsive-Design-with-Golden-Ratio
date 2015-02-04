@@ -40,7 +40,8 @@
 	$type2:		$type3 / $golden;			
 	$type1:		$type3 - $type2;
     
-    $viewPortHeight: 1.618vh; 
+    $viewPortHeight: 1.618vh;
+
 
     $h1: $type5 * $viewPortHeight;
 	$h2: $type4 * $viewPortHeight;
@@ -51,3 +52,8 @@
 
 /* Typography metrics & leading */
 	$lineHeight: $golden;
+
+/* ================================================================= */
+/*				@breakpoint				 							*/
+/* =============================================================== */
+$at_desktop: $golden * 50em;

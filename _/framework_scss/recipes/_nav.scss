@@ -1,9 +1,16 @@
+@mixin dropDownLocation {
+    display: block;
+    position: relative;
+    top: -7vh;
+    left: 21vw;
+}
+
 body.navbar {
 	
 	/* ================================================================= */
 	/*				headerNav Icon Image				 				*/
 	/* =============================================================== */
-	$headerNavIcon:	url(menu_icon.gif);
+	$headerNavIcon:	url(menu_icon.svg);
 	
 	/* ================================================================= */
 	/*				1st lvl menu				 						*/
@@ -15,10 +22,9 @@ body.navbar {
 			li {
 				a {
 					padding: 0.5em 1.25em;
-					text-decoration: none;
 					display: block;
-					min-height: 2.75em;
-					
+                    font-size: $golden * 2vh;
+
 					&:hover { 
 						color: white;
 						background-color: $baseColorDark;
@@ -35,14 +41,19 @@ body.navbar {
 			z-index: 99;
 			display: block;
 			position: absolute;
-			float: none;
+
 		}
 		ul {
 			display: none;
 			width: 0;
 			li a { 
-				min-width: 12em;
+                min-width: 25vmax;
 				background-color: $baseColorLighter;
+                box-shadow: 0 8px 6px -6px $baseColorLight;
+                
+                &:hover {
+                    color: white;
+                }
 			}
 		}
 	}
@@ -53,10 +64,7 @@ body.navbar {
 		ul { display: none; }
 			
 		&:hover ul {
-			display: block;
-			position: absolute;
-			margin-top: -2.5em;
-			left: 5em;
+			@include dropDownLocation;
 		} 
 	}	
 	/* ================================================================= */
@@ -69,13 +77,10 @@ body.navbar {
 			
 		ul {
 			li {
-				float: none;						/* Vertical Nav */
+                background-color: $baseColorLighter;  /* default color / style of nav */
 				
 				/*hide the nav bar*/
-				text-indent: -9999px;							
-				margin-top: -75%;
-				white-space: nowrap;
-                font-size: 18px;
+                margin-top: -100vh;
                 
 				ul:before {
 					display:none;
@@ -83,33 +88,29 @@ body.navbar {
 				
 				/* 2nd lvl nav */
 				ul li a{
-					position: relative;
-					left: 5em;
-					top: -2.5em; 
-					background-color: $baseColorLight;
+					@include dropDownLocation;
 				} 					
 				
 			} /* /li*/
 			
 			/*show the nav bar*/
 			&:hover li{
-				text-indent: 0;
 				margin-top: 0;
-				white-space: normal;
-                background-color: $baseColorLighter;		/* default color / style of nav */
 			} 
 			
 			&:before {
-				content: "Menu";
+				content: "MENU";
+                font-weight: bold;
+                line-height: 1;
                 text-align: center;
 				background-image: $headerNavIcon;
 				background-size: 34px;
 				background-repeat: no-repeat;
 				background-position: center center;
-				height: 72px;
-				width: 72px;		
+                height: 4.5em;
+                width: 4.5em;
 				display: inline-table;
-				padding: 0.25em 0.5em;				/* move button from corner */ 
+				padding: 0.5em;				/* move button from corner */ 
 				background-color: $baseColorLighter;		
 			} /* /ul:before */
 	

@@ -20,6 +20,14 @@ body.tables {
 	
 	table tr:nth-child(even) { background-color: $baseColorLighter; }
 	/* $end */
+    
+    
+    code {
+        background-color: $baseColorLighter;
+        padding: $gld4;
+        display: inline-block;
+        border: 1px solid $baseColorLight;
+    }
 	
 } /*  |---------------|END of Tables |---------------|  */
 

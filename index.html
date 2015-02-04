@@ -2,10 +2,9 @@
 <html lang="en-US">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	
-	<meta name="description" content="">
+	<meta name="description" content="Golden Responsive Design Library">
 	<meta name="keywords" content="Golden Responsive Design" />
 	<meta name="Author" content="Chad Lindemann - www.etchedprints.com" />
 	
@@ -52,12 +51,12 @@
 </header>	
 
 	<section>
-	<article class="full columns2">
+	<article class="full">
 		<h3>A New Responsive Framework &amp; Measurement System &ndash; Found in Antiquity</h3>
 		<p>
 		We find ourselves excited by the future of the web, by the esthetic pleasures of great web typography, by new gadgets for viewing mobile content, and by the increased bandwidth for media consumption. These exciting things demand responsive design, dynamically changing web content, and an almost exponential growth in knowledge and skill sets from us. However, measurement units used by web designers are not overly dynamic, relative, or responsive; rather, they are fixed to a dot size, default browser settings, or simple percentages.
 		</p>
-		<h2 id="ratio_link">Ratio &#966; 1 : 1.618</h2>
+		<h2>Ratio &#966; 1 : 1.618</h2>
 		<img src="example_images/full_image.jpg" alt="image" />
 		
         <p >Why is this an issue? <a href="#0">Because</a> of the ever-growing list of different browsers and devices for viewing web content. The most common solutions are to create multiple css files, make conditional alternatives for different browsers, or construct a plethora of @media steps within a single design. The end result is an ever-growing infrastructure that is hard to maintain. Perhaps a new unit of measurement is needed for a ratio driven responsive design? Not found in the newest iPad or mobile device pixel density, but instead, in nature, Greek architecture, and art history.</p>
@@ -93,7 +92,7 @@
 		<p>$gld1 throught $gld10</p>
 		<dl id="gld_units">
 			<dt>$gld1</dt>
-			<dd id="test1" class="boxtest">&nbsp;</dd>
+			<dd id="test1" class="boxtest"><br></dd>
 			<dt>$gld2</dt>
 			<dd id="test2" class="boxtest">&nbsp;</dd>
 			<dt>$gld3</dt>
@@ -239,59 +238,46 @@
 </section>
 	
 	<section>
-	<aside class="med">
-		<h3>Border-box</h3>
-		<code>
-			*, body {
-				<br />
-			&nbsp;&nbsp;	-webkit-box-sizing: border-box;
-				<br />
-			&nbsp;&nbsp;	-moz-box-sizing: border-box; 
-				<br />
-			&nbsp;&nbsp;	box-sizing: border-box;  
-				<br />
-			}
-		</code>		
-	</aside>									
-	<article class="large">
+									
+	<article class="full">
 		<h2>Responsive Padding</h2>
 		<h3>Class Names</h3>
 		<p>The next example uses golden units for CSS padding. By default this padding is responsive and changes are based on the browser’s width.</p>
 		<code>
 			/* PADDING / METERING SETTINGS */
 			<br />
-			.full, header, footer, .large, .xlarge, .med, .small, .xsmall, .columns3, .columns4 { padding:  $gld2 $gld4; }
+			.full, header, footer, .large, .xlarge, .med, .small, .xsmall { padding: $gld4; }
 		</code>
 	</article>
-</section>			
+    </section>
+    
 	<section>
 	<article class="large">
 		<h2>Typography</h2>
 		<p>Typography size can also be declared in “$glds”. This will create font-sizes that work well together and scale appropriately for the content.</p>
-		<div id="code_type">	
-			<h1>h1 - Title</h1>
-			<h2>h2 - Story Title</h2>
-			<h3>h3 - Main Story Point</h3>
-			<h4>h4 - Text Body Size Headline &amp; Main Point</h4>
-			<h5>h5 - Small Small Subpoint</h5>
-			<h6>h6 - To Small to Even Write, But Here if You Need It.</h6>
-		</div>
+		<hr>	
+        <h1>h1 - Title</h1>
+        <h2>h2 - Story Title</h2>
+        <h3>h3 - Main Story Point</h3>
+        <h4>h4 - Text Body Size Headline &amp; Main Point</h4>
+        <h5>h5 - Small Small Subpoint</h5>
+        <h6>h6 - To Small to Even Write, But Here if You Need It.</h6>
+		
 	</article>
 	<aside class="med">
 		<h3>Code</h3>
 		<p><em>example for font-size code</em></p>
 		<code>
-			h1 { @include goldenH1; }
-			<br />
-			h2 { @include goldenH2; }
-			<br />
-			h3 { @include goldenH3; }
-			<br />
-			h4 { @include goldenH4; }
-			<br />
-			h5 { @include goldenH5; }
-			<br />
-			h6 { @include goldenH6; }
+            $type10:&nbsp;&nbsp;	100 / $golden;     <br>		
+            $type9:&nbsp;&nbsp;		100 - $type10;     <br>
+            $type8:&nbsp;&nbsp;		$type9 / $golden;  <br>
+            $type7:&nbsp;&nbsp;		$type9 - $type8;   <br>
+            $type6:&nbsp;&nbsp;		$type7 / $golden;  <br> 
+            $type5:&nbsp;&nbsp;		$type7 - $type6;   <br>
+            $type4:&nbsp;&nbsp;		$type5 / $golden;  <br>
+            $type3:&nbsp;&nbsp;		$type5 - $type4;   <br>
+            $type2:&nbsp;&nbsp;		$type3 / $golden;  <br>		
+            $type1:&nbsp;		$type3 - $type2;
 		</code>
 	</aside>
 </section>
@@ -431,7 +417,7 @@
 	</aside>
 </section>
 
-<section class="columns2">
+<section>
 	<div>
 		<h3>column 1</h3>
 	 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -441,7 +427,7 @@
 	 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	</div>
 </section>
-<section class="columns3">
+<section>
 	<div>
 		<h3>column 1</h3>
 	 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -455,7 +441,7 @@
 	 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	 </div>	
 </section>
-<section class="columns4">
+<section>
 	<div>
 		<h3>column 1</h3>
 	 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>

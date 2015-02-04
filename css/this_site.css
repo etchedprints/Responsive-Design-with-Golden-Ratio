@@ -9,13 +9,9 @@
 /* $group Styles */
 /* Type Ratio */
 /* Typography metrics & leading */
-body {
-  margin-top: 14.5888115927%; }
-
-section, hr {
-  border-bottom: 1px solid gray;
-  box-shadow: 0 8px 6px -6px #a5a5a5; }
-
+/* ================================================================= */
+/*				@breakpoint				 							*/
+/* =============================================================== */
 #gld_units {
   font-family: monospace;
   letter-spacing: 1px; }
@@ -49,9 +45,6 @@ section, hr {
 .tdright {
   border-right: 2px dashed gray; }
 
-#code_type {
-  margin-bottom: 9.0165708237%; }
-
 #color_text {
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
@@ -66,17 +59,3 @@ section, hr {
     color: #5b5b5b; }
   #color_text #darkerc {
     color: #1f1f1f; }
-
-#ratio_link {
-  text-align: center; }
-
-code {
-  background-color: #e1e1e1;
-  padding: 3.4439065322%;
-  display: inline-block;
-  border: 1px solid #a5a5a5;
-  margin-bottom: 3.4439065322%; }
-
-@media screen and (min-width: 60em) {
-  body {
-    margin-top: 0; } }

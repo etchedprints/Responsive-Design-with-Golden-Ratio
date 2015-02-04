@@ -3,30 +3,24 @@
 	body.desktop-nav {
 
 		header nav, footer nav {
-			position: static;											/* place nav at top of window */		
+			position: static;				/* place nav at top of window */		
 			ul {	
 				li {
-					float: left;										/* Vertical Nav */
-					text-indent: 0;							
+                    display: inline-flex;
+                    flex-direction: column;
+                    						
 					margin-top: 0;
+                    background:none;
 					
-					ul li a { 											/* Show 2nd lvl nav */
-						background-color: $baseColorLighter;
+					ul li a { 				/* Show 2nd lvl nav */
 						position: static;
 					} /*/ul*/
 																		
-				} /* /li*/
-                
-                &:hover li{
-                    background-color: #fff;   
-                }
-                
-				
-			/* =========================================================== */
+				} /* /li*/			
+			
 				&:before {
-					display: none;
+					display: none;         /* No MENU icon */
 				} /* /ul:before */
-			/* =========================================================== */
 			
 			} /* /ul */		
 		} /* /header nav */

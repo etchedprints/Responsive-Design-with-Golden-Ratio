@@ -1,7 +1,7 @@
 @media screen and (min-width: $at_desktop ) {
 
 	body.desktop-layout {
-	
+        
         /*Layout*/
 			section { 
                 flex-direction: row;
@@ -16,8 +16,14 @@
 			
 			/*Images*/
             img, embed, object, video {
-                float: left;
-                margin: $gld1 $gld4 $gld1 $gld1;
+                &.left {
+                    float: left;
+                    margin: $gld1 $gld4 $gld1 $gld1;
+                }
+                &.right {
+                    float: right;
+                    margin: $gld1 $gld1 $gld1 $gld4;
+                }
             }
 			
 	} /*  |---------------|END of Desktop Layout |---------------|  */

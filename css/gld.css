@@ -30,9 +30,6 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block; }
 
-body {
-  line-height: 1; }
-
 ol, ul, dl {
   list-style-position: inside; }
 
@@ -61,6 +58,9 @@ strong {
 /* $group Styles */
 /* Type Ratio */
 /* Typography metrics & leading */
+/* ================================================================= */
+/*				@breakpoint				 							*/
+/* =============================================================== */
 /*Recipes*/
 body.type {
   hyphens: auto;
@@ -104,7 +104,7 @@ body.images img, body.images embed, body.images object, body.images video {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
-  padding: 3.4439065322% 0.8129237073%; }
+  padding: 1.618vw; }
 
 /*  |---------------| END body |---------------|  */
 body.links a {
@@ -125,6 +125,7 @@ body.links p a {
 /*  |---------------|END of Body Links |---------------|  */
 /* =========================================================== */
 body.layout {
+  margin-top: 7.853772vh;
   /* @group NINJA MOVE */
   /* @end */
   /* =========================================================== */ }
@@ -135,6 +136,9 @@ body.layout {
     /* Firefox, other Gecko */
     box-sizing: border-box;
     /* Opera/IE 8+ */ }
+  body.layout section, body.layout hr {
+    border-bottom: 1px solid gray;
+    box-shadow: 0 8px 6px -6px #a5a5a5; }
   body.layout section:before, body.layout section:after, body.layout .clearfix:before, body.layout .clearfix:after, body.layout .group:before, body.layout .group:after, body.layout header:before, body.layout header:after, body.layout footer:before, body.layout footer:after, body.layout .full:before, body.layout .full:after {
     content: "\0020";
     display: block;
@@ -146,17 +150,11 @@ body.layout {
   body.layout section {
     display: flex;
     align-items: baseline;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-content: flex-start; }
+    flex-direction: column; }
   body.layout header, body.layout footer, body.layout article, body.layout aside, body.layout div {
     padding: 3.4439065322%; }
 
 /*  |---------------|END of Body layout |---------------|  */
-/* ================================================================= */
-/*				@breakpoint				 							*/
-/* =============================================================== */
 body.navbar {
   /* ================================================================= */
   /*				headerNav Icon Image				 				*/
@@ -180,30 +178,31 @@ body.navbar {
       list-style: none; }
       body.navbar nav ul li a {
         padding: 0.5em 1.25em;
-        text-decoration: none;
         display: block;
-        min-height: 2.75em; }
+        font-size: 3.236vh; }
         body.navbar nav ul li a:hover {
           color: white;
           background-color: #5b5b5b; }
   body.navbar nav ul li:hover ul {
     z-index: 99;
     display: block;
-    position: absolute;
-    float: none; }
+    position: absolute; }
   body.navbar nav ul li ul {
     display: none;
     width: 0; }
     body.navbar nav ul li ul li a {
-      min-width: 12em;
-      background-color: #e1e1e1; }
+      min-width: 25vmax;
+      background-color: #e1e1e1;
+      box-shadow: 0 8px 6px -6px #a5a5a5; }
+      body.navbar nav ul li ul li a:hover {
+        color: white; }
   body.navbar nav ul li:hover ul li ul {
     display: none; }
   body.navbar nav ul li:hover ul li:hover ul {
     display: block;
-    position: absolute;
-    margin-top: -2.5em;
-    left: 5em; }
+    position: relative;
+    top: -7vh;
+    left: 21vw; }
   body.navbar header nav {
     position: fixed;
     /* place nav at top of window */
@@ -215,38 +214,33 @@ body.navbar {
       /*show the nav bar*/
       /* /ul:before */ }
       body.navbar header nav ul li {
-        float: none;
-        /* Vertical Nav */
+        background-color: #e1e1e1;
+        /* default color / style of nav */
         /*hide the nav bar*/
-        text-indent: -9999px;
-        margin-top: -75%;
-        white-space: nowrap;
-        font-size: 18px;
+        margin-top: -100vh;
         /* 2nd lvl nav */ }
         body.navbar header nav ul li ul:before {
           display: none; }
         body.navbar header nav ul li ul li a {
+          display: block;
           position: relative;
-          left: 5em;
-          top: -2.5em;
-          background-color: #a5a5a5; }
+          top: -7vh;
+          left: 21vw; }
       body.navbar header nav ul:hover li {
-        text-indent: 0;
-        margin-top: 0;
-        white-space: normal;
-        background-color: #e1e1e1;
-        /* default color / style of nav */ }
+        margin-top: 0; }
       body.navbar header nav ul:before {
-        content: "Menu";
+        content: "MENU";
+        font-weight: bold;
+        line-height: 1;
         text-align: center;
-        background-image: url(menu_icon.gif);
+        background-image: url(menu_icon.svg);
         background-size: 34px;
         background-repeat: no-repeat;
         background-position: center center;
-        height: 72px;
-        width: 72px;
+        height: 4.5em;
+        width: 4.5em;
         display: inline-table;
-        padding: 0.25em 0.5em;
+        padding: 0.5em;
         /* move button from corner */
         background-color: #e1e1e1; }
 
@@ -267,10 +261,15 @@ body.tables {
     color: white; }
   body.tables table tr:nth-child(even) {
     background-color: #e1e1e1; }
+  body.tables code {
+    background-color: #e1e1e1;
+    padding: 3.4439065322%;
+    display: inline-block;
+    border: 1px solid #a5a5a5; }
 
 /*  |---------------|END of Tables |---------------|  */
 /* Desktop Breakpoint Recipes*/
-@media screen and (min-width: 60em) {
+@media screen and (min-width: 80.9em) {
   body.desktop-layout {
     /*Layout*/
     /*Images*/ }
@@ -288,13 +287,16 @@ body.tables {
       width: 23.6064912503%; }
     body.desktop-layout .xsmall {
       width: 14.5888115927%; }
-    body.desktop-layout img, body.desktop-layout embed, body.desktop-layout object, body.desktop-layout video {
+    body.desktop-layout img.left, body.desktop-layout embed.left, body.desktop-layout object.left, body.desktop-layout video.left {
       float: left;
       margin: 0.8129237073% 3.4439065322% 0.8129237073% 0.8129237073%; }
+    body.desktop-layout img.right, body.desktop-layout embed.right, body.desktop-layout object.right, body.desktop-layout video.right {
+      float: right;
+      margin: 0.8129237073% 0.8129237073% 0.8129237073% 3.4439065322%; }
 
   /*  |---------------|END of Desktop Layout |---------------|  */ }
 /*  |---------------|END of @media |---------------|  */
-@media screen and (min-width: 60em) {
+@media screen and (min-width: 80.9em) {
   body.desktop-nav {
     /* /header nav */ }
     body.desktop-nav header nav, body.desktop-nav footer nav {
@@ -303,23 +305,19 @@ body.tables {
       /* /ul */ }
       body.desktop-nav header nav ul, body.desktop-nav footer nav ul {
         /* /li*/
-        /* =========================================================== */
-        /* /ul:before */
-        /* =========================================================== */ }
+        /* /ul:before */ }
         body.desktop-nav header nav ul li, body.desktop-nav footer nav ul li {
-          float: left;
-          /* Vertical Nav */
-          text-indent: 0;
+          display: inline-flex;
+          flex-direction: column;
           margin-top: 0;
+          background: none;
           /*/ul*/ }
           body.desktop-nav header nav ul li ul li a, body.desktop-nav footer nav ul li ul li a {
             /* Show 2nd lvl nav */
-            background-color: #e1e1e1;
             position: static; }
-        body.desktop-nav header nav ul:hover li, body.desktop-nav footer nav ul:hover li {
-          background-color: #fff; }
         body.desktop-nav header nav ul:before, body.desktop-nav footer nav ul:before {
-          display: none; }
+          display: none;
+          /* No MENU icon */ }
 
   /*  |---------------|END of Desktop Nav |---------------|  */ }
 /*/@media desktop*/
