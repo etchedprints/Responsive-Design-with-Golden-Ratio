@@ -66,7 +66,6 @@ body.navbar {
 		position: fixed;							/* place nav at top of window */
 		top: 0;
 		left: 0;
-		background-color: $baseColorLighter;		/* default color / style of nav */
 			
 		ul {
 			li {
@@ -76,6 +75,7 @@ body.navbar {
 				text-indent: -9999px;							
 				margin-top: -75%;
 				white-space: nowrap;
+                font-size: 18px;
                 
 				ul:before {
 					display:none;
@@ -96,18 +96,20 @@ body.navbar {
 				text-indent: 0;
 				margin-top: 0;
 				white-space: normal;
+                background-color: $baseColorLighter;		/* default color / style of nav */
 			} 
 			
 			&:before {
-				content: "\0020";
+				content: "Menu";
+                text-align: center;
 				background-image: $headerNavIcon;
 				background-size: 34px;
 				background-repeat: no-repeat;
 				background-position: center center;
-				height: 64px;
-				width: 64px;		
+				height: 72px;
+				width: 72px;		
 				display: inline-table;
-				padding: 0.25em 0.5em;				/* move button from corner */
+				padding: 0.25em 0.5em;				/* move button from corner */ 
 				background-color: $baseColorLighter;		
 			} /* /ul:before */
 	

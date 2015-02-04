@@ -209,8 +209,6 @@ body.navbar {
     /* place nav at top of window */
     top: 0;
     left: 0;
-    background-color: #e1e1e1;
-    /* default color / style of nav */
     /* /ul */ }
     body.navbar header nav ul {
       /* /li*/
@@ -223,6 +221,7 @@ body.navbar {
         text-indent: -9999px;
         margin-top: -75%;
         white-space: nowrap;
+        font-size: 18px;
         /* 2nd lvl nav */ }
         body.navbar header nav ul li ul:before {
           display: none; }
@@ -234,15 +233,18 @@ body.navbar {
       body.navbar header nav ul:hover li {
         text-indent: 0;
         margin-top: 0;
-        white-space: normal; }
+        white-space: normal;
+        background-color: #e1e1e1;
+        /* default color / style of nav */ }
       body.navbar header nav ul:before {
-        content: "\0020";
+        content: "Menu";
+        text-align: center;
         background-image: url(menu_icon.gif);
         background-size: 34px;
         background-repeat: no-repeat;
         background-position: center center;
-        height: 64px;
-        width: 64px;
+        height: 72px;
+        width: 72px;
         display: inline-table;
         padding: 0.25em 0.5em;
         /* move button from corner */
@@ -314,6 +316,8 @@ body.tables {
             /* Show 2nd lvl nav */
             background-color: #e1e1e1;
             position: static; }
+        body.desktop-nav header nav ul:hover li, body.desktop-nav footer nav ul:hover li {
+          background-color: #fff; }
         body.desktop-nav header nav ul:before, body.desktop-nav footer nav ul:before {
           display: none; }
 
