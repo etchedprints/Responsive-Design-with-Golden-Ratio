@@ -4,11 +4,10 @@
 
 		header nav, footer nav {
 			position: static;				/* place nav at top of window */		
-			ul {	
-				li {
-                    display: inline-flex;
-                    flex-direction: column;
-                    						
+			ul {
+                flex-direction: row;
+                
+				li {						
 					margin-top: 0;
                     background:none;
 					

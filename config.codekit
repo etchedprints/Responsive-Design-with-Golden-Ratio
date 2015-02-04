@@ -98,22 +98,6 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/_\/framework_scss\/recipes\/_nav.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 10,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_\/framework_scss\/recipes\/_nav.scss",
-		"outputAbbreviatedPath": "\/_\/framework_scss\/css\/_nav.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
 	"\/_\/framework_scss\/recipes\/_table.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -139,38 +123,6 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_\/framework_scss\/recipes\/_typography.scss",
 		"outputAbbreviatedPath": "\/_\/framework_scss\/css\/_typography.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
-	"\/_\/framework_scss\/recipes\/desktop_breakpoint\/_desktop_header_nav.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 10,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_\/framework_scss\/recipes\/desktop_breakpoint\/_desktop_header_nav.scss",
-		"outputAbbreviatedPath": "\/_\/framework_scss\/recipes\/css\/_desktop_header_nav.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
-	"\/_\/framework_scss\/recipes\/desktop_breakpoint\/_desktop_layout.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 10,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_\/framework_scss\/recipes\/desktop_breakpoint\/_desktop_layout.scss",
-		"outputAbbreviatedPath": "\/_\/framework_scss\/recipes\/css\/_desktop_layout.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -209,15 +161,6 @@
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
 		"useLibsass": 0
-		},
-	"\/css\/gld.css": {
-		"fileType": 16,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/css\/gld.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
 		},
 	"\/css\/this_site.css": {
 		"fileType": 16,

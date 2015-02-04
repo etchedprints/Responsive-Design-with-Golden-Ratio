@@ -2,22 +2,36 @@
     display: block;
     position: relative;
     top: -7vh;
-    left: 21vw;
+    left: 14vw;
+}
+
+@mixin menuBarIcon {
+    content: "MENU";
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    background-image: url(menu_icon.svg);
+    background-size: 34px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 4.5em;
+    width: 4.5em;
+    display: block;
+    padding: 0.5em;				/* move button from corner */ 
+    background-color: $baseColorLighter;
 }
 
 body.navbar {
-	
-	/* ================================================================= */
-	/*				headerNav Icon Image				 				*/
-	/* =============================================================== */
-	$headerNavIcon:	url(menu_icon.svg);
-	
 	/* ================================================================= */
 	/*				1st lvl menu				 						*/
 	/* =============================================================== */
 	nav {
-		z-index: 99;	
+		z-index: 98;	
 		ul {
+        
+            display: flex;
+             flex-direction: row;
+            
 			list-style: none;	
 			li {
 				a {
@@ -28,6 +42,7 @@ body.navbar {
 					&:hover { 
 						color: white;
 						background-color: $baseColorDark;
+                        
 					}
 				}
 			}
@@ -41,7 +56,6 @@ body.navbar {
 			z-index: 99;
 			display: block;
 			position: absolute;
-
 		}
 		ul {
 			display: none;
@@ -74,9 +88,14 @@ body.navbar {
 		position: fixed;							/* place nav at top of window */
 		top: 0;
 		left: 0;
+        
+    
 			
 		ul {
+                flex-direction: column;
+            
 			li {
+                
                 background-color: $baseColorLighter;  /* default color / style of nav */
 				
 				/*hide the nav bar*/
@@ -99,19 +118,7 @@ body.navbar {
 			} 
 			
 			&:before {
-				content: "MENU";
-                font-weight: bold;
-                line-height: 1;
-                text-align: center;
-				background-image: $headerNavIcon;
-				background-size: 34px;
-				background-repeat: no-repeat;
-				background-position: center center;
-                height: 4.5em;
-                width: 4.5em;
-				display: inline-table;
-				padding: 0.5em;				/* move button from corner */ 
-				background-color: $baseColorLighter;		
+				@include menuBarIcon;	
 			} /* /ul:before */
 	
 		} /* /ul */		

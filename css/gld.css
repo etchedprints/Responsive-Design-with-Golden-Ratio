@@ -157,9 +157,6 @@ body.layout {
 /*  |---------------|END of Body layout |---------------|  */
 body.navbar {
   /* ================================================================= */
-  /*				headerNav Icon Image				 				*/
-  /* =============================================================== */
-  /* ================================================================= */
   /*				1st lvl menu				 						*/
   /* =============================================================== */
   /* ================================================================= */
@@ -173,8 +170,10 @@ body.navbar {
   /* =============================================================== */
   /* /header nav */ }
   body.navbar nav {
-    z-index: 99; }
+    z-index: 98; }
     body.navbar nav ul {
+      display: flex;
+      flex-direction: row;
       list-style: none; }
       body.navbar nav ul li a {
         padding: 0.5em 1.25em;
@@ -202,7 +201,7 @@ body.navbar {
     display: block;
     position: relative;
     top: -7vh;
-    left: 21vw; }
+    left: 14vw; }
   body.navbar header nav {
     position: fixed;
     /* place nav at top of window */
@@ -210,6 +209,7 @@ body.navbar {
     left: 0;
     /* /ul */ }
     body.navbar header nav ul {
+      flex-direction: column;
       /* /li*/
       /*show the nav bar*/
       /* /ul:before */ }
@@ -225,7 +225,7 @@ body.navbar {
           display: block;
           position: relative;
           top: -7vh;
-          left: 21vw; }
+          left: 14vw; }
       body.navbar header nav ul:hover li {
         margin-top: 0; }
       body.navbar header nav ul:before {
@@ -239,7 +239,7 @@ body.navbar {
         background-position: center center;
         height: 4.5em;
         width: 4.5em;
-        display: inline-table;
+        display: block;
         padding: 0.5em;
         /* move button from corner */
         background-color: #e1e1e1; }
@@ -269,55 +269,3 @@ body.tables {
 
 /*  |---------------|END of Tables |---------------|  */
 /* Desktop Breakpoint Recipes*/
-@media screen and (min-width: 80.9em) {
-  body.desktop-layout {
-    /*Layout*/
-    /*Images*/ }
-    body.desktop-layout section {
-      flex-direction: row; }
-    body.desktop-layout .full {
-      width: 100%; }
-    body.desktop-layout .large {
-      width: 61.804697157%; }
-    body.desktop-layout .xlarge {
-      width: 70.8223768146%; }
-    body.desktop-layout .med {
-      width: 38.195302843%; }
-    body.desktop-layout .small {
-      width: 23.6064912503%; }
-    body.desktop-layout .xsmall {
-      width: 14.5888115927%; }
-    body.desktop-layout img.left, body.desktop-layout embed.left, body.desktop-layout object.left, body.desktop-layout video.left {
-      float: left;
-      margin: 0.8129237073% 3.4439065322% 0.8129237073% 0.8129237073%; }
-    body.desktop-layout img.right, body.desktop-layout embed.right, body.desktop-layout object.right, body.desktop-layout video.right {
-      float: right;
-      margin: 0.8129237073% 0.8129237073% 0.8129237073% 3.4439065322%; }
-
-  /*  |---------------|END of Desktop Layout |---------------|  */ }
-/*  |---------------|END of @media |---------------|  */
-@media screen and (min-width: 80.9em) {
-  body.desktop-nav {
-    /* /header nav */ }
-    body.desktop-nav header nav, body.desktop-nav footer nav {
-      position: static;
-      /* place nav at top of window */
-      /* /ul */ }
-      body.desktop-nav header nav ul, body.desktop-nav footer nav ul {
-        /* /li*/
-        /* /ul:before */ }
-        body.desktop-nav header nav ul li, body.desktop-nav footer nav ul li {
-          display: inline-flex;
-          flex-direction: column;
-          margin-top: 0;
-          background: none;
-          /*/ul*/ }
-          body.desktop-nav header nav ul li ul li a, body.desktop-nav footer nav ul li ul li a {
-            /* Show 2nd lvl nav */
-            position: static; }
-        body.desktop-nav header nav ul:before, body.desktop-nav footer nav ul:before {
-          display: none;
-          /* No MENU icon */ }
-
-  /*  |---------------|END of Desktop Nav |---------------|  */ }
-/*/@media desktop*/
