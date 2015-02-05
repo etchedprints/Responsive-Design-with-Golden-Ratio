@@ -11,8 +11,13 @@
 					margin-top: 0;
                     background:none;
 					
+					a {
+						min-width: 0;
+					}
+					
 					ul li a { 				/* Show 2nd lvl nav */
 						position: static;
+						min-width: 25vmax;
 					} /*/ul*/
 																		
 				} /* /li*/			

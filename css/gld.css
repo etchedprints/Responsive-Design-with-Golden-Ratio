@@ -330,9 +330,12 @@ body.tables {
           margin-top: 0;
           background: none;
           /*/ul*/ }
+          body.desktop-nav header nav ul li a {
+            min-width: 0; }
           body.desktop-nav header nav ul li ul li a {
             /* Show 2nd lvl nav */
-            position: static; }
+            position: static;
+            min-width: 25vmax; }
         body.desktop-nav header nav ul:before {
           display: none;
           /* No MENU icon */ }
