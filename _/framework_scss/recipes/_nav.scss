@@ -29,6 +29,16 @@
   display: flex;
 }
 
+@mixin flexRow {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+}
+
+@mixin flexColumn {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
 body.navbar {
 	/* ================================================================= */
 	/*				1st lvl menu				 						*/
@@ -37,10 +47,8 @@ body.navbar {
 		z-index: 98;	
 		ul {
             @include flexbox;
-            
-            -webkit-flex-direction: row;
-            flex-direction: row;
-            
+            @include flexRow;
+
 			list-style: none;	
 			li {
 				a {
@@ -98,12 +106,8 @@ body.navbar {
 		top: 0;
 		left: 0;
         
-    
-			
 		ul {
-            
-            -webkit-flex-direction: column;
-            flex-direction: column;
+            @include flexColumn;
             
 			li {
                 

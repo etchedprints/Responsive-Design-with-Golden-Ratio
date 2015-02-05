@@ -2,10 +2,10 @@
 
 	body.desktop-nav {
 
-		header nav, footer nav {
+		header nav {
 			position: static;				/* place nav at top of window */		
 			ul {
-                flex-direction: row;
+                @include flexRow;
                 
 				li {						
 					margin-top: 0;
