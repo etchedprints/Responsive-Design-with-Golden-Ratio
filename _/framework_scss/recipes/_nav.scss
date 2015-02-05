@@ -19,6 +19,7 @@
     display: block;
     padding: 0.5em;				/* move button from corner */ 
     background-color: $baseColorLighter;
+	box-shadow: 1px 1px 6px 1px $baseColorLight;
 }
 
 
@@ -38,6 +39,7 @@ body.navbar {
 					padding: 0.5em 1.25em;
 					display: block;
                     font-size: $golden * 2vh;
+					min-width: 25vmax;
 
 					&:hover { 
 						color: white;
@@ -61,7 +63,6 @@ body.navbar {
 			display: none;
 			width: 0;
 			li a { 
-                min-width: 25vmax;
 				background-color: $baseColorLighter;
                 box-shadow: 0 8px 6px -6px $baseColorLight;
                 
