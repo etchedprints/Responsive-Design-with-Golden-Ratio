@@ -5,9 +5,11 @@
 @import "ingredients/_algorithm.scss";
 
 /*Recipes*/
+@import "recipes/_flex.scss";
 @import "recipes/_typography.scss";
 @import "recipes/_img.scss";
 @import "recipes/_links.scss";
+@import "recipes/_layoutMixin.scss";
 @import "recipes/_layout.scss";
 @import "recipes/_nav.scss";
 @import "recipes/_table.scss";

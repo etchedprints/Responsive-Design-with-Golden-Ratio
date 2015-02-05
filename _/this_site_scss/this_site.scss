@@ -45,3 +45,10 @@ $at_desktop: 60em;
 	#darkc { color: $baseColorDark; }
 	#darkerc { color: $baseColorDarker; }
 }
+
+code {
+    background-color: $baseColorLighter;
+    padding: $gld4;
+    display: inline-block;
+    border: 1px solid $baseColorLight;
+}
