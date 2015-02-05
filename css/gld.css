@@ -179,11 +179,14 @@ body.navbar {
     z-index: 98; }
     body.navbar nav ul {
       display: -webkit-box;
+      display: -webkit-flex;
       display: -moz-box;
       display: -ms-flexbox;
-      display: -webkit-flex;
       display: flex;
+      align-items: baseline;
       -webkit-flex-direction: row;
+      -moz-flex-direction: row;
+      -ms-flex-direction: row;
       flex-direction: row;
       list-style: none; }
       body.navbar nav ul li a {
@@ -221,6 +224,8 @@ body.navbar {
     /* /ul */ }
     body.navbar header nav ul {
       -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
       flex-direction: column;
       /* /li*/
       /*show the nav bar*/
@@ -277,34 +282,6 @@ body.tables {
 /*  |---------------|END of Tables |---------------|  */
 /* Desktop Breakpoint Recipes*/
 @media screen and (min-width: 80.9em) {
-  body.desktop-layout {
-    /*Layout*/
-    /*Images*/ }
-    body.desktop-layout section {
-      -webkit-flex-direction: row;
-      flex-direction: row; }
-    body.desktop-layout .full {
-      width: 100%; }
-    body.desktop-layout .large {
-      width: 61.804697157%; }
-    body.desktop-layout .xlarge {
-      width: 70.8223768146%; }
-    body.desktop-layout .med {
-      width: 38.195302843%; }
-    body.desktop-layout .small {
-      width: 23.6064912503%; }
-    body.desktop-layout .xsmall {
-      width: 14.5888115927%; }
-    body.desktop-layout img.left, body.desktop-layout embed.left, body.desktop-layout object.left, body.desktop-layout video.left {
-      float: left;
-      margin: 0.8129237073% 3.4439065322% 0.8129237073% 0.8129237073%; }
-    body.desktop-layout img.right, body.desktop-layout embed.right, body.desktop-layout object.right, body.desktop-layout video.right {
-      float: right;
-      margin: 0.8129237073% 0.8129237073% 0.8129237073% 3.4439065322%; }
-
-  /*  |---------------|END of Desktop Layout |---------------|  */ }
-/*  |---------------|END of @media |---------------|  */
-@media screen and (min-width: 80.9em) {
   body.desktop-nav {
     /* /header nav */ }
     body.desktop-nav header nav {
@@ -313,6 +290,8 @@ body.tables {
       /* /ul */ }
       body.desktop-nav header nav ul {
         -webkit-flex-direction: row;
+        -moz-flex-direction: row;
+        -ms-flex-direction: row;
         flex-direction: row;
         /* /li*/
         /* /ul:before */ }

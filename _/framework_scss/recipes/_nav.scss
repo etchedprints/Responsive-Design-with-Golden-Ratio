@@ -21,23 +21,6 @@
     background-color: $baseColorLighter;
 }
 
-@mixin flexbox {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-}
-
-@mixin flexRow {
-    -webkit-flex-direction: row;
-    flex-direction: row;
-}
-
-@mixin flexColumn {
-    -webkit-flex-direction: column;
-    flex-direction: column;
-}
 
 body.navbar {
 	/* ================================================================= */
