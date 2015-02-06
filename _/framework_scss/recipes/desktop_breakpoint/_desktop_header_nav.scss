@@ -5,26 +5,21 @@
 		header nav {
 			position: static;				/* place nav at top of window */		
 			ul {
-                @include flexRow;
+				position: static;
                 
 				li {						
-					margin-top: 0;
-                    background:none;
-					
-					a {
-						min-width: 0;
-					}
-					
-					ul li a { 				/* Show 2nd lvl nav */
-						position: static;
-						min-width: 25vmax;
-					} /*/ul*/
-																		
+					@include showContent;
+					min-width: 0;
+					clear: none;
 				} /* /li*/			
 			
+				&:hover li {
+					background: none;
+				}
+				
 				&:before {
 					display: none;         /* No MENU icon */
-				} /* /ul:before */
+				}
 			
 			} /* /ul */		
 		} /* /header nav */

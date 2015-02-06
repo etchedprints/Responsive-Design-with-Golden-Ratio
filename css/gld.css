@@ -56,12 +56,11 @@ strong {
 /* Color Scheme */
 /* Base Color for Design */
 /* $group Styles */
-/* Type Ratio */
-/* Typography metrics & leading */
 /* ================================================================= */
 /*				@breakpoint				 							*/
 /* =============================================================== */
 /*Recipes*/
+/* Typography metrics & leading */
 body.type {
   hyphens: auto;
   word-wrap: break-word;
@@ -74,37 +73,59 @@ body.type {
   body.type h1, body.type h2, body.type h3, body.type h4, body.type h5, body.type h6 {
     font-weight: bold;
     padding-bottom: 1rem; }
-  body.type h1 {
-    font-size: 9.0158855643vh; }
-  body.type h2 {
-    font-size: 5.572240769vh; }
-  body.type h3 {
-    font-size: 3.4436447953vh; }
-  body.type h4 {
-    font-size: 2.1283342369vh; }
-  body.type h5 {
-    font-size: 1.3153105584vh; }
-  body.type h6 {
-    font-size: 1.3153105584vh; }
-  body.type p, body.type li, body.type dt, body.type dd, body.type table, body.type form {
-    font-weight: normal;
-    font-size: 2.1283342369vh; }
   body.type p {
     font-family: "Georgia", serif;
-    padding-bottom: 1.618vh; }
+    font-weight: normal;
+    padding-bottom: 2rem; }
   body.type h5, body.type h6, body.type em, body.type strong {
     letter-spacing: 1px; }
   body.type .unstyle {
     list-style: none; }
 
 /*  |---------------|END type |---------------|  */
+/*  |---------------| Mobile First |---------------|  */
+@media screen and (max-width: 768px) {
+  body {
+    /* Type Ratio */ }
+    body h1 {
+      font-size: 18.0317711286vmin; }
+    body h2 {
+      font-size: 11.1444815381vmin; }
+    body h3 {
+      font-size: 6.8872895905vmin; }
+    body h4 {
+      font-size: 4.2566684737vmin; }
+    body h5 {
+      font-size: 2.6306211168vmin; }
+    body h6 {
+      font-size: 2.6306211168vmin; }
+    body p, body li, body dt, body dd, body table, body form {
+      font-size: 4.2566684737vmin; } }
+/*  |---------------|desktop |---------------|  */
+@media screen and (min-width: 768px) {
+  body {
+    /* Type Ratio */ }
+    body h1 {
+      font-size: 9.0158855643vmin; }
+    body h2 {
+      font-size: 5.572240769vmin; }
+    body h3 {
+      font-size: 3.4436447953vmin; }
+    body h4 {
+      font-size: 2.1283342369vmin; }
+    body h5 {
+      font-size: 1.3153105584vmin; }
+    body h6 {
+      font-size: 1.3153105584vmin; }
+    body p, body li, body dt, body dd, body table, body form {
+      font-size: 2.1283342369vmin; } }
 body.images img, body.images embed, body.images object, body.images video {
   border-style: none;
   width: auto;
   max-width: 100%;
   height: auto;
   vertical-align: middle;
-  padding: 1.618vw; }
+  padding: 1em 0.5em; }
 
 /*  |---------------| END body |---------------|  */
 body.links a {
@@ -124,7 +145,7 @@ body.links p a {
 
 /*  |---------------|END of Body Links |---------------|  */
 body.layout {
-  margin-top: 7.853772vh;
+  margin-top: 4em;
   /* @group NINJA MOVE */
   /* @end */
   /* =========================================================== */ }
@@ -152,6 +173,7 @@ body.layout {
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-align-items: baseline;
     align-items: baseline;
     -webkit-flex-direction: column;
     -moz-flex-direction: column;
@@ -162,107 +184,70 @@ body.layout {
 
 /*  |---------------|END of Body layout |---------------|  */
 body.navbar {
-  /* ================================================================= */
-  /*				1st lvl menu				 						*/
-  /* =============================================================== */
-  /* ================================================================= */
-  /*				2rd lvl menu				 						*/
-  /* =============================================================== */
-  /* ================================================================= */
-  /*				3rd lvl menu				 						*/
-  /* =============================================================== */
-  /* ================================================================= */
-  /*				Header Nav Bar				 						*/
-  /* =============================================================== */
-  /* /header nav */ }
+  /* /nav */
+  /* $end */
+  /* /nav */ }
   body.navbar nav {
-    z-index: 98; }
+    /* /ul */ }
     body.navbar nav ul {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: flex;
-      align-items: baseline;
-      -webkit-flex-direction: row;
-      -moz-flex-direction: row;
-      -ms-flex-direction: row;
-      flex-direction: row;
-      list-style: none; }
-      body.navbar nav ul li a {
-        padding: 0.5em 1.25em;
-        display: block;
-        font-size: 3.236vh;
-        min-width: 25vmax; }
-        body.navbar nav ul li a:hover {
-          color: white;
-          background-color: #5b5b5b; }
-  body.navbar nav ul li:hover ul {
-    z-index: 99;
-    display: block;
-    position: absolute; }
-  body.navbar nav ul li ul {
-    display: none;
-    width: 0; }
-    body.navbar nav ul li ul li a {
-      background-color: #e1e1e1;
-      box-shadow: 0 8px 6px -6px #a5a5a5; }
-      body.navbar nav ul li ul li a:hover {
-        color: white; }
-  body.navbar nav ul li:hover ul li ul {
-    display: none; }
-  body.navbar nav ul li:hover ul li:hover ul {
-    display: block;
-    position: relative;
-    top: -7vh;
-    left: 14vw; }
+      list-style-type: none;
+      /*  /li */ }
+      body.navbar nav ul li {
+        float: left;
+        /* /a */ }
+        body.navbar nav ul li a {
+          /* unselected top-level menu items */
+          display: block;
+          /* Style Stuff */
+          padding: 0.5em 1.25em;
+          /* spacing of buttons */
+          /* /a:hover */ }
+          body.navbar nav ul li a:hover {
+            color: white;
+            background-color: #5b5b5b; }
   body.navbar header nav {
-    position: fixed;
-    /* place nav at top of window */
-    top: 0;
-    left: 0;
     /* /ul */ }
     body.navbar header nav ul {
-      -webkit-flex-direction: column;
-      -moz-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 99;
       /* /li*/
       /*show the nav bar*/
+      /* /ul:hover */
       /* /ul:before */ }
       body.navbar header nav ul li {
+        height: 0;
+        min-height: 0;
+        margin-top: -70px;
+        text-indent: -9999px;
+        min-width: 50vw;
+        clear: both; }
+      body.navbar header nav ul:hover li {
         background-color: #e1e1e1;
         /* default color / style of nav */
-        /*hide the nav bar*/
-        margin-top: -100vh;
-        /* 2nd lvl nav */ }
-        body.navbar header nav ul li ul:before {
-          display: none; }
-        body.navbar header nav ul li ul li a {
-          display: block;
-          position: relative;
-          top: -7vh;
-          left: 14vw; }
-      body.navbar header nav ul:hover li {
-        margin-top: 0; }
+        height: 100%;
+        max-height: 9999px;
+        margin-top: 0;
+        text-indent: 0; }
       body.navbar header nav ul:before {
+        display: block;
+        height: 4em;
+        width: 4em;
+        padding: 0.4em;
+        /* move button from corner */
         content: "MENU";
         font-weight: bold;
         line-height: 1;
         text-align: center;
+        background-color: #e1e1e1;
         background-image: url(menu_icon.svg);
-        background-size: 34px;
+        background-size: 24px;
         background-repeat: no-repeat;
         background-position: center center;
-        height: 4.5em;
-        width: 4.5em;
-        display: block;
-        padding: 0.5em;
-        /* move button from corner */
-        background-color: #e1e1e1;
-        box-shadow: 1px 1px 6px 1px #a5a5a5; }
+        box-shadow: 0 8px 6px -6px #a5a5a5; }
 
-/*  |---------------|END Navbar |---------------|  */
+/* /Body NavBar */
 body.tables {
   /* $group Table */
   /* $end */ }
@@ -282,8 +267,9 @@ body.tables {
 
 /*  |---------------|END of Tables |---------------|  */
 /* Desktop Breakpoint Recipes*/
-@media screen and (min-width: 80.9em) {
+@media screen and (min-width: 768px) {
   body.desktop-layout {
+    margin-top: 0em;
     /*Layout*/
     /*Images*/ }
     body.desktop-layout section {
@@ -312,7 +298,7 @@ body.tables {
 
   /*  |---------------|END of Desktop Layout |---------------|  */ }
 /*  |---------------|END of @media |---------------|  */
-@media screen and (min-width: 80.9em) {
+@media screen and (min-width: 768px) {
   body.desktop-nav {
     /* /header nav */ }
     body.desktop-nav header nav {
@@ -320,22 +306,17 @@ body.tables {
       /* place nav at top of window */
       /* /ul */ }
       body.desktop-nav header nav ul {
-        -webkit-flex-direction: row;
-        -moz-flex-direction: row;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        /* /li*/
-        /* /ul:before */ }
+        position: static;
+        /* /li*/ }
         body.desktop-nav header nav ul li {
+          height: 100%;
+          max-height: 9999px;
           margin-top: 0;
-          background: none;
-          /*/ul*/ }
-          body.desktop-nav header nav ul li a {
-            min-width: 0; }
-          body.desktop-nav header nav ul li ul li a {
-            /* Show 2nd lvl nav */
-            position: static;
-            min-width: 25vmax; }
+          text-indent: 0;
+          min-width: 0;
+          clear: none; }
+        body.desktop-nav header nav ul:hover li {
+          background: none; }
         body.desktop-nav header nav ul:before {
           display: none;
           /* No MENU icon */ }

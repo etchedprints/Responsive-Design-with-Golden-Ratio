@@ -1,127 +1,92 @@
-@mixin dropDownLocation {
-    display: block;
-    position: relative;
-    top: -7vh;
-    left: 14vw;
-}
-
 @mixin menuBarIcon {
-    content: "MENU";
+	
+	display: block;
+	height: 4em;
+    width: 4em;
+    padding: 0.4em;													/* move button from corner */ 
+	
+	content: "MENU";
     font-weight: bold;
     line-height: 1;
     text-align: center;
-    background-image: url(menu_icon.svg);
-    background-size: 34px;
+	
+    background-color: $baseColorLighter;
+	background-image: url(menu_icon.svg);
+    background-size: 24px;
     background-repeat: no-repeat;
     background-position: center center;
-    height: 4.5em;
-    width: 4.5em;
-    display: block;
-    padding: 0.5em;				/* move button from corner */ 
-    background-color: $baseColorLighter;
-	box-shadow: 1px 1px 6px 1px $baseColorLight;
+	box-shadow: 0 8px 6px -6px $baseColorLight;	
+
 }
 
+@mixin hideContent {
+	height: 0;
+	min-height: 0;
+	margin-top: -70px; 													// makes it work on iOS
+	text-indent: -9999px;
+}
+
+@mixin showContent {
+	height: 100%;	
+	max-height: 9999px;
+	margin-top: 0;
+	text-indent: 0;
+}
 
 body.navbar {
-	/* ================================================================= */
-	/*				1st lvl menu				 						*/
-	/* =============================================================== */
-	nav {
-		z-index: 98;	
-		ul {
-            @include flexbox;
-            @include flexRow;
-
-			list-style: none;	
-			li {
-				a {
-					padding: 0.5em 1.25em;
-					display: block;
-                    font-size: $golden * 2vh;
-					min-width: 25vmax;
-
-					&:hover { 
-						color: white;
-						background-color: $baseColorDark;
-                        
-					}
-				}
-			}
-		}	
-	}
-	/* ================================================================= */
-	/*				2rd lvl menu				 						*/
-	/* =============================================================== */
-	nav ul li {
-		&:hover ul {
-			z-index: 99;
-			display: block;
-			position: absolute;
-		}
-		ul {
-			display: none;
-			width: 0;
-			li a { 
-				background-color: $baseColorLighter;
-                box-shadow: 0 8px 6px -6px $baseColorLight;
-                
-                &:hover {
-                    color: white;
-                }
-			}
-		}
-	}
-	/* ================================================================= */
-	/*				3rd lvl menu				 						*/
-	/* =============================================================== */
-	nav ul li:hover ul li {
-		ul { display: none; }
-			
-		&:hover ul {
-			@include dropDownLocation;
-		} 
-	}	
-	/* ================================================================= */
-	/*				Header Nav Bar				 						*/
-	/* =============================================================== */
-	header nav {
-		position: fixed;							/* place nav at top of window */
-		top: 0;
-		left: 0;
-        
-		ul {
-            @include flexColumn;
-            
-			li {
-                
-                background-color: $baseColorLighter;  /* default color / style of nav */
-				
-				/*hide the nav bar*/
-                margin-top: -100vh;
-                
-				ul:before {
-					display:none;
-				}
-				
-				/* 2nd lvl nav */
-				ul li a{
-					@include dropDownLocation;
-				} 					
-				
-			} /* /li*/
-			
-			/*show the nav bar*/
-			&:hover li{
-				margin-top: 0;
-			} 
-			
-			&:before {
-				@include menuBarIcon;	
-			} /* /ul:before */
 	
-		} /* /ul */		
-		
-	} /* /header nav */
-		
-} /*  |---------------|END Navbar |---------------|  */
+    nav {
+        ul {
+            list-style-type:none;
+
+            li {
+                float: left;
+
+                a {														/* unselected top-level menu items */
+                    display: block;										/* Style Stuff */
+                    padding: 0.5em 1.25em;								/* spacing of buttons */
+
+					&:hover {
+                        color: white;
+                        background-color: $baseColorDark;
+                    } /* /a:hover */
+                    
+                } /* /a */			
+            } /*  /li */	
+        } /* /ul */
+    } /* /nav */
+
+    /* $end */
+
+
+    header nav {	
+        ul {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 99;
+			
+            li {	
+				@include hideContent;
+				min-width: 50vw;
+				clear: both;
+            } /* /li*/
+			
+            /*show the nav bar*/
+            &:hover li {
+				background-color: $baseColorLighter;  /* default color / style of nav */
+				@include showContent;	
+            } /* /ul:hover */
+
+            &:before {
+                @include menuBarIcon;
+            } /* /ul:before */
+			
+        } /* /ul */		
+    } /* /nav */
+	
+	
+	
+	
+	
+} /* /Body NavBar */

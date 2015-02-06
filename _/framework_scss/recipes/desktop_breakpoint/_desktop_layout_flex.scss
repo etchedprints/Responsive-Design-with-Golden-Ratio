@@ -1,7 +1,8 @@
-@media screen and (min-width: $at_desktop ) {
-
+@media screen and (min-width: $at_desktop ) {	
 	body.desktop-layout {
         
+		 margin-top: 0em;
+		
         /*Layout*/
 			section { 
                 @include flexRow;

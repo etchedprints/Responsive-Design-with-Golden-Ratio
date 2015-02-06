@@ -1,3 +1,37 @@
+/* Typography metrics & leading */
+	$lineHeight: $golden;
+
+@mixin typeMixin($viewPortHeight){
+	
+	/* Type Ratio */
+	$type10:	100 / $golden;			
+	$type9:		100 - $type10;
+	$type8:		$type9 / $golden;
+	$type7:		$type9 - $type8;
+	$type6:		$type7 / $golden;
+	$type5:		$type7 - $type6;
+	$type4:		$type5 / $golden;
+	$type3:		$type5 - $type4;
+	$type2:		$type3 / $golden;			
+	$type1:		$type3 - $type2;
+	
+	$h1: $type5 * $viewPortHeight;
+	$h2: $type4 * $viewPortHeight;
+	$h3: $type3 * $viewPortHeight;
+	$h4: $type2 * $viewPortHeight;
+	$h5: $type1 * $viewPortHeight;
+	$h6: $type1 * $viewPortHeight;
+	
+	h1 { font-size: $h1 }
+	h2 { font-size: $h2 }
+	h3 { font-size: $h3 }
+	h4 { font-size: $h4 }
+	h5 { font-size: $h5 }
+	h6 { font-size: $h6 }
+	p, li, dt, dd, table, form { font-size: $h4 }
+}
+
+
 body.type {
 	hyphens: auto;
 	word-wrap: break-word;
@@ -12,28 +46,35 @@ body.type {
 		font-weight: bold;
 		padding-bottom: 1rem;
 	}
-	
-	h1 { font-size: $h1 }
-    h2 { font-size: $h2 }
-    h3 { font-size: $h3 }
-    h4 { font-size: $h4 }
-    h5 { font-size: $h5 }
-    h6 { font-size: $h6 }
-    
-    p, li, dt, dd, table, form { 
-		font-weight: normal;
-		font-size: $h4;
-	}
     
 	p { 
 		font-family: $serif;
-		padding-bottom: $viewPortHeight;
+		font-weight: normal;
+		padding-bottom: 2rem;
 	}
 	
 	h5, h6, em, strong { letter-spacing: 1px }
 	
 	/* no list style for ul or ol */
 	.unstyle { list-style: none }
-
+	
 } /*  |---------------|END type |---------------|  */
+
+
+/*  |---------------| Mobile First |---------------|  */
+@media screen and (max-width: $at_desktop ) {	
+  body {
+	$viewPortHeight: $golden * 2vmin;
+	@include typeMixin($viewPortHeight);
+  }
+}
+
+
+/*  |---------------|desktop |---------------|  */
+@media screen and (min-width: $at_desktop ) {	
+  body {
+    $viewPortHeight: $golden * 1vmin;
+	@include typeMixin($viewPortHeight);
+  }
+}
 
