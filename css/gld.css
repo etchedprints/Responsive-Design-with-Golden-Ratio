@@ -55,18 +55,18 @@ strong {
 /* -----------------------------  */
 /* Color Scheme */
 /* Base Color for Design */
-/* $group Styles */
 /* ================================================================= */
 /*				@breakpoint				 							*/
 /* =============================================================== */
 /*Recipes*/
+/* $group Styles */
 /* Typography metrics & leading */
 body.type {
   hyphens: auto;
   word-wrap: break-word;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  font-family: "Avenir Next Condensed", "Avenir Next", Verdana, sans-serif;
+  font-family: "Fira Sans", Verdana, sans-serif;
   color: #1f1f1f;
   line-height: 1.618;
   /* no list style for ul or ol */ }
@@ -74,7 +74,7 @@ body.type {
     font-weight: bold;
     padding-bottom: 1rem; }
   body.type p {
-    font-family: "Georgia", serif;
+    font-family: "PT Serif", "Georgia", serif;
     font-weight: normal;
     padding-bottom: 2rem; }
   body.type h5, body.type h6, body.type em, body.type strong {
@@ -88,37 +88,37 @@ body.type {
   body {
     /* Type Ratio */ }
     body h1 {
-      font-size: 18.0317711286vmin; }
+      font-size: 14.587702843vmin; }
     body h2 {
-      font-size: 11.1444815381vmin; }
+      font-size: 9.0158855643vmin; }
     body h3 {
-      font-size: 6.8872895905vmin; }
+      font-size: 5.5718172787vmin; }
     body h4 {
-      font-size: 4.2566684737vmin; }
+      font-size: 3.4436447953vmin; }
     body h5 {
-      font-size: 2.6306211168vmin; }
+      font-size: 2.1281724835vmin; }
     body h6 {
-      font-size: 2.6306211168vmin; }
+      font-size: 2.1281724835vmin; }
     body p, body li, body dt, body dd, body table, body form {
-      font-size: 4.2566684737vmin; } }
+      font-size: 5.5718172787vmin; } }
 /*  |---------------|desktop |---------------|  */
 @media screen and (min-width: 768px) {
   body {
     /* Type Ratio */ }
     body h1 {
-      font-size: 9.0158855643vmin; }
+      font-size: 5.5718172787vmin; }
     body h2 {
-      font-size: 5.572240769vmin; }
-    body h3 {
       font-size: 3.4436447953vmin; }
+    body h3 {
+      font-size: 2.1281724835vmin; }
     body h4 {
-      font-size: 2.1283342369vmin; }
+      font-size: 1.3153105584vmin; }
     body h5 {
-      font-size: 1.3153105584vmin; }
+      font-size: 0.8128619251vmin; }
     body h6 {
-      font-size: 1.3153105584vmin; }
+      font-size: 0.8128619251vmin; }
     body p, body li, body dt, body dd, body table, body form {
-      font-size: 2.1283342369vmin; } }
+      font-size: 2.1281724835vmin; } }
 body.images img, body.images embed, body.images object, body.images video {
   border-style: none;
   width: auto;
@@ -180,7 +180,7 @@ body.layout {
     -ms-flex-direction: column;
     flex-direction: column; }
   body.layout header, body.layout footer, body.layout article, body.layout aside, body.layout div {
-    padding: 5.572240769%; }
+    padding: 3.4439065322%; }
 
 /*  |---------------|END of Body layout |---------------|  */
 body.navbar {
@@ -221,7 +221,7 @@ body.navbar {
         min-height: 0;
         margin-top: -70px;
         text-indent: -9999px;
-        min-width: 50vw;
+        width: 100%;
         clear: both; }
       body.navbar header nav ul:hover li {
         background-color: #e1e1e1;
@@ -234,15 +234,16 @@ body.navbar {
         display: block;
         height: 4em;
         width: 4em;
-        padding: 0.4em;
+        padding: 0.6em;
         /* move button from corner */
         content: "MENU";
+        font-size: 14px;
         font-weight: bold;
-        line-height: 1;
+        line-height: 0.5;
         text-align: center;
         background-color: #e1e1e1;
         background-image: url(menu_icon.svg);
-        background-size: 24px;
+        background-size: 34px;
         background-repeat: no-repeat;
         background-position: center center;
         box-shadow: 0 8px 6px -6px #a5a5a5; }
@@ -269,7 +270,7 @@ body.tables {
 /* Desktop Breakpoint Recipes*/
 @media screen and (min-width: 768px) {
   body.desktop-layout {
-    margin: 0 9.0165708237%;
+    margin: 0 3.4439065322%;
     /*Layout*/
     /*Images*/ }
     body.desktop-layout header, body.desktop-layout footer, body.desktop-layout article, body.desktop-layout aside, body.desktop-layout div {
@@ -315,8 +316,10 @@ body.tables {
           max-height: 9999px;
           margin-top: 0;
           text-indent: 0;
-          min-width: 0;
+          width: auto;
           clear: none; }
+          body.desktop-nav header nav ul li a {
+            font-size: 85.4111884073%; }
         body.desktop-nav header nav ul:hover li {
           background: none; }
         body.desktop-nav header nav ul:before {

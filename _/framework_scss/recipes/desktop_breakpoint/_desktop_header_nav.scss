@@ -9,8 +9,13 @@
                 
 				li {						
 					@include showContent;
-					min-width: 0;
+					width: auto;
 					clear: none;
+					
+					a {
+					 font-size: $gld10 + $gld8;
+					}
+					
 				} /* /li*/			
 			
 				&:hover li {

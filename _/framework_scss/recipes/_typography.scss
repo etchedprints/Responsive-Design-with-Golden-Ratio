@@ -1,3 +1,7 @@
+/* $group Styles */
+	$sans:	'Fira Sans', Verdana, sans-serif;
+	$serif: 'PT Serif', 'Georgia', serif;
+
 /* Typography metrics & leading */
 	$lineHeight: $golden;
 
@@ -28,7 +32,7 @@
 	h4 { font-size: $h4 }
 	h5 { font-size: $h5 }
 	h6 { font-size: $h6 }
-	p, li, dt, dd, table, form { font-size: $h4 }
+	p, li, dt, dd, table, form { font-size: $h3 }
 }
 
 
@@ -64,7 +68,7 @@ body.type {
 /*  |---------------| Mobile First |---------------|  */
 @media screen and (max-width: $at_desktop ) {	
   body {
-	$viewPortHeight: $golden * 2vmin;
+	$viewPortHeight: $golden * 1.618vmin;
 	@include typeMixin($viewPortHeight);
   }
 }
@@ -73,7 +77,7 @@ body.type {
 /*  |---------------|desktop |---------------|  */
 @media screen and (min-width: $at_desktop ) {	
   body {
-    $viewPortHeight: $golden * 1vmin;
+    $viewPortHeight: $golden * 0.618vmin;
 	@include typeMixin($viewPortHeight);
   }
 }

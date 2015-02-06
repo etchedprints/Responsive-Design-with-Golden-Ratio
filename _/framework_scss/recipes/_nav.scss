@@ -3,16 +3,17 @@
 	display: block;
 	height: 4em;
     width: 4em;
-    padding: 0.4em;													/* move button from corner */ 
+    padding: 0.6em;													/* move button from corner */ 
 	
 	content: "MENU";
+	font-size: 14px;
     font-weight: bold;
-    line-height: 1;
+    line-height: 0.5;
     text-align: center;
 	
     background-color: $baseColorLighter;
 	background-image: url(menu_icon.svg);
-    background-size: 24px;
+    background-size: 34px;
     background-repeat: no-repeat;
     background-position: center center;
 	box-shadow: 0 8px 6px -6px $baseColorLight;	
@@ -68,7 +69,7 @@ body.navbar {
 			
             li {	
 				@include hideContent;
-				min-width: 50vw;
+				width: 100%;
 				clear: both;
             } /* /li*/
 			
