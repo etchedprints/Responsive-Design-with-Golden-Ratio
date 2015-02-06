@@ -1,7 +1,9 @@
 @media screen and (min-width: $at_desktop ) {	
 	body.desktop-layout {
         
-		 margin-top: 0em;
+		margin: 0 $gld6;
+		
+		header, footer, article, aside, div { padding:  $gld2; } 
 		
         /*Layout*/
 			section { 

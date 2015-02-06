@@ -180,7 +180,7 @@ body.layout {
     -ms-flex-direction: column;
     flex-direction: column; }
   body.layout header, body.layout footer, body.layout article, body.layout aside, body.layout div {
-    padding: 3.4439065322%; }
+    padding: 5.572240769%; }
 
 /*  |---------------|END of Body layout |---------------|  */
 body.navbar {
@@ -269,9 +269,11 @@ body.tables {
 /* Desktop Breakpoint Recipes*/
 @media screen and (min-width: 768px) {
   body.desktop-layout {
-    margin-top: 0em;
+    margin: 0 9.0165708237%;
     /*Layout*/
     /*Images*/ }
+    body.desktop-layout header, body.desktop-layout footer, body.desktop-layout article, body.desktop-layout aside, body.desktop-layout div {
+      padding: 1.3154105296%; }
     body.desktop-layout section {
       -webkit-flex-direction: row;
       -moz-flex-direction: row;
